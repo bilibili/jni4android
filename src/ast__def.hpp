@@ -18,8 +18,8 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
  */
 
-#ifndef JJK_PARSER_AST__AST__DEF__HPP
-#define JJK_PARSER_AST__AST__DEF__HPP
+#ifndef J4A__AST__DEF__HPP
+#define J4A__AST__DEF__HPP
 
 #include <iostream>
 #include <map>
