@@ -1,20 +1,20 @@
 /*
  * copyright (c) 2015 Zhang Rui <bbcallen@gmail.com>
  *
- * This file is part of ijkPlayer.
+ * This file is part of jni4android.
  *
- * ijkPlayer is free software; you can redistribute it and/or
+ * jni4android is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
  * License as published by the Free Software Foundation; either
  * version 2.1 of the License, or (at your option) any later version.
  *
- * ijkPlayer is distributed in the hope that it will be useful,
+ * jni4android is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
  * Lesser General Public License for more details.
  *
  * You should have received a copy of the GNU Lesser General Public
- * License along with ijkPlayer; if not, write to the Free Software
+ * License along with jni4android; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
  */
 
@@ -32,20 +32,20 @@ static const char *JJK_LICENSE_HEADER =
 "/*\n"
 " * copyright (c) 2015 Zhang Rui <bbcallen@gmail.com>\n"
 " *\n"
-" * This file is part of ijkPlayer.\n"
+" * This file is part of jni4android.\n"
 " *\n"
-" * ijkPlayer is free software; you can redistribute it and/or\n"
+" * jni4android is free software; you can redistribute it and/or\n"
 " * modify it under the terms of the GNU Lesser General Public\n"
 " * License as published by the Free Software Foundation; either\n"
 " * version 2.1 of the License, or (at your option) any later version.\n"
 " *\n"
-" * ijkPlayer is distributed in the hope that it will be useful,\n"
+" * jni4android is distributed in the hope that it will be useful,\n"
 " * but WITHOUT ANY WARRANTY; without even the implied warranty of\n"
 " * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU\n"
 " * Lesser General Public License for more details.\n"
 " *\n"
 " * You should have received a copy of the GNU Lesser General Public\n"
-" * License along with ijkPlayer; if not, write to the Free Software\n"
+" * License along with jni4android; if not, write to the Free Software\n"
 " * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA\n"
 " */\n";
 
