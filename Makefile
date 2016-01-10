@@ -76,6 +76,9 @@ ifneq ("$<", "test/o_c/.c")
 endif
 
 TEST_C = \
+	test/o_c/java/nio/Buffer.c \
+	test/o_c/java/nio/ByteBuffer.c \
+	test/o_c/java/util/ArrayList.c \
 	test/o_c/android/media/AudioTrack.c \
 	test/o_c/android/media/MediaCodec.c \
 	test/o_c/android/media/MediaFormat.c \
