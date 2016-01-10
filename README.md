@@ -18,6 +18,7 @@ Generate C wrapper from Pseudo-Java
 ```
 git clone https://github.com/Bilibili/jni4android.git jni4android
 cd jni4android
+./configure
 make
 ```
 

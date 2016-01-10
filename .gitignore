@@ -2,6 +2,8 @@
 *.d
 j4a
 test/o_c
+config.mak
+config.h
 
 # Object files
 *.o

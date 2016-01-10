@@ -1,3 +1,4 @@
+include config.mak
 CC = g++
 CPPFLAGS = -std=c++11 -I./src -Wno-deprecated-register
 YACC = /opt/bin/bison
@@ -95,8 +96,14 @@ cleantest:
 
 
 
+install: j4a
+	@mkdir -p $(BINDIR)
+	@cp ./j4a $(BINDIR)/j4a
+
+
+
 # -----
-.PHONY: all test clean
+.PHONY: all test clean install
 
 clean:
 	rm -f $(CXX_OBJS)
