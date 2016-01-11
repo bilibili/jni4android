@@ -31,11 +31,11 @@ DEPS := $(CXX_OBJS:.o=.d)
 -include $(DEPS)
 
 %.o: %.cpp
-	$(CC) $(CPPFLAGS) -MM -MT $@ -MF $(patsubst %.o,%.d,$@) $<
-	$(CC) $(CPPFLAGS) -c -o $@ $<
+	$(CXX) $(CPPFLAGS) -MM -MT $@ -MF $(patsubst %.o,%.d,$@) $<
+	$(CXX) $(CPPFLAGS) -c -o $@ $<
 
 j4a: $(CXX_OBJS)
-	$(CC) -o j4a $(CXX_OBJS)
+	$(CXX) -o j4a $(CXX_OBJS)
 
 
 
@@ -47,7 +47,7 @@ src/bison.j4a.tab.cpp: $(YACC_DEPS)
 	$(YACC) $(YACC_FLAGS) -o $@ src/bison.j4a.y
 
 j4acc: bison.j4a.tab.cpp
-	$(CC) -o j4acc bison.j4a.tab.cpp
+	$(CXX) -o j4acc bison.j4a.tab.cpp
 
 
 # YYLEX
@@ -59,7 +59,7 @@ src/flex.j4a.yy.cpp: $(YYLEX_DEPS)
 	$(YYLEX) $(YYLEX_FLAGS) -o $@ src/flex.j4a.l
 
 j4alex: flex.j4a.yy.cpp
-	$(CC) -o j4alex flex.j4a.yy.cpp
+	$(CXX) -o j4alex flex.j4a.yy.cpp
 
 
 # test java -> c

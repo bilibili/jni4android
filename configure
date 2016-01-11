@@ -65,7 +65,7 @@ PATHS_LIST="
 
 CMDLINE_SET="
     $PATHS_LIST
-    cc
+    cxx
     yacc
     yylex
 "
@@ -74,7 +74,7 @@ CMDLINE_SET="
 
 #----- init options -----
 opt_prefix_default="output"
-opt_cc_default="g++"
+opt_cxx_default="g++"
 opt_yacc_default="bison"
 opt_yylex_default="flex"
 
@@ -146,7 +146,7 @@ done
 echo "install prefix:           $opt_prefix"
 echo "  binary directory:       $opt_bindir"
 echo "  include directory:      $opt_incdir"
-echo "cc:                       $opt_cc"
+echo "cxx:                      $opt_cxx"
 echo "yylex:                    $opt_yylex"
 echo "yacc:                     $opt_yacc"
 
@@ -158,7 +158,7 @@ cat > config.mak <<EOF
 PREFIX=$opt_prefix
 BINDIR=$opt_bindir
 INCDIR=$opt_incdir
-CC=$opt_cc
+CXX=$opt_cxx
 YYLEX=$opt_yylex
 YACC=$opt_yacc
 EOF
