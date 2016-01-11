@@ -31,6 +31,8 @@ CXX_OBJS := $(CXX_SRCS:.cpp=.o)
 CXX_DEPS := $(CXX_OBJS:.o=.d)
 -include $(CXX_DEPS)
 
+$(CXX_OBJS): config.mak config.h Makefile
+
 $(CXX_OBJS): %.o: %.cpp
 	$(CXX) $(CPPFLAGS) -MM -MT $@ -MF $(patsubst %.o,%.d,$@) $<
 	$(CXX) $(CPPFLAGS) -c -o $@ $<
@@ -99,7 +101,9 @@ cleantest:
 
 install: j4a
 	@mkdir -p $(BINDIR)
-	@cp ./j4a $(BINDIR)/j4a
+	@cp ./j4a $(BINDIR)/
+	@mkdir -p $(INCDIR)
+	@cp -r include/* $(INCDIR)/
 
 
 
