@@ -27,6 +27,15 @@ die_unknown(){
     exit 1
 }
 
+is_in(){
+    value=$1
+    shift
+    for var in $*; do
+        [ $var = $value ] && return 0
+    done
+    return 1
+}
+
 show_help(){
     cat <<EOF
 Usage: configure [options]
@@ -56,12 +65,27 @@ PATHS_LIST="
 
 CMDLINE_SET="
     $PATHS_LIST
+    cc
+    yacc
+    yylex
 "
 
 
 
 #----- init options -----
 opt_prefix_default="output"
+opt_cc_default="g++"
+opt_yacc_default="bison"
+opt_yylex_default="flex"
+
+
+
+# auto detect bison
+if [ -f "/usr/local/opt/bison/bin/bison" ]; then
+    opt_yacc_default="/usr/local/opt/bison/bin/bison"
+fi
+
+
 
 for optname in $CMDLINE_SET; do
     eval opt_$optname=
@@ -100,17 +124,21 @@ done
 
 
 #----- check options -----
-if [ "$opt_prefix"="" ]; then
-    opt_prefix="$opt_prefix_default"
-fi
+if [ "$opt_prefix" == "" ]; then opt_prefix="$opt_prefix_default"; fi
+if [ "$opt_bindir" == "" ]; then opt_bindir="$opt_prefix/bin"; fi
+if [ "$opt_incdir" == "" ]; then opt_incdir="$opt_prefix/include"; fi
 
-if [ "opt_bindir"="" ]; then
-    opt_bindir="$opt_prefix/bin"
-fi
+for optname in $CMDLINE_SET; do    
+    opt_optname="opt_$optname"
+    eval opt_optvalue=\$$opt_optname
 
-if [ "opt_incdir"="" ]; then
-    opt_incdir="$opt_prefix/include"
-fi
+    opt_optname_default="opt_""$optname""_default"
+    eval opt_optvalue_default=\$$opt_optname_default
+
+    if [ "$opt_optvalue" == "" ]; then
+        eval $opt_optname=$opt_optvalue_default
+    fi
+done
 
 
 
@@ -118,6 +146,9 @@ fi
 echo "install prefix:           $opt_prefix"
 echo "  binary directory:       $opt_bindir"
 echo "  include directory:      $opt_incdir"
+echo "cc:                       $opt_cc"
+echo "yylex:                    $opt_yylex"
+echo "yacc:                     $opt_yacc"
 
 
 
@@ -127,6 +158,9 @@ cat > config.mak <<EOF
 PREFIX=$opt_prefix
 BINDIR=$opt_bindir
 INCDIR=$opt_incdir
+CC=$opt_cc
+YYLEX=$opt_yylex
+YACC=$opt_yacc
 EOF
 
 cat > config.h <<EOF

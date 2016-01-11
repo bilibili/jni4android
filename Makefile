@@ -1,9 +1,6 @@
 include config.mak
-CC = g++
 CPPFLAGS = -std=c++11 -I./src -Wno-deprecated-register
-YACC = /opt/bin/bison
 YACC_FLAGS = --debug --verbose -d
-YYLEX = flex
 YYLEX_FLAGS = 
 J4A = ./j4a
 
