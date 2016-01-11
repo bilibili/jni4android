@@ -6,31 +6,32 @@ J4A = ./j4a
 
 all: j4a test
 
-CXX_OBJS = \
-	src/ast_annotation.o \
-	src/ast_argument.o \
-	src/ast_class.o \
-	src/ast_compilation_unit.o \
-	src/ast_constructor.o \
-	src/ast_field.o \
-	src/ast_identifier.o \
-	src/ast_member.o \
-	src/ast_method.o \
-	src/ast_node.o \
-	src/ast_property_accessor.o \
-	src/ast_reference_type.o \
-	src/ast__context.o \
-	src/ast__namespace.o \
-	src/j4a_string_pool.o \
-	src/j4a_string.o \
-	src/flex.j4a.yy.o \
-	src/bison.j4a.tab.o \
-	src/main.o \
+CXX_SRCS = \
+	src/ast_annotation.cpp \
+	src/ast_argument.cpp \
+	src/ast_class.cpp \
+	src/ast_compilation_unit.cpp \
+	src/ast_constructor.cpp \
+	src/ast_field.cpp \
+	src/ast_identifier.cpp \
+	src/ast_member.cpp \
+	src/ast_method.cpp \
+	src/ast_node.cpp \
+	src/ast_property_accessor.cpp \
+	src/ast_reference_type.cpp \
+	src/ast__context.cpp \
+	src/ast__namespace.cpp \
+	src/j4a_string_pool.cpp \
+	src/j4a_string.cpp \
+	src/flex.j4a.yy.cpp \
+	src/bison.j4a.tab.cpp \
+	src/main.cpp \
 
-DEPS := $(CXX_OBJS:.o=.d)
--include $(DEPS)
+CXX_OBJS := $(CXX_SRCS:.cpp=.o)
+CXX_DEPS := $(CXX_OBJS:.o=.d)
+-include $(CXX_DEPS)
 
-%.o: %.cpp
+$(CXX_OBJS): %.o: %.cpp
 	$(CXX) $(CPPFLAGS) -MM -MT $@ -MF $(patsubst %.o,%.d,$@) $<
 	$(CXX) $(CPPFLAGS) -c -o $@ $<
 
@@ -63,9 +64,25 @@ j4alex: flex.j4a.yy.cpp
 
 
 # test java -> c
-test/o_c/%.c: j4a
+TEST_JAVA_SRCS = \
+	test/i_java/java/nio/Buffer.java \
+	test/i_java/java/nio/ByteBuffer.java \
+	test/i_java/java/util/ArrayList.java \
+	test/i_java/android/media/AudioTrack.java \
+	test/i_java/android/media/MediaCodec.java \
+	test/i_java/android/media/MediaFormat.java \
+	test/i_java/android/media/PlaybackParams.java \
+	test/i_java/android/os/Build.java \
+	test/i_java/android/os/Bundle.java \
+	test/i_java/tv/danmaku/ijk/media/player/misc/IMediaDataSource.java \
+	test/i_java/tv/danmaku/ijk/media/player/IjkMediaPlayer.java \
 
-test/o_c/%.c: test/i_java/%.java
+TEST_C_SRCS := $(TEST_JAVA_SRCS:test/i_java/%.java=test/o_c/%.c)
+TEST_H_SRCS := $(TEST_C_SRCS:%.c=%.h)
+
+$(TEST_C_SRCS): test/o_c/%.c: j4a
+
+$(TEST_C_SRCS): test/o_c/%.c: test/i_java/%.java
 ifneq ("$<", "test/o_c/.c")
 	@mkdir -p $(shell dirname $@)
 	$(J4A) $< -o $@
@@ -73,23 +90,10 @@ ifneq ("$<", "test/o_c/.c")
 	@diff test/ref_c/$*.h test/o_c/$*.h
 endif
 
-TEST_C = \
-	test/o_c/java/nio/Buffer.c \
-	test/o_c/java/nio/ByteBuffer.c \
-	test/o_c/java/util/ArrayList.c \
-	test/o_c/android/media/AudioTrack.c \
-	test/o_c/android/media/MediaCodec.c \
-	test/o_c/android/media/MediaFormat.c \
-	test/o_c/android/media/PlaybackParams.c \
-	test/o_c/android/os/Build.c \
-	test/o_c/android/os/Bundle.c \
-	test/o_c/tv/danmaku/ijk/media/player/misc/IMediaDataSource.c \
-	test/o_c/tv/danmaku/ijk/media/player/IjkMediaPlayer.c \
-
-test: cleantest j4a $(TEST_C)
+test: cleantest j4a $(TEST_C_SRCS)
 
 cleantest:
-	@rm -f $(TEST_C)
+	@rm -f $(TEST_C_SRCS)
 
 
 
@@ -104,5 +108,5 @@ install: j4a
 
 clean:
 	rm -f $(CXX_OBJS)
-	rm -f $(DEPS)
+	rm -f $(CXX_DEPS)
 	rm -f j4a
