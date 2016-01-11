@@ -36,24 +36,6 @@ is_in(){
     return 1
 }
 
-show_help(){
-    cat <<EOF
-Usage: configure [options]
-Options: [defaults in brackets after descriptions]
-
-Help options:
-  --help                   print this message
-
-Standard options:
-  --prefix=PREFIX          install in PREFIX [$prefix]
-  --bindir=DIR             install binaries in DIR [PREFIX/bin]
-  --incdir=DIR             install includes in DIR [PREFIX/include]
-
-  NOTE: Object files are built at the place where configure is launched.
-EOF
-  exit 0
-}
-
 
 
 #----- define options -----
@@ -90,6 +72,32 @@ fi
 for optname in $CMDLINE_SET; do
     eval opt_$optname=
 done
+
+
+
+
+show_help(){
+    cat <<EOF
+Usage: configure [options]
+Options: [defaults in brackets after descriptions]
+
+Help options:
+  --help                   print this message
+
+Standard options:
+  --prefix=PREFIX          install in PREFIX [$prefix]
+  --bindir=DIR             install binaries in DIR [PREFIX/bin]
+  --incdir=DIR             install includes in DIR [PREFIX/include]
+
+Toolchain options:
+  --cxx=CXX                use C compiler CXX [$opt_cxx_default]
+  --yylex=YYLEX            use yylex YYLEX [$opt_yylex_default]
+  --yacc=YACC              use yacc YACC [$opt_yacc_default]
+
+  NOTE: Object files are built at the place where configure is launched.
+EOF
+  exit 0
+}
 
 
 
