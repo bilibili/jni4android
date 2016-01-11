@@ -1,9 +1,10 @@
 *.DS_Store
 *.d
-j4a
-test/o_c
-config.mak
-config.h
+/config.h
+/config.mak
+/j4a
+/output
+/test/o_c
 
 # Object files
 *.o
