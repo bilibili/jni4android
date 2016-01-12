@@ -24,6 +24,7 @@
 #include <string.h>
 #include <stdbool.h>
 #include <jni.h>
+#include <android/log.h>
 
 #define J4A_FUNC_FAIL_TRACE()               do {ALOGE("%s: failed\n", __func__);} while (0)
 #define J4A_FUNC_FAIL_TRACE1(x__)           do {ALOGE("%s: failed: %s\n", __func__, x__);} while (0)
@@ -32,6 +33,19 @@
 #ifndef J4A_UNUSED
 #define J4A_UNUSED(x) x __attribute__((unused))
 #endif
+
+#define J4A_LOG_TAG "J4A"
+#define J4A_VLOGV(...)  VLOG(ANDROID_LOG_VERBOSE,   J4A_LOG_TAG, __VA_ARGS__)
+#define J4A_VLOGD(...)  VLOG(ANDROID_LOG_DEBUG,     J4A_LOG_TAG, __VA_ARGS__)
+#define J4A_VLOGI(...)  VLOG(ANDROID_LOG_INFO,      J4A_LOG_TAG, __VA_ARGS__)
+#define J4A_VLOGW(...)  VLOG(ANDROID_LOG_WARN,      J4A_LOG_TAG, __VA_ARGS__)
+#define J4A_VLOGE(...)  VLOG(ANDROID_LOG_ERROR,     J4A_LOG_TAG, __VA_ARGS__)
+
+#define J4A_ALOGV(...)  ALOG(ANDROID_LOG_VERBOSE,   J4A_LOG_TAG, __VA_ARGS__)
+#define J4A_ALOGD(...)  ALOG(ANDROID_LOG_DEBUG,     J4A_LOG_TAG, __VA_ARGS__)
+#define J4A_ALOGI(...)  ALOG(ANDROID_LOG_INFO,      J4A_LOG_TAG, __VA_ARGS__)
+#define J4A_ALOGW(...)  ALOG(ANDROID_LOG_WARN,      J4A_LOG_TAG, __VA_ARGS__)
+#define J4A_ALOGE(...)  ALOG(ANDROID_LOG_ERROR,     J4A_LOG_TAG, __VA_ARGS__)
 
 /********************
  * Exception Handle

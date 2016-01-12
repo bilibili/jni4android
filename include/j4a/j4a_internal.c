@@ -49,7 +49,7 @@ bool J4A_ExceptionCheck__catchAll(JNIEnv *env)
 int J4A_ThrowExceptionOfClass(JNIEnv* env, jclass clazz, const char* msg)
 {
     if ((*env)->ThrowNew(env, clazz, msg) != JNI_OK)
-        ALOGE("%s: Failed: msg: '%s'\n", __func__, msg);
+        J4A_ALOGE("%s: Failed: msg: '%s'\n", __func__, msg);
 
     return 0;
 }
@@ -59,7 +59,7 @@ int J4A_ThrowException(JNIEnv* env, const char* class_sign, const char* msg)
     int ret = -1;
 
     if (J4A_ExceptionCheck__catchAll(env)) {
-        ALOGE("pending exception throwed.\n");
+        J4A_ALOGE("pending exception throwed.\n");
     }
 
     jclass exceptionClass = J4A_FindClass__catchAll(env, class_sign);
@@ -266,7 +266,7 @@ int J4A_GetSystemAndroidApiLevel(JNIEnv *env)
     if (SDK_INT > 0)
         return SDK_INT;
 
-    SDK_INT = JJKC_android_os_Build__VERSION__SDK_INT__get__catchAll(env);
-    ALOGI("API-Level: %d\n", SDK_INT);
+    SDK_INT = J4A_android_os_Build__VERSION__SDK_INT__get__catchAll(env);
+    J4A_ALOGI("API-Level: %d\n", SDK_INT);
     return SDK_INT;
 }
