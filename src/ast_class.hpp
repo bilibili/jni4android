@@ -90,14 +90,16 @@ public:
     // @Override
     virtual Class *get_this_class() override {return this;}
 
-    j4a::string get_c_class_name() {
+    j4a::string get_c_class_name(bool with_prefix = true) {
         std::ostringstream os;
         if (get_parent()->get_this_class()) {
             // inner class
             os << get_parent()->get_this_class()->get_c_class_name();
             os << "__";
         } else {
-            os << "J4AC_";
+            if (with_prefix) {
+                os << "J4AC_";
+            }
             os << get_this_package()->get_c_long_name();
             os << "_";
         }

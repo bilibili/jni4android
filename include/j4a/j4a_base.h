@@ -18,8 +18,8 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
  */
 
-#ifndef J4A_INTERNAL_H
-#define J4A_INTERNAL_H
+#ifndef J4A_BASE_H
+#define J4A_BASE_H
 
 #include <string.h>
 #include <stdbool.h>

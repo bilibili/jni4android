@@ -161,6 +161,38 @@ inline std::string get_h_file(const std::string& value)
     return value + ".h";
 }
 
+inline std::string get_j4a_include_file(const std::string& value)
+{
+    if (ends_with(value, ".c")) {
+        std::string result(value, 0, value.length() - 2);
+        return result + ".include.j4a";
+    } else if (ends_with(value, ".cpp")) {
+        std::string result(value, 0, value.length() - 4);
+        return result + ".include.j4a";
+    } else if (ends_with(value, ".java")) {
+        std::string result(value, 0, value.length() - 5);
+        return result + ".include.j4a";
+    }
+
+    return value + ".include.j4a";
+}
+
+inline std::string get_j4a_loader_file(const std::string& value)
+{
+    if (ends_with(value, ".c")) {
+        std::string result(value, 0, value.length() - 2);
+        return result + ".loader.j4a";
+    } else if (ends_with(value, ".cpp")) {
+        std::string result(value, 0, value.length() - 4);
+        return result + ".loader.j4a";
+    } else if (ends_with(value, ".java")) {
+        std::string result(value, 0, value.length() - 5);
+        return result + ".loader.j4a";
+    }
+
+    return value + ".loader.j4a";
+}
+
 int compile(const std::string& input_file)
 {
     int ret = 0;
@@ -179,6 +211,8 @@ int compile(const std::string& input_file)
         return -1;
     }
 
+    ast::Context::instance()->set_j4a_include_file_path(get_j4a_include_file(c_file));
+    ast::Context::instance()->set_j4a_loader_file_path(get_j4a_loader_file(c_file));
     ast::Context::instance()->set_h_file_path(h_file.c_str());
     ast::Context::instance()->set_c_file_path(c_file.c_str());
 

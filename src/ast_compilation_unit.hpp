@@ -62,7 +62,7 @@ public:
         return os;
     }
 
-    void do_build(std::ostream &h_os, std::ostream &c_os);
+    void do_build(std::ostream&, std::ostream&, std::ostream&, std::ostream&);
     void build();
 
 public:

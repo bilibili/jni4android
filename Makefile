@@ -3,6 +3,8 @@ CPPFLAGS = -std=c++11 -I./src -Wno-deprecated-register
 YACC_FLAGS = --debug --verbose -d
 YYLEX_FLAGS = 
 J4A = ./j4a
+ROOT_CLASS_INCLUDES = jni/j4a/j4a_allclasses.include.h
+ROOT_CLASS_LOADERS = jni/j4a/j4a_allclasses.loader.h
 
 all: j4a test
 
@@ -88,16 +90,26 @@ $(TEST_C_SRCS): jni/j4a/class/%.c: test/i_java/%.java
 ifneq ("$<", "jni/j4a/class/.c")
 	@mkdir -p $(shell dirname $@)
 	$(J4A) -c $< -o $@
+	@cat jni/j4a/class/$*.include.j4a >> $(ROOT_CLASS_INCLUDES)
+	@echo >> $(ROOT_CLASS_INCLUDES)
+	@cat jni/j4a/class/$*.loader.j4a >> $(ROOT_CLASS_LOADERS)
+	@echo >> $(ROOT_CLASS_LOADERS)
 	@#cp $@                 test/ref_c/$*.c
 	@#cp jni/j4a/class/$*.h test/ref_c/$*.h
-	@diff test/ref_c/$*.c $@
-	@diff test/ref_c/$*.h jni/j4a/class/$*.h
+	@diff test/ref_c/$*.c 			$@
+	@diff test/ref_c/$*.h 			jni/j4a/class/$*.h
+	@diff test/ref_c/$*.include.j4a jni/j4a/class/$*.include.j4a 
+	@diff test/ref_c/$*.loader.j4a  jni/j4a/class/$*.loader.j4a 
 endif
 
-test: resettest j4a $(TEST_C_SRCS)
+test: j4a resettest $(TEST_C_SRCS)
 
 resettest:
 	@rm -f $(TEST_C_SRCS)
+	@rm -f $(TEST_CLASS_INCLUDES)
+	@rm -f $(TEST_CLASS_LOADERS)
+	@rm -f $(ROOT_CLASS_INCLUDES)
+	@rm -f $(ROOT_CLASS_LOADERS)
 	@mkdir -p jni
 	@cp -r include/* jni/
 
@@ -114,7 +126,7 @@ install: j4a
 # -----
 .PHONY: all test clean install
 
-clean:
+clean: resettest
 	rm -f $(CXX_OBJS)
 	rm -f $(CXX_DEPS)
 	rm -f j4a

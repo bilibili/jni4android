@@ -41,6 +41,8 @@ public:
 
     AST_PROPERTY_DEFINE(std::string,        h_file_path);
     AST_PROPERTY_DEFINE(std::string,        c_file_path);
+    AST_PROPERTY_DEFINE(std::string,        j4a_include_file_path);
+    AST_PROPERTY_DEFINE(std::string,        j4a_loader_file_path);
     AST_PROPERTY_DEFINE(std::string,        java_class_dir);
     AST_PROPERTY_DEFINE(Namespace*,         global_name_space);
 
