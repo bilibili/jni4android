@@ -29,6 +29,7 @@ typedef struct j4a_options
 
     std::string output;
 
+    int compile;
     int help;
 } j4a_options;
 static j4a_options g_options;
@@ -39,9 +40,11 @@ void show_help()
         << std::endl
         << "Usage:" << std::endl
         << "    j4a -h" << std::endl
-        << "    j4a [-o <output_file>] <input_file>" << std::endl
+        << "    j4a -c [-o <output_file>] <input_file>" << std::endl
+        << "    j4a [-o <output_file>] <input_files>" << std::endl
         << std::endl
         << "Startup:" << std::endl
+        << "    " << "-c, --compile         " << "compile file." << std::endl
         << "    " << "-h, --help            " << "print this help." << std::endl
         << "    " << "-o, --output          " << "output file." << std::endl
         << std::endl;
@@ -51,6 +54,7 @@ int parse_options(int argc, const char * argv[])
 {
     static struct option long_options[] =
     {
+        {"compile", no_argument,        NULL, 'c'},
         {"help",    no_argument,        &g_options.help, 1},
         {"output",  required_argument,  NULL, 'o'},
         {NULL,      0,                  NULL, 0},
@@ -58,7 +62,7 @@ int parse_options(int argc, const char * argv[])
 
     while (true) {
         int option_index = 0;
-        int c = getopt_long(argc, (char * const *)argv, "hi:o:", long_options, &option_index);
+        int c = getopt_long(argc, (char * const *)argv, "chi:o:", long_options, &option_index);
         if (c == -1) {
             if (optind < argc) {
                 g_options.arguments.push_back(argv[optind]);
@@ -81,7 +85,12 @@ int parse_options(int argc, const char * argv[])
                 std::cout << std::endl;
                 break;
 
+            case 'c':
+                g_options.compile = 1;
+                break;
+
             case 'h':
+                g_options.help = 1;
                 show_help();
                 return -1;
 
@@ -152,16 +161,10 @@ inline std::string get_h_file(const std::string& value)
     return value + ".h";
 }
 
-int main(int argc, const char * argv[])
+int compile(const std::string& input_file)
 {
     int ret = 0;
 
-    ret = parse_options(argc, argv);
-    if (ret)
-        return ret;
-
-    std::string exec_file  = argv[0];
-    std::string input_file = g_options.arguments[0];
     std::string c_file     = g_options.output;
     std::string h_file     = get_h_file(c_file);
 
@@ -196,4 +199,25 @@ int main(int argc, const char * argv[])
     ret = yyparse();
     fclose(yyin);
     return ret;
+}
+
+int link_all()
+{
+    std::cout << "not implemented" << std::endl;
+    return 0;
+}
+
+int main(int argc, const char * argv[])
+{
+    int ret = 0;
+
+    ret = parse_options(argc, argv);
+    if (ret)
+        return ret;
+
+    if (g_options.compile) {
+        return compile(g_options.arguments[0]);
+    } else {
+        return link_all();
+    }
 }

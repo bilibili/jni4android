@@ -87,7 +87,7 @@ $(TEST_C_SRCS): jni/j4a/class/%.c: j4a
 $(TEST_C_SRCS): jni/j4a/class/%.c: test/i_java/%.java
 ifneq ("$<", "jni/j4a/class/.c")
 	@mkdir -p $(shell dirname $@)
-	$(J4A) $< -o $@
+	$(J4A) -c $< -o $@
 	@#cp $@                 test/ref_c/$*.c
 	@#cp jni/j4a/class/$*.h test/ref_c/$*.h
 	@diff test/ref_c/$*.c $@
