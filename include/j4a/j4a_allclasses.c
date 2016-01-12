@@ -30,13 +30,6 @@
 #include "j4a/class/tv/danmaku/ijk/media/player/IjkMediaPlayer.h"
 #include "j4a/class/tv/danmaku/ijk/media/player/misc/IMediaDataSource.h"
 
-#define J4A_LOAD_CLASS(class__) \
-    do { \
-        ret = J4A_loadClass__J4AC_##class__(env); \
-        if (ret) \
-            goto fail; \
-    } while (0)
-
 int J4A_LoadAll__catchAll(JNIEnv *env)
 {
     int ret = 0;

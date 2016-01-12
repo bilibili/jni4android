@@ -47,6 +47,13 @@
 #define J4A_FUNC_FAIL_TRACE1(x__)           do {J4A_ALOGE("%s: failed: %s\n", __func__, x__);} while (0)
 #define J4A_FUNC_FAIL_TRACE2(x1__, x2__)    do {J4A_ALOGE("%s: failed: %s %s\n", __func__, x1__, x2__);} while (0)
 
+#define J4A_LOAD_CLASS(class__) \
+    do { \
+        ret = J4A_loadClass__J4AC_##class__(env); \
+        if (ret) \
+            goto fail; \
+    } while (0)
+
 /********************
  * Exception Handle
  ********************/
