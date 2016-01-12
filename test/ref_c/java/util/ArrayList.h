@@ -25,13 +25,20 @@
 
 #include "j4a/j4a_internal.h"
 
-jobject J4AC_ArrayList__ArrayList(JNIEnv *env);
-jobject J4AC_ArrayList__ArrayList__catchAll(JNIEnv *env);
-jobject J4AC_ArrayList__ArrayList__asGlobalRef__catchAll(JNIEnv *env);
-jboolean J4AC_ArrayList__add(JNIEnv *env, jobject thiz, jobject object);
-jboolean J4AC_ArrayList__add__catchAll(JNIEnv *env, jobject thiz, jobject object);
-int J4A_loadClass__J4AC_ArrayList(JNIEnv *env);
+jobject J4AC_java_util_ArrayList__ArrayList(JNIEnv *env);
+jobject J4AC_java_util_ArrayList__ArrayList__catchAll(JNIEnv *env);
+jobject J4AC_java_util_ArrayList__ArrayList__asGlobalRef__catchAll(JNIEnv *env);
+jboolean J4AC_java_util_ArrayList__add(JNIEnv *env, jobject thiz, jobject object);
+jboolean J4AC_java_util_ArrayList__add__catchAll(JNIEnv *env, jobject thiz, jobject object);
+int J4A_loadClass__J4AC_java_util_ArrayList(JNIEnv *env);
 
-#define J4A_HAVE__J4AC_ArrayList
+#define J4A_HAVE__J4AC_java_util_ArrayList
+
+#define J4AC_ArrayList__ArrayList J4AC_java_util_ArrayList__ArrayList
+#define J4AC_ArrayList__ArrayList__asGlobalRef__catchAll J4AC_java_util_ArrayList__ArrayList__asGlobalRef__catchAll
+#define J4AC_ArrayList__ArrayList__catchAll J4AC_java_util_ArrayList__ArrayList__catchAll
+#define J4AC_ArrayList__add J4AC_java_util_ArrayList__add
+#define J4AC_ArrayList__add__catchAll J4AC_java_util_ArrayList__add__catchAll
+#define J4A_loadClass__J4AC_ArrayList J4A_loadClass__J4AC_java_util_ArrayList
 
 #endif//J4A__java_util_ArrayList__H

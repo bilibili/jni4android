@@ -22,7 +22,7 @@
 
 #include "MediaFormat.h"
 
-typedef struct J4AC_MediaFormat {
+typedef struct J4AC_android_media_MediaFormat {
     jclass id;
 
     jmethodID constructor_MediaFormat;
@@ -30,17 +30,17 @@ typedef struct J4AC_MediaFormat {
     jmethodID method_getInteger;
     jmethodID method_setInteger;
     jmethodID method_setByteBuffer;
-} J4AC_MediaFormat;
-static J4AC_MediaFormat class_J4AC_MediaFormat;
+} J4AC_android_media_MediaFormat;
+static J4AC_android_media_MediaFormat class_J4AC_android_media_MediaFormat;
 
-jobject J4AC_MediaFormat__MediaFormat(JNIEnv *env)
+jobject J4AC_android_media_MediaFormat__MediaFormat(JNIEnv *env)
 {
-    return (*env)->NewObject(env, class_J4AC_MediaFormat.id, class_J4AC_MediaFormat.constructor_MediaFormat);
+    return (*env)->NewObject(env, class_J4AC_android_media_MediaFormat.id, class_J4AC_android_media_MediaFormat.constructor_MediaFormat);
 }
 
-jobject J4AC_MediaFormat__MediaFormat__catchAll(JNIEnv *env)
+jobject J4AC_android_media_MediaFormat__MediaFormat__catchAll(JNIEnv *env)
 {
-    jobject ret_object = J4AC_MediaFormat__MediaFormat(env);
+    jobject ret_object = J4AC_android_media_MediaFormat__MediaFormat(env);
     if (J4A_ExceptionCheck__catchAll(env) || !ret_object) {
         return NULL;
     }
@@ -48,10 +48,10 @@ jobject J4AC_MediaFormat__MediaFormat__catchAll(JNIEnv *env)
     return ret_object;
 }
 
-jobject J4AC_MediaFormat__MediaFormat__asGlobalRef__catchAll(JNIEnv *env)
+jobject J4AC_android_media_MediaFormat__MediaFormat__asGlobalRef__catchAll(JNIEnv *env)
 {
     jobject ret_object   = NULL;
-    jobject local_object = J4AC_MediaFormat__MediaFormat__catchAll(env);
+    jobject local_object = J4AC_android_media_MediaFormat__MediaFormat__catchAll(env);
     if (J4A_ExceptionCheck__catchAll(env) || !local_object) {
         ret_object = NULL;
         goto fail;
@@ -68,14 +68,14 @@ fail:
     return ret_object;
 }
 
-jobject J4AC_MediaFormat__createVideoFormat(JNIEnv *env, jstring mime, jint width, jint height)
+jobject J4AC_android_media_MediaFormat__createVideoFormat(JNIEnv *env, jstring mime, jint width, jint height)
 {
-    return (*env)->CallStaticObjectMethod(env, class_J4AC_MediaFormat.id, class_J4AC_MediaFormat.method_createVideoFormat, mime, width, height);
+    return (*env)->CallStaticObjectMethod(env, class_J4AC_android_media_MediaFormat.id, class_J4AC_android_media_MediaFormat.method_createVideoFormat, mime, width, height);
 }
 
-jobject J4AC_MediaFormat__createVideoFormat__catchAll(JNIEnv *env, jstring mime, jint width, jint height)
+jobject J4AC_android_media_MediaFormat__createVideoFormat__catchAll(JNIEnv *env, jstring mime, jint width, jint height)
 {
-    jobject ret_object = J4AC_MediaFormat__createVideoFormat(env, mime, width, height);
+    jobject ret_object = J4AC_android_media_MediaFormat__createVideoFormat(env, mime, width, height);
     if (J4A_ExceptionCheck__catchAll(env) || !ret_object) {
         return NULL;
     }
@@ -83,10 +83,10 @@ jobject J4AC_MediaFormat__createVideoFormat__catchAll(JNIEnv *env, jstring mime,
     return ret_object;
 }
 
-jobject J4AC_MediaFormat__createVideoFormat__asGlobalRef__catchAll(JNIEnv *env, jstring mime, jint width, jint height)
+jobject J4AC_android_media_MediaFormat__createVideoFormat__asGlobalRef__catchAll(JNIEnv *env, jstring mime, jint width, jint height)
 {
     jobject ret_object   = NULL;
-    jobject local_object = J4AC_MediaFormat__createVideoFormat__catchAll(env, mime, width, height);
+    jobject local_object = J4AC_android_media_MediaFormat__createVideoFormat__catchAll(env, mime, width, height);
     if (J4A_ExceptionCheck__catchAll(env) || !local_object) {
         ret_object = NULL;
         goto fail;
@@ -103,7 +103,7 @@ fail:
     return ret_object;
 }
 
-jobject J4AC_MediaFormat__createVideoFormat__withCString(JNIEnv *env, const char *mime_cstr__, jint width, jint height)
+jobject J4AC_android_media_MediaFormat__createVideoFormat__withCString(JNIEnv *env, const char *mime_cstr__, jint width, jint height)
 {
     jobject ret_object = NULL;
     jstring mime = NULL;
@@ -112,7 +112,7 @@ jobject J4AC_MediaFormat__createVideoFormat__withCString(JNIEnv *env, const char
     if (J4A_ExceptionCheck__throwAny(env) || !mime)
         goto fail;
 
-    ret_object = J4AC_MediaFormat__createVideoFormat(env, mime, width, height);
+    ret_object = J4AC_android_media_MediaFormat__createVideoFormat(env, mime, width, height);
     if (J4A_ExceptionCheck__throwAny(env) || !ret_object) {
         ret_object = NULL;
         goto fail;
@@ -123,7 +123,7 @@ fail:
     return ret_object;
 }
 
-jobject J4AC_MediaFormat__createVideoFormat__withCString__catchAll(JNIEnv *env, const char *mime_cstr__, jint width, jint height)
+jobject J4AC_android_media_MediaFormat__createVideoFormat__withCString__catchAll(JNIEnv *env, const char *mime_cstr__, jint width, jint height)
 {
     jobject ret_object = NULL;
     jstring mime = NULL;
@@ -132,7 +132,7 @@ jobject J4AC_MediaFormat__createVideoFormat__withCString__catchAll(JNIEnv *env, 
     if (J4A_ExceptionCheck__catchAll(env) || !mime)
         goto fail;
 
-    ret_object = J4AC_MediaFormat__createVideoFormat__catchAll(env, mime, width, height);
+    ret_object = J4AC_android_media_MediaFormat__createVideoFormat__catchAll(env, mime, width, height);
     if (J4A_ExceptionCheck__catchAll(env) || !ret_object) {
         ret_object = NULL;
         goto fail;
@@ -143,10 +143,10 @@ fail:
     return ret_object;
 }
 
-jobject J4AC_MediaFormat__createVideoFormat__withCString__asGlobalRef__catchAll(JNIEnv *env, const char *mime_cstr__, jint width, jint height)
+jobject J4AC_android_media_MediaFormat__createVideoFormat__withCString__asGlobalRef__catchAll(JNIEnv *env, const char *mime_cstr__, jint width, jint height)
 {
     jobject ret_object   = NULL;
-    jobject local_object = J4AC_MediaFormat__createVideoFormat__withCString__catchAll(env, mime_cstr__, width, height);
+    jobject local_object = J4AC_android_media_MediaFormat__createVideoFormat__withCString__catchAll(env, mime_cstr__, width, height);
     if (J4A_ExceptionCheck__catchAll(env) || !local_object) {
         ret_object = NULL;
         goto fail;
@@ -163,14 +163,14 @@ fail:
     return ret_object;
 }
 
-jint J4AC_MediaFormat__getInteger(JNIEnv *env, jobject thiz, jstring name)
+jint J4AC_android_media_MediaFormat__getInteger(JNIEnv *env, jobject thiz, jstring name)
 {
-    return (*env)->CallIntMethod(env, thiz, class_J4AC_MediaFormat.method_getInteger, name);
+    return (*env)->CallIntMethod(env, thiz, class_J4AC_android_media_MediaFormat.method_getInteger, name);
 }
 
-jint J4AC_MediaFormat__getInteger__catchAll(JNIEnv *env, jobject thiz, jstring name)
+jint J4AC_android_media_MediaFormat__getInteger__catchAll(JNIEnv *env, jobject thiz, jstring name)
 {
-    jint ret_value = J4AC_MediaFormat__getInteger(env, thiz, name);
+    jint ret_value = J4AC_android_media_MediaFormat__getInteger(env, thiz, name);
     if (J4A_ExceptionCheck__catchAll(env)) {
         return 0;
     }
@@ -178,7 +178,7 @@ jint J4AC_MediaFormat__getInteger__catchAll(JNIEnv *env, jobject thiz, jstring n
     return ret_value;
 }
 
-jint J4AC_MediaFormat__getInteger__withCString(JNIEnv *env, jobject thiz, const char *name_cstr__)
+jint J4AC_android_media_MediaFormat__getInteger__withCString(JNIEnv *env, jobject thiz, const char *name_cstr__)
 {
     jint ret_value = 0;
     jstring name = NULL;
@@ -187,7 +187,7 @@ jint J4AC_MediaFormat__getInteger__withCString(JNIEnv *env, jobject thiz, const 
     if (J4A_ExceptionCheck__throwAny(env) || !name)
         goto fail;
 
-    ret_value = J4AC_MediaFormat__getInteger(env, thiz, name);
+    ret_value = J4AC_android_media_MediaFormat__getInteger(env, thiz, name);
     if (J4A_ExceptionCheck__throwAny(env)) {
         ret_value = 0;
         goto fail;
@@ -198,7 +198,7 @@ fail:
     return ret_value;
 }
 
-jint J4AC_MediaFormat__getInteger__withCString__catchAll(JNIEnv *env, jobject thiz, const char *name_cstr__)
+jint J4AC_android_media_MediaFormat__getInteger__withCString__catchAll(JNIEnv *env, jobject thiz, const char *name_cstr__)
 {
     jint ret_value = 0;
     jstring name = NULL;
@@ -207,7 +207,7 @@ jint J4AC_MediaFormat__getInteger__withCString__catchAll(JNIEnv *env, jobject th
     if (J4A_ExceptionCheck__catchAll(env) || !name)
         goto fail;
 
-    ret_value = J4AC_MediaFormat__getInteger__catchAll(env, thiz, name);
+    ret_value = J4AC_android_media_MediaFormat__getInteger__catchAll(env, thiz, name);
     if (J4A_ExceptionCheck__catchAll(env)) {
         ret_value = 0;
         goto fail;
@@ -218,18 +218,18 @@ fail:
     return ret_value;
 }
 
-void J4AC_MediaFormat__setInteger(JNIEnv *env, jobject thiz, jstring name, jint value)
+void J4AC_android_media_MediaFormat__setInteger(JNIEnv *env, jobject thiz, jstring name, jint value)
 {
-    (*env)->CallVoidMethod(env, thiz, class_J4AC_MediaFormat.method_setInteger, name, value);
+    (*env)->CallVoidMethod(env, thiz, class_J4AC_android_media_MediaFormat.method_setInteger, name, value);
 }
 
-void J4AC_MediaFormat__setInteger__catchAll(JNIEnv *env, jobject thiz, jstring name, jint value)
+void J4AC_android_media_MediaFormat__setInteger__catchAll(JNIEnv *env, jobject thiz, jstring name, jint value)
 {
-    J4AC_MediaFormat__setInteger(env, thiz, name, value);
+    J4AC_android_media_MediaFormat__setInteger(env, thiz, name, value);
     J4A_ExceptionCheck__catchAll(env);
 }
 
-void J4AC_MediaFormat__setInteger__withCString(JNIEnv *env, jobject thiz, const char *name_cstr__, jint value)
+void J4AC_android_media_MediaFormat__setInteger__withCString(JNIEnv *env, jobject thiz, const char *name_cstr__, jint value)
 {
     jstring name = NULL;
 
@@ -237,13 +237,13 @@ void J4AC_MediaFormat__setInteger__withCString(JNIEnv *env, jobject thiz, const 
     if (J4A_ExceptionCheck__throwAny(env) || !name)
         goto fail;
 
-    J4AC_MediaFormat__setInteger(env, thiz, name, value);
+    J4AC_android_media_MediaFormat__setInteger(env, thiz, name, value);
 
 fail:
     J4A_DeleteLocalRef__p(env, &name);
 }
 
-void J4AC_MediaFormat__setInteger__withCString__catchAll(JNIEnv *env, jobject thiz, const char *name_cstr__, jint value)
+void J4AC_android_media_MediaFormat__setInteger__withCString__catchAll(JNIEnv *env, jobject thiz, const char *name_cstr__, jint value)
 {
     jstring name = NULL;
 
@@ -251,24 +251,24 @@ void J4AC_MediaFormat__setInteger__withCString__catchAll(JNIEnv *env, jobject th
     if (J4A_ExceptionCheck__catchAll(env) || !name)
         goto fail;
 
-    J4AC_MediaFormat__setInteger__catchAll(env, thiz, name, value);
+    J4AC_android_media_MediaFormat__setInteger__catchAll(env, thiz, name, value);
 
 fail:
     J4A_DeleteLocalRef__p(env, &name);
 }
 
-void J4AC_MediaFormat__setByteBuffer(JNIEnv *env, jobject thiz, jstring name, jobject bytes)
+void J4AC_android_media_MediaFormat__setByteBuffer(JNIEnv *env, jobject thiz, jstring name, jobject bytes)
 {
-    (*env)->CallVoidMethod(env, thiz, class_J4AC_MediaFormat.method_setByteBuffer, name, bytes);
+    (*env)->CallVoidMethod(env, thiz, class_J4AC_android_media_MediaFormat.method_setByteBuffer, name, bytes);
 }
 
-void J4AC_MediaFormat__setByteBuffer__catchAll(JNIEnv *env, jobject thiz, jstring name, jobject bytes)
+void J4AC_android_media_MediaFormat__setByteBuffer__catchAll(JNIEnv *env, jobject thiz, jstring name, jobject bytes)
 {
-    J4AC_MediaFormat__setByteBuffer(env, thiz, name, bytes);
+    J4AC_android_media_MediaFormat__setByteBuffer(env, thiz, name, bytes);
     J4A_ExceptionCheck__catchAll(env);
 }
 
-void J4AC_MediaFormat__setByteBuffer__withCString(JNIEnv *env, jobject thiz, const char *name_cstr__, jobject bytes)
+void J4AC_android_media_MediaFormat__setByteBuffer__withCString(JNIEnv *env, jobject thiz, const char *name_cstr__, jobject bytes)
 {
     jstring name = NULL;
 
@@ -276,13 +276,13 @@ void J4AC_MediaFormat__setByteBuffer__withCString(JNIEnv *env, jobject thiz, con
     if (J4A_ExceptionCheck__throwAny(env) || !name)
         goto fail;
 
-    J4AC_MediaFormat__setByteBuffer(env, thiz, name, bytes);
+    J4AC_android_media_MediaFormat__setByteBuffer(env, thiz, name, bytes);
 
 fail:
     J4A_DeleteLocalRef__p(env, &name);
 }
 
-void J4AC_MediaFormat__setByteBuffer__withCString__catchAll(JNIEnv *env, jobject thiz, const char *name_cstr__, jobject bytes)
+void J4AC_android_media_MediaFormat__setByteBuffer__withCString__catchAll(JNIEnv *env, jobject thiz, const char *name_cstr__, jobject bytes)
 {
     jstring name = NULL;
 
@@ -290,13 +290,13 @@ void J4AC_MediaFormat__setByteBuffer__withCString__catchAll(JNIEnv *env, jobject
     if (J4A_ExceptionCheck__catchAll(env) || !name)
         goto fail;
 
-    J4AC_MediaFormat__setByteBuffer__catchAll(env, thiz, name, bytes);
+    J4AC_android_media_MediaFormat__setByteBuffer__catchAll(env, thiz, name, bytes);
 
 fail:
     J4A_DeleteLocalRef__p(env, &name);
 }
 
-int J4A_loadClass__J4AC_MediaFormat(JNIEnv *env)
+int J4A_loadClass__J4AC_android_media_MediaFormat(JNIEnv *env)
 {
     int         ret                   = -1;
     const char *J4A_UNUSED(name)      = NULL;
@@ -312,43 +312,43 @@ int J4A_loadClass__J4AC_MediaFormat(JNIEnv *env)
     }
 
     sign = "android/media/MediaFormat";
-    class_J4AC_MediaFormat.id = J4A_FindClass__asGlobalRef__catchAll(env, sign);
-    if (class_J4AC_MediaFormat.id == NULL)
+    class_J4AC_android_media_MediaFormat.id = J4A_FindClass__asGlobalRef__catchAll(env, sign);
+    if (class_J4AC_android_media_MediaFormat.id == NULL)
         goto fail;
 
-    class_id = class_J4AC_MediaFormat.id;
+    class_id = class_J4AC_android_media_MediaFormat.id;
     name     = "<init>";
     sign     = "()V";
-    class_J4AC_MediaFormat.constructor_MediaFormat = JJK_GetMethodID__catchAll(env, class_id, name, sign);
-    if (class_J4AC_MediaFormat.constructor_MediaFormat == NULL)
+    class_J4AC_android_media_MediaFormat.constructor_MediaFormat = JJK_GetMethodID__catchAll(env, class_id, name, sign);
+    if (class_J4AC_android_media_MediaFormat.constructor_MediaFormat == NULL)
         goto fail;
 
-    class_id = class_J4AC_MediaFormat.id;
+    class_id = class_J4AC_android_media_MediaFormat.id;
     name     = "createVideoFormat";
     sign     = "(Ljava/lang/String;II)Landroid/media/MediaFormat;";
-    class_J4AC_MediaFormat.method_createVideoFormat = J4A_GetStaticMethodID__catchAll(env, class_id, name, sign);
-    if (class_J4AC_MediaFormat.method_createVideoFormat == NULL)
+    class_J4AC_android_media_MediaFormat.method_createVideoFormat = J4A_GetStaticMethodID__catchAll(env, class_id, name, sign);
+    if (class_J4AC_android_media_MediaFormat.method_createVideoFormat == NULL)
         goto fail;
 
-    class_id = class_J4AC_MediaFormat.id;
+    class_id = class_J4AC_android_media_MediaFormat.id;
     name     = "getInteger";
     sign     = "(Ljava/lang/String;)I";
-    class_J4AC_MediaFormat.method_getInteger = JJK_GetMethodID__catchAll(env, class_id, name, sign);
-    if (class_J4AC_MediaFormat.method_getInteger == NULL)
+    class_J4AC_android_media_MediaFormat.method_getInteger = JJK_GetMethodID__catchAll(env, class_id, name, sign);
+    if (class_J4AC_android_media_MediaFormat.method_getInteger == NULL)
         goto fail;
 
-    class_id = class_J4AC_MediaFormat.id;
+    class_id = class_J4AC_android_media_MediaFormat.id;
     name     = "setInteger";
     sign     = "(Ljava/lang/String;I)V";
-    class_J4AC_MediaFormat.method_setInteger = JJK_GetMethodID__catchAll(env, class_id, name, sign);
-    if (class_J4AC_MediaFormat.method_setInteger == NULL)
+    class_J4AC_android_media_MediaFormat.method_setInteger = JJK_GetMethodID__catchAll(env, class_id, name, sign);
+    if (class_J4AC_android_media_MediaFormat.method_setInteger == NULL)
         goto fail;
 
-    class_id = class_J4AC_MediaFormat.id;
+    class_id = class_J4AC_android_media_MediaFormat.id;
     name     = "setByteBuffer";
     sign     = "(Ljava/lang/String;Ljava/nio/ByteBuffer;)V";
-    class_J4AC_MediaFormat.method_setByteBuffer = JJK_GetMethodID__catchAll(env, class_id, name, sign);
-    if (class_J4AC_MediaFormat.method_setByteBuffer == NULL)
+    class_J4AC_android_media_MediaFormat.method_setByteBuffer = JJK_GetMethodID__catchAll(env, class_id, name, sign);
+    if (class_J4AC_android_media_MediaFormat.method_setByteBuffer == NULL)
         goto fail;
 
     ALOGD("J4ALoader: OK: '%s' loaded\n", "android.media.MediaFormat");

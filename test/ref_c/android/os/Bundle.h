@@ -25,37 +25,68 @@
 
 #include "j4a/j4a_internal.h"
 
-jobject J4AC_Bundle__Bundle(JNIEnv *env);
-jobject J4AC_Bundle__Bundle__catchAll(JNIEnv *env);
-jobject J4AC_Bundle__Bundle__asGlobalRef__catchAll(JNIEnv *env);
-jint J4AC_Bundle__getInt(JNIEnv *env, jobject thiz, jstring key, jint defaultValue);
-jint J4AC_Bundle__getInt__catchAll(JNIEnv *env, jobject thiz, jstring key, jint defaultValue);
-jint J4AC_Bundle__getInt__withCString(JNIEnv *env, jobject thiz, const char *key_cstr__, jint defaultValue);
-jint J4AC_Bundle__getInt__withCString__catchAll(JNIEnv *env, jobject thiz, const char *key_cstr__, jint defaultValue);
-void J4AC_Bundle__putInt(JNIEnv *env, jobject thiz, jstring key, jint value);
-void J4AC_Bundle__putInt__catchAll(JNIEnv *env, jobject thiz, jstring key, jint value);
-void J4AC_Bundle__putInt__withCString(JNIEnv *env, jobject thiz, const char *key_cstr__, jint value);
-void J4AC_Bundle__putInt__withCString__catchAll(JNIEnv *env, jobject thiz, const char *key_cstr__, jint value);
-jstring J4AC_Bundle__getString(JNIEnv *env, jobject thiz, jstring key);
-jstring J4AC_Bundle__getString__catchAll(JNIEnv *env, jobject thiz, jstring key);
-jstring J4AC_Bundle__getString__asGlobalRef__catchAll(JNIEnv *env, jobject thiz, jstring key);
-const char *J4AC_Bundle__getString__asCBuffer(JNIEnv *env, jobject thiz, jstring key, char *out_buf, int out_len);
-const char *J4AC_Bundle__getString__asCBuffer__catchAll(JNIEnv *env, jobject thiz, jstring key, char *out_buf, int out_len);
-jstring J4AC_Bundle__getString__withCString(JNIEnv *env, jobject thiz, const char *key_cstr__);
-jstring J4AC_Bundle__getString__withCString__catchAll(JNIEnv *env, jobject thiz, const char *key_cstr__);
-jstring J4AC_Bundle__getString__withCString__asGlobalRef__catchAll(JNIEnv *env, jobject thiz, const char *key_cstr__);
-const char *J4AC_Bundle__getString__withCString__asCBuffer(JNIEnv *env, jobject thiz, const char *key_cstr__, char *out_buf, int out_len);
-const char *J4AC_Bundle__getString__withCString__asCBuffer__catchAll(JNIEnv *env, jobject thiz, const char *key_cstr__, char *out_buf, int out_len);
-void J4AC_Bundle__putString(JNIEnv *env, jobject thiz, jstring key, jstring value);
-void J4AC_Bundle__putString__catchAll(JNIEnv *env, jobject thiz, jstring key, jstring value);
-void J4AC_Bundle__putString__withCString(JNIEnv *env, jobject thiz, const char *key_cstr__, const char *value_cstr__);
-void J4AC_Bundle__putString__withCString__catchAll(JNIEnv *env, jobject thiz, const char *key_cstr__, const char *value_cstr__);
-void J4AC_Bundle__putParcelableArrayList(JNIEnv *env, jobject thiz, jstring key, jobject value);
-void J4AC_Bundle__putParcelableArrayList__catchAll(JNIEnv *env, jobject thiz, jstring key, jobject value);
-void J4AC_Bundle__putParcelableArrayList__withCString(JNIEnv *env, jobject thiz, const char *key_cstr__, jobject value);
-void J4AC_Bundle__putParcelableArrayList__withCString__catchAll(JNIEnv *env, jobject thiz, const char *key_cstr__, jobject value);
-int J4A_loadClass__J4AC_Bundle(JNIEnv *env);
+jobject J4AC_android_os_Bundle__Bundle(JNIEnv *env);
+jobject J4AC_android_os_Bundle__Bundle__catchAll(JNIEnv *env);
+jobject J4AC_android_os_Bundle__Bundle__asGlobalRef__catchAll(JNIEnv *env);
+jint J4AC_android_os_Bundle__getInt(JNIEnv *env, jobject thiz, jstring key, jint defaultValue);
+jint J4AC_android_os_Bundle__getInt__catchAll(JNIEnv *env, jobject thiz, jstring key, jint defaultValue);
+jint J4AC_android_os_Bundle__getInt__withCString(JNIEnv *env, jobject thiz, const char *key_cstr__, jint defaultValue);
+jint J4AC_android_os_Bundle__getInt__withCString__catchAll(JNIEnv *env, jobject thiz, const char *key_cstr__, jint defaultValue);
+void J4AC_android_os_Bundle__putInt(JNIEnv *env, jobject thiz, jstring key, jint value);
+void J4AC_android_os_Bundle__putInt__catchAll(JNIEnv *env, jobject thiz, jstring key, jint value);
+void J4AC_android_os_Bundle__putInt__withCString(JNIEnv *env, jobject thiz, const char *key_cstr__, jint value);
+void J4AC_android_os_Bundle__putInt__withCString__catchAll(JNIEnv *env, jobject thiz, const char *key_cstr__, jint value);
+jstring J4AC_android_os_Bundle__getString(JNIEnv *env, jobject thiz, jstring key);
+jstring J4AC_android_os_Bundle__getString__catchAll(JNIEnv *env, jobject thiz, jstring key);
+jstring J4AC_android_os_Bundle__getString__asGlobalRef__catchAll(JNIEnv *env, jobject thiz, jstring key);
+const char *J4AC_android_os_Bundle__getString__asCBuffer(JNIEnv *env, jobject thiz, jstring key, char *out_buf, int out_len);
+const char *J4AC_android_os_Bundle__getString__asCBuffer__catchAll(JNIEnv *env, jobject thiz, jstring key, char *out_buf, int out_len);
+jstring J4AC_android_os_Bundle__getString__withCString(JNIEnv *env, jobject thiz, const char *key_cstr__);
+jstring J4AC_android_os_Bundle__getString__withCString__catchAll(JNIEnv *env, jobject thiz, const char *key_cstr__);
+jstring J4AC_android_os_Bundle__getString__withCString__asGlobalRef__catchAll(JNIEnv *env, jobject thiz, const char *key_cstr__);
+const char *J4AC_android_os_Bundle__getString__withCString__asCBuffer(JNIEnv *env, jobject thiz, const char *key_cstr__, char *out_buf, int out_len);
+const char *J4AC_android_os_Bundle__getString__withCString__asCBuffer__catchAll(JNIEnv *env, jobject thiz, const char *key_cstr__, char *out_buf, int out_len);
+void J4AC_android_os_Bundle__putString(JNIEnv *env, jobject thiz, jstring key, jstring value);
+void J4AC_android_os_Bundle__putString__catchAll(JNIEnv *env, jobject thiz, jstring key, jstring value);
+void J4AC_android_os_Bundle__putString__withCString(JNIEnv *env, jobject thiz, const char *key_cstr__, const char *value_cstr__);
+void J4AC_android_os_Bundle__putString__withCString__catchAll(JNIEnv *env, jobject thiz, const char *key_cstr__, const char *value_cstr__);
+void J4AC_android_os_Bundle__putParcelableArrayList(JNIEnv *env, jobject thiz, jstring key, jobject value);
+void J4AC_android_os_Bundle__putParcelableArrayList__catchAll(JNIEnv *env, jobject thiz, jstring key, jobject value);
+void J4AC_android_os_Bundle__putParcelableArrayList__withCString(JNIEnv *env, jobject thiz, const char *key_cstr__, jobject value);
+void J4AC_android_os_Bundle__putParcelableArrayList__withCString__catchAll(JNIEnv *env, jobject thiz, const char *key_cstr__, jobject value);
+int J4A_loadClass__J4AC_android_os_Bundle(JNIEnv *env);
 
-#define J4A_HAVE__J4AC_Bundle
+#define J4A_HAVE__J4AC_android_os_Bundle
+
+#define J4AC_Bundle__Bundle J4AC_android_os_Bundle__Bundle
+#define J4AC_Bundle__Bundle__asGlobalRef__catchAll J4AC_android_os_Bundle__Bundle__asGlobalRef__catchAll
+#define J4AC_Bundle__Bundle__catchAll J4AC_android_os_Bundle__Bundle__catchAll
+#define J4AC_Bundle__getInt J4AC_android_os_Bundle__getInt
+#define J4AC_Bundle__getInt__catchAll J4AC_android_os_Bundle__getInt__catchAll
+#define J4AC_Bundle__getInt__withCString J4AC_android_os_Bundle__getInt__withCString
+#define J4AC_Bundle__getInt__withCString__catchAll J4AC_android_os_Bundle__getInt__withCString__catchAll
+#define J4AC_Bundle__putInt J4AC_android_os_Bundle__putInt
+#define J4AC_Bundle__putInt__catchAll J4AC_android_os_Bundle__putInt__catchAll
+#define J4AC_Bundle__putInt__withCString J4AC_android_os_Bundle__putInt__withCString
+#define J4AC_Bundle__putInt__withCString__catchAll J4AC_android_os_Bundle__putInt__withCString__catchAll
+#define J4AC_Bundle__getString J4AC_android_os_Bundle__getString
+#define J4AC_Bundle__getString__asCBuffer J4AC_android_os_Bundle__getString__asCBuffer
+#define J4AC_Bundle__getString__asCBuffer__catchAll J4AC_android_os_Bundle__getString__asCBuffer__catchAll
+#define J4AC_Bundle__getString__asGlobalRef__catchAll J4AC_android_os_Bundle__getString__asGlobalRef__catchAll
+#define J4AC_Bundle__getString__catchAll J4AC_android_os_Bundle__getString__catchAll
+#define J4AC_Bundle__getString__withCString J4AC_android_os_Bundle__getString__withCString
+#define J4AC_Bundle__getString__withCString__asCBuffer J4AC_android_os_Bundle__getString__withCString__asCBuffer
+#define J4AC_Bundle__getString__withCString__asCBuffer__catchAll J4AC_android_os_Bundle__getString__withCString__asCBuffer__catchAll
+#define J4AC_Bundle__getString__withCString__asGlobalRef__catchAll J4AC_android_os_Bundle__getString__withCString__asGlobalRef__catchAll
+#define J4AC_Bundle__getString__withCString__catchAll J4AC_android_os_Bundle__getString__withCString__catchAll
+#define J4AC_Bundle__putString J4AC_android_os_Bundle__putString
+#define J4AC_Bundle__putString__catchAll J4AC_android_os_Bundle__putString__catchAll
+#define J4AC_Bundle__putString__withCString J4AC_android_os_Bundle__putString__withCString
+#define J4AC_Bundle__putString__withCString__catchAll J4AC_android_os_Bundle__putString__withCString__catchAll
+#define J4AC_Bundle__putParcelableArrayList J4AC_android_os_Bundle__putParcelableArrayList
+#define J4AC_Bundle__putParcelableArrayList__catchAll J4AC_android_os_Bundle__putParcelableArrayList__catchAll
+#define J4AC_Bundle__putParcelableArrayList__withCString J4AC_android_os_Bundle__putParcelableArrayList__withCString
+#define J4AC_Bundle__putParcelableArrayList__withCString__catchAll J4AC_android_os_Bundle__putParcelableArrayList__withCString__catchAll
+#define J4A_loadClass__J4AC_Bundle J4A_loadClass__J4AC_android_os_Bundle
 
 #endif//J4A__android_os_Bundle__H

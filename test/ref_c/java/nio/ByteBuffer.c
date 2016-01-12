@@ -22,23 +22,23 @@
 
 #include "ByteBuffer.h"
 
-typedef struct J4AC_ByteBuffer {
+typedef struct J4AC_java_nio_ByteBuffer {
     jclass id;
 
     jmethodID method_allocate;
     jmethodID method_allocateDirect;
     jmethodID method_limit;
-} J4AC_ByteBuffer;
-static J4AC_ByteBuffer class_J4AC_ByteBuffer;
+} J4AC_java_nio_ByteBuffer;
+static J4AC_java_nio_ByteBuffer class_J4AC_java_nio_ByteBuffer;
 
-jobject J4AC_ByteBuffer__allocate(JNIEnv *env, jint capacity)
+jobject J4AC_java_nio_ByteBuffer__allocate(JNIEnv *env, jint capacity)
 {
-    return (*env)->CallStaticObjectMethod(env, class_J4AC_ByteBuffer.id, class_J4AC_ByteBuffer.method_allocate, capacity);
+    return (*env)->CallStaticObjectMethod(env, class_J4AC_java_nio_ByteBuffer.id, class_J4AC_java_nio_ByteBuffer.method_allocate, capacity);
 }
 
-jobject J4AC_ByteBuffer__allocate__catchAll(JNIEnv *env, jint capacity)
+jobject J4AC_java_nio_ByteBuffer__allocate__catchAll(JNIEnv *env, jint capacity)
 {
-    jobject ret_object = J4AC_ByteBuffer__allocate(env, capacity);
+    jobject ret_object = J4AC_java_nio_ByteBuffer__allocate(env, capacity);
     if (J4A_ExceptionCheck__catchAll(env) || !ret_object) {
         return NULL;
     }
@@ -46,10 +46,10 @@ jobject J4AC_ByteBuffer__allocate__catchAll(JNIEnv *env, jint capacity)
     return ret_object;
 }
 
-jobject J4AC_ByteBuffer__allocate__asGlobalRef__catchAll(JNIEnv *env, jint capacity)
+jobject J4AC_java_nio_ByteBuffer__allocate__asGlobalRef__catchAll(JNIEnv *env, jint capacity)
 {
     jobject ret_object   = NULL;
-    jobject local_object = J4AC_ByteBuffer__allocate__catchAll(env, capacity);
+    jobject local_object = J4AC_java_nio_ByteBuffer__allocate__catchAll(env, capacity);
     if (J4A_ExceptionCheck__catchAll(env) || !local_object) {
         ret_object = NULL;
         goto fail;
@@ -66,14 +66,14 @@ fail:
     return ret_object;
 }
 
-jobject J4AC_ByteBuffer__allocateDirect(JNIEnv *env, jint capacity)
+jobject J4AC_java_nio_ByteBuffer__allocateDirect(JNIEnv *env, jint capacity)
 {
-    return (*env)->CallStaticObjectMethod(env, class_J4AC_ByteBuffer.id, class_J4AC_ByteBuffer.method_allocateDirect, capacity);
+    return (*env)->CallStaticObjectMethod(env, class_J4AC_java_nio_ByteBuffer.id, class_J4AC_java_nio_ByteBuffer.method_allocateDirect, capacity);
 }
 
-jobject J4AC_ByteBuffer__allocateDirect__catchAll(JNIEnv *env, jint capacity)
+jobject J4AC_java_nio_ByteBuffer__allocateDirect__catchAll(JNIEnv *env, jint capacity)
 {
-    jobject ret_object = J4AC_ByteBuffer__allocateDirect(env, capacity);
+    jobject ret_object = J4AC_java_nio_ByteBuffer__allocateDirect(env, capacity);
     if (J4A_ExceptionCheck__catchAll(env) || !ret_object) {
         return NULL;
     }
@@ -81,10 +81,10 @@ jobject J4AC_ByteBuffer__allocateDirect__catchAll(JNIEnv *env, jint capacity)
     return ret_object;
 }
 
-jobject J4AC_ByteBuffer__allocateDirect__asGlobalRef__catchAll(JNIEnv *env, jint capacity)
+jobject J4AC_java_nio_ByteBuffer__allocateDirect__asGlobalRef__catchAll(JNIEnv *env, jint capacity)
 {
     jobject ret_object   = NULL;
-    jobject local_object = J4AC_ByteBuffer__allocateDirect__catchAll(env, capacity);
+    jobject local_object = J4AC_java_nio_ByteBuffer__allocateDirect__catchAll(env, capacity);
     if (J4A_ExceptionCheck__catchAll(env) || !local_object) {
         ret_object = NULL;
         goto fail;
@@ -101,14 +101,14 @@ fail:
     return ret_object;
 }
 
-jobject J4AC_ByteBuffer__limit(JNIEnv *env, jobject thiz, jint newLimit)
+jobject J4AC_java_nio_ByteBuffer__limit(JNIEnv *env, jobject thiz, jint newLimit)
 {
-    return (*env)->CallObjectMethod(env, thiz, class_J4AC_ByteBuffer.method_limit, newLimit);
+    return (*env)->CallObjectMethod(env, thiz, class_J4AC_java_nio_ByteBuffer.method_limit, newLimit);
 }
 
-jobject J4AC_ByteBuffer__limit__catchAll(JNIEnv *env, jobject thiz, jint newLimit)
+jobject J4AC_java_nio_ByteBuffer__limit__catchAll(JNIEnv *env, jobject thiz, jint newLimit)
 {
-    jobject ret_object = J4AC_ByteBuffer__limit(env, thiz, newLimit);
+    jobject ret_object = J4AC_java_nio_ByteBuffer__limit(env, thiz, newLimit);
     if (J4A_ExceptionCheck__catchAll(env) || !ret_object) {
         return NULL;
     }
@@ -116,10 +116,10 @@ jobject J4AC_ByteBuffer__limit__catchAll(JNIEnv *env, jobject thiz, jint newLimi
     return ret_object;
 }
 
-jobject J4AC_ByteBuffer__limit__asGlobalRef__catchAll(JNIEnv *env, jobject thiz, jint newLimit)
+jobject J4AC_java_nio_ByteBuffer__limit__asGlobalRef__catchAll(JNIEnv *env, jobject thiz, jint newLimit)
 {
     jobject ret_object   = NULL;
-    jobject local_object = J4AC_ByteBuffer__limit__catchAll(env, thiz, newLimit);
+    jobject local_object = J4AC_java_nio_ByteBuffer__limit__catchAll(env, thiz, newLimit);
     if (J4A_ExceptionCheck__catchAll(env) || !local_object) {
         ret_object = NULL;
         goto fail;
@@ -136,7 +136,7 @@ fail:
     return ret_object;
 }
 
-int J4A_loadClass__J4AC_ByteBuffer(JNIEnv *env)
+int J4A_loadClass__J4AC_java_nio_ByteBuffer(JNIEnv *env)
 {
     int         ret                   = -1;
     const char *J4A_UNUSED(name)      = NULL;
@@ -145,29 +145,29 @@ int J4A_loadClass__J4AC_ByteBuffer(JNIEnv *env)
     int         J4A_UNUSED(api_level) = 0;
 
     sign = "java/nio/ByteBuffer";
-    class_J4AC_ByteBuffer.id = J4A_FindClass__asGlobalRef__catchAll(env, sign);
-    if (class_J4AC_ByteBuffer.id == NULL)
+    class_J4AC_java_nio_ByteBuffer.id = J4A_FindClass__asGlobalRef__catchAll(env, sign);
+    if (class_J4AC_java_nio_ByteBuffer.id == NULL)
         goto fail;
 
-    class_id = class_J4AC_ByteBuffer.id;
+    class_id = class_J4AC_java_nio_ByteBuffer.id;
     name     = "allocate";
     sign     = "(I)Ljava/nio/ByteBuffer;";
-    class_J4AC_ByteBuffer.method_allocate = J4A_GetStaticMethodID__catchAll(env, class_id, name, sign);
-    if (class_J4AC_ByteBuffer.method_allocate == NULL)
+    class_J4AC_java_nio_ByteBuffer.method_allocate = J4A_GetStaticMethodID__catchAll(env, class_id, name, sign);
+    if (class_J4AC_java_nio_ByteBuffer.method_allocate == NULL)
         goto fail;
 
-    class_id = class_J4AC_ByteBuffer.id;
+    class_id = class_J4AC_java_nio_ByteBuffer.id;
     name     = "allocateDirect";
     sign     = "(I)Ljava/nio/ByteBuffer;";
-    class_J4AC_ByteBuffer.method_allocateDirect = J4A_GetStaticMethodID__catchAll(env, class_id, name, sign);
-    if (class_J4AC_ByteBuffer.method_allocateDirect == NULL)
+    class_J4AC_java_nio_ByteBuffer.method_allocateDirect = J4A_GetStaticMethodID__catchAll(env, class_id, name, sign);
+    if (class_J4AC_java_nio_ByteBuffer.method_allocateDirect == NULL)
         goto fail;
 
-    class_id = class_J4AC_ByteBuffer.id;
+    class_id = class_J4AC_java_nio_ByteBuffer.id;
     name     = "limit";
     sign     = "(I)Ljava/nio/Buffer;";
-    class_J4AC_ByteBuffer.method_limit = JJK_GetMethodID__catchAll(env, class_id, name, sign);
-    if (class_J4AC_ByteBuffer.method_limit == NULL)
+    class_J4AC_java_nio_ByteBuffer.method_limit = JJK_GetMethodID__catchAll(env, class_id, name, sign);
+    if (class_J4AC_java_nio_ByteBuffer.method_limit == NULL)
         goto fail;
 
     ALOGD("J4ALoader: OK: '%s' loaded\n", "java.nio.ByteBuffer");

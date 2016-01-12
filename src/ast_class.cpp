@@ -56,6 +56,19 @@ void Class::build_c_func_decl(std::ostream &os)
 }
 
 //@Override
+void Class::build_c_simple_func_decl(std::ostream &os)
+{
+    get_member_list()->build_all_c_simple_func_decl(os);
+    if (get_parent()->get_this_class() == NULL) {
+        // do not export inner class loader
+        os  << "#define"
+            << " J4A_loadClass__" << get_c_simple_class_name()
+            << " J4A_loadClass__" << get_c_class_name()
+            << std::endl;
+    }
+}
+
+//@Override
 void Class::build_c_class_decl(std::ostream &os)
 {
     get_member_list()->build_all_c_class_decl(os);

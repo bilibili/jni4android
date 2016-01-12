@@ -22,22 +22,22 @@
 
 #include "ArrayList.h"
 
-typedef struct J4AC_ArrayList {
+typedef struct J4AC_java_util_ArrayList {
     jclass id;
 
     jmethodID constructor_ArrayList;
     jmethodID method_add;
-} J4AC_ArrayList;
-static J4AC_ArrayList class_J4AC_ArrayList;
+} J4AC_java_util_ArrayList;
+static J4AC_java_util_ArrayList class_J4AC_java_util_ArrayList;
 
-jobject J4AC_ArrayList__ArrayList(JNIEnv *env)
+jobject J4AC_java_util_ArrayList__ArrayList(JNIEnv *env)
 {
-    return (*env)->NewObject(env, class_J4AC_ArrayList.id, class_J4AC_ArrayList.constructor_ArrayList);
+    return (*env)->NewObject(env, class_J4AC_java_util_ArrayList.id, class_J4AC_java_util_ArrayList.constructor_ArrayList);
 }
 
-jobject J4AC_ArrayList__ArrayList__catchAll(JNIEnv *env)
+jobject J4AC_java_util_ArrayList__ArrayList__catchAll(JNIEnv *env)
 {
-    jobject ret_object = J4AC_ArrayList__ArrayList(env);
+    jobject ret_object = J4AC_java_util_ArrayList__ArrayList(env);
     if (J4A_ExceptionCheck__catchAll(env) || !ret_object) {
         return NULL;
     }
@@ -45,10 +45,10 @@ jobject J4AC_ArrayList__ArrayList__catchAll(JNIEnv *env)
     return ret_object;
 }
 
-jobject J4AC_ArrayList__ArrayList__asGlobalRef__catchAll(JNIEnv *env)
+jobject J4AC_java_util_ArrayList__ArrayList__asGlobalRef__catchAll(JNIEnv *env)
 {
     jobject ret_object   = NULL;
-    jobject local_object = J4AC_ArrayList__ArrayList__catchAll(env);
+    jobject local_object = J4AC_java_util_ArrayList__ArrayList__catchAll(env);
     if (J4A_ExceptionCheck__catchAll(env) || !local_object) {
         ret_object = NULL;
         goto fail;
@@ -65,14 +65,14 @@ fail:
     return ret_object;
 }
 
-jboolean J4AC_ArrayList__add(JNIEnv *env, jobject thiz, jobject object)
+jboolean J4AC_java_util_ArrayList__add(JNIEnv *env, jobject thiz, jobject object)
 {
-    return (*env)->CallBooleanMethod(env, thiz, class_J4AC_ArrayList.method_add, object);
+    return (*env)->CallBooleanMethod(env, thiz, class_J4AC_java_util_ArrayList.method_add, object);
 }
 
-jboolean J4AC_ArrayList__add__catchAll(JNIEnv *env, jobject thiz, jobject object)
+jboolean J4AC_java_util_ArrayList__add__catchAll(JNIEnv *env, jobject thiz, jobject object)
 {
-    jboolean ret_value = J4AC_ArrayList__add(env, thiz, object);
+    jboolean ret_value = J4AC_java_util_ArrayList__add(env, thiz, object);
     if (J4A_ExceptionCheck__catchAll(env)) {
         return false;
     }
@@ -80,7 +80,7 @@ jboolean J4AC_ArrayList__add__catchAll(JNIEnv *env, jobject thiz, jobject object
     return ret_value;
 }
 
-int J4A_loadClass__J4AC_ArrayList(JNIEnv *env)
+int J4A_loadClass__J4AC_java_util_ArrayList(JNIEnv *env)
 {
     int         ret                   = -1;
     const char *J4A_UNUSED(name)      = NULL;
@@ -89,22 +89,22 @@ int J4A_loadClass__J4AC_ArrayList(JNIEnv *env)
     int         J4A_UNUSED(api_level) = 0;
 
     sign = "java/util/ArrayList";
-    class_J4AC_ArrayList.id = J4A_FindClass__asGlobalRef__catchAll(env, sign);
-    if (class_J4AC_ArrayList.id == NULL)
+    class_J4AC_java_util_ArrayList.id = J4A_FindClass__asGlobalRef__catchAll(env, sign);
+    if (class_J4AC_java_util_ArrayList.id == NULL)
         goto fail;
 
-    class_id = class_J4AC_ArrayList.id;
+    class_id = class_J4AC_java_util_ArrayList.id;
     name     = "<init>";
     sign     = "()V";
-    class_J4AC_ArrayList.constructor_ArrayList = JJK_GetMethodID__catchAll(env, class_id, name, sign);
-    if (class_J4AC_ArrayList.constructor_ArrayList == NULL)
+    class_J4AC_java_util_ArrayList.constructor_ArrayList = JJK_GetMethodID__catchAll(env, class_id, name, sign);
+    if (class_J4AC_java_util_ArrayList.constructor_ArrayList == NULL)
         goto fail;
 
-    class_id = class_J4AC_ArrayList.id;
+    class_id = class_J4AC_java_util_ArrayList.id;
     name     = "add";
     sign     = "(Ljava/lang/Object;)Z";
-    class_J4AC_ArrayList.method_add = JJK_GetMethodID__catchAll(env, class_id, name, sign);
-    if (class_J4AC_ArrayList.method_add == NULL)
+    class_J4AC_java_util_ArrayList.method_add = JJK_GetMethodID__catchAll(env, class_id, name, sign);
+    if (class_J4AC_java_util_ArrayList.method_add == NULL)
         goto fail;
 
     ALOGD("J4ALoader: OK: '%s' loaded\n", "java.util.ArrayList");

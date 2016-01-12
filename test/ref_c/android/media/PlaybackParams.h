@@ -25,11 +25,16 @@
 
 #include "j4a/j4a_internal.h"
 
-jobject J4AC_PlaybackParams__setSpeed(JNIEnv *env, jobject thiz, jfloat speed);
-jobject J4AC_PlaybackParams__setSpeed__catchAll(JNIEnv *env, jobject thiz, jfloat speed);
-jobject J4AC_PlaybackParams__setSpeed__asGlobalRef__catchAll(JNIEnv *env, jobject thiz, jfloat speed);
-int J4A_loadClass__J4AC_PlaybackParams(JNIEnv *env);
+jobject J4AC_android_media_PlaybackParams__setSpeed(JNIEnv *env, jobject thiz, jfloat speed);
+jobject J4AC_android_media_PlaybackParams__setSpeed__catchAll(JNIEnv *env, jobject thiz, jfloat speed);
+jobject J4AC_android_media_PlaybackParams__setSpeed__asGlobalRef__catchAll(JNIEnv *env, jobject thiz, jfloat speed);
+int J4A_loadClass__J4AC_android_media_PlaybackParams(JNIEnv *env);
 
-#define J4A_HAVE__J4AC_PlaybackParams
+#define J4A_HAVE__J4AC_android_media_PlaybackParams
+
+#define J4AC_PlaybackParams__setSpeed J4AC_android_media_PlaybackParams__setSpeed
+#define J4AC_PlaybackParams__setSpeed__asGlobalRef__catchAll J4AC_android_media_PlaybackParams__setSpeed__asGlobalRef__catchAll
+#define J4AC_PlaybackParams__setSpeed__catchAll J4AC_android_media_PlaybackParams__setSpeed__catchAll
+#define J4A_loadClass__J4AC_PlaybackParams J4A_loadClass__J4AC_android_media_PlaybackParams
 
 #endif//J4A__android_media_PlaybackParams__H

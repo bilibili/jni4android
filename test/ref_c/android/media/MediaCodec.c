@@ -22,7 +22,7 @@
 
 #include "MediaCodec.h"
 
-typedef struct J4AC_MediaCodec__BufferInfo {
+typedef struct J4AC_android_media_MediaCodec__BufferInfo {
     jclass id;
 
     jfieldID field_flags;
@@ -30,10 +30,10 @@ typedef struct J4AC_MediaCodec__BufferInfo {
     jfieldID field_presentationTimeUs;
     jfieldID field_size;
     jmethodID constructor_BufferInfo;
-} J4AC_MediaCodec__BufferInfo;
-static J4AC_MediaCodec__BufferInfo class_J4AC_MediaCodec__BufferInfo;
+} J4AC_android_media_MediaCodec__BufferInfo;
+static J4AC_android_media_MediaCodec__BufferInfo class_J4AC_android_media_MediaCodec__BufferInfo;
 
-typedef struct J4AC_MediaCodec {
+typedef struct J4AC_android_media_MediaCodec {
     jclass id;
 
     jmethodID method_createByCodecName;
@@ -48,17 +48,17 @@ typedef struct J4AC_MediaCodec {
     jmethodID method_stop;
     jmethodID method_flush;
     jmethodID method_release;
-} J4AC_MediaCodec;
-static J4AC_MediaCodec class_J4AC_MediaCodec;
+} J4AC_android_media_MediaCodec;
+static J4AC_android_media_MediaCodec class_J4AC_android_media_MediaCodec;
 
-jint J4AC_MediaCodec__BufferInfo__flags__get(JNIEnv *env, jobject thiz)
+jint J4AC_android_media_MediaCodec__BufferInfo__flags__get(JNIEnv *env, jobject thiz)
 {
-    return (*env)->GetIntField(env, thiz, class_J4AC_MediaCodec__BufferInfo.field_flags);
+    return (*env)->GetIntField(env, thiz, class_J4AC_android_media_MediaCodec__BufferInfo.field_flags);
 }
 
-jint J4AC_MediaCodec__BufferInfo__flags__get__catchAll(JNIEnv *env, jobject thiz)
+jint J4AC_android_media_MediaCodec__BufferInfo__flags__get__catchAll(JNIEnv *env, jobject thiz)
 {
-    jint ret_value = J4AC_MediaCodec__BufferInfo__flags__get(env, thiz);
+    jint ret_value = J4AC_android_media_MediaCodec__BufferInfo__flags__get(env, thiz);
     if (J4A_ExceptionCheck__catchAll(env)) {
         return 0;
     }
@@ -66,25 +66,25 @@ jint J4AC_MediaCodec__BufferInfo__flags__get__catchAll(JNIEnv *env, jobject thiz
     return ret_value;
 }
 
-void J4AC_MediaCodec__BufferInfo__flags__set(JNIEnv *env, jobject thiz, jint value)
+void J4AC_android_media_MediaCodec__BufferInfo__flags__set(JNIEnv *env, jobject thiz, jint value)
 {
-    (*env)->SetIntField(env, thiz, class_J4AC_MediaCodec__BufferInfo.field_flags, value);
+    (*env)->SetIntField(env, thiz, class_J4AC_android_media_MediaCodec__BufferInfo.field_flags, value);
 }
 
-void J4AC_MediaCodec__BufferInfo__flags__set__catchAll(JNIEnv *env, jobject thiz, jint value)
+void J4AC_android_media_MediaCodec__BufferInfo__flags__set__catchAll(JNIEnv *env, jobject thiz, jint value)
 {
-    J4AC_MediaCodec__BufferInfo__flags__set(env, thiz, value);
+    J4AC_android_media_MediaCodec__BufferInfo__flags__set(env, thiz, value);
     J4A_ExceptionCheck__catchAll(env);
 }
 
-jint J4AC_MediaCodec__BufferInfo__offset__get(JNIEnv *env, jobject thiz)
+jint J4AC_android_media_MediaCodec__BufferInfo__offset__get(JNIEnv *env, jobject thiz)
 {
-    return (*env)->GetIntField(env, thiz, class_J4AC_MediaCodec__BufferInfo.field_offset);
+    return (*env)->GetIntField(env, thiz, class_J4AC_android_media_MediaCodec__BufferInfo.field_offset);
 }
 
-jint J4AC_MediaCodec__BufferInfo__offset__get__catchAll(JNIEnv *env, jobject thiz)
+jint J4AC_android_media_MediaCodec__BufferInfo__offset__get__catchAll(JNIEnv *env, jobject thiz)
 {
-    jint ret_value = J4AC_MediaCodec__BufferInfo__offset__get(env, thiz);
+    jint ret_value = J4AC_android_media_MediaCodec__BufferInfo__offset__get(env, thiz);
     if (J4A_ExceptionCheck__catchAll(env)) {
         return 0;
     }
@@ -92,25 +92,25 @@ jint J4AC_MediaCodec__BufferInfo__offset__get__catchAll(JNIEnv *env, jobject thi
     return ret_value;
 }
 
-void J4AC_MediaCodec__BufferInfo__offset__set(JNIEnv *env, jobject thiz, jint value)
+void J4AC_android_media_MediaCodec__BufferInfo__offset__set(JNIEnv *env, jobject thiz, jint value)
 {
-    (*env)->SetIntField(env, thiz, class_J4AC_MediaCodec__BufferInfo.field_offset, value);
+    (*env)->SetIntField(env, thiz, class_J4AC_android_media_MediaCodec__BufferInfo.field_offset, value);
 }
 
-void J4AC_MediaCodec__BufferInfo__offset__set__catchAll(JNIEnv *env, jobject thiz, jint value)
+void J4AC_android_media_MediaCodec__BufferInfo__offset__set__catchAll(JNIEnv *env, jobject thiz, jint value)
 {
-    J4AC_MediaCodec__BufferInfo__offset__set(env, thiz, value);
+    J4AC_android_media_MediaCodec__BufferInfo__offset__set(env, thiz, value);
     J4A_ExceptionCheck__catchAll(env);
 }
 
-jlong J4AC_MediaCodec__BufferInfo__presentationTimeUs__get(JNIEnv *env, jobject thiz)
+jlong J4AC_android_media_MediaCodec__BufferInfo__presentationTimeUs__get(JNIEnv *env, jobject thiz)
 {
-    return (*env)->GetLongField(env, thiz, class_J4AC_MediaCodec__BufferInfo.field_presentationTimeUs);
+    return (*env)->GetLongField(env, thiz, class_J4AC_android_media_MediaCodec__BufferInfo.field_presentationTimeUs);
 }
 
-jlong J4AC_MediaCodec__BufferInfo__presentationTimeUs__get__catchAll(JNIEnv *env, jobject thiz)
+jlong J4AC_android_media_MediaCodec__BufferInfo__presentationTimeUs__get__catchAll(JNIEnv *env, jobject thiz)
 {
-    jlong ret_value = J4AC_MediaCodec__BufferInfo__presentationTimeUs__get(env, thiz);
+    jlong ret_value = J4AC_android_media_MediaCodec__BufferInfo__presentationTimeUs__get(env, thiz);
     if (J4A_ExceptionCheck__catchAll(env)) {
         return 0;
     }
@@ -118,25 +118,25 @@ jlong J4AC_MediaCodec__BufferInfo__presentationTimeUs__get__catchAll(JNIEnv *env
     return ret_value;
 }
 
-void J4AC_MediaCodec__BufferInfo__presentationTimeUs__set(JNIEnv *env, jobject thiz, jlong value)
+void J4AC_android_media_MediaCodec__BufferInfo__presentationTimeUs__set(JNIEnv *env, jobject thiz, jlong value)
 {
-    (*env)->SetLongField(env, thiz, class_J4AC_MediaCodec__BufferInfo.field_presentationTimeUs, value);
+    (*env)->SetLongField(env, thiz, class_J4AC_android_media_MediaCodec__BufferInfo.field_presentationTimeUs, value);
 }
 
-void J4AC_MediaCodec__BufferInfo__presentationTimeUs__set__catchAll(JNIEnv *env, jobject thiz, jlong value)
+void J4AC_android_media_MediaCodec__BufferInfo__presentationTimeUs__set__catchAll(JNIEnv *env, jobject thiz, jlong value)
 {
-    J4AC_MediaCodec__BufferInfo__presentationTimeUs__set(env, thiz, value);
+    J4AC_android_media_MediaCodec__BufferInfo__presentationTimeUs__set(env, thiz, value);
     J4A_ExceptionCheck__catchAll(env);
 }
 
-jint J4AC_MediaCodec__BufferInfo__size__get(JNIEnv *env, jobject thiz)
+jint J4AC_android_media_MediaCodec__BufferInfo__size__get(JNIEnv *env, jobject thiz)
 {
-    return (*env)->GetIntField(env, thiz, class_J4AC_MediaCodec__BufferInfo.field_size);
+    return (*env)->GetIntField(env, thiz, class_J4AC_android_media_MediaCodec__BufferInfo.field_size);
 }
 
-jint J4AC_MediaCodec__BufferInfo__size__get__catchAll(JNIEnv *env, jobject thiz)
+jint J4AC_android_media_MediaCodec__BufferInfo__size__get__catchAll(JNIEnv *env, jobject thiz)
 {
-    jint ret_value = J4AC_MediaCodec__BufferInfo__size__get(env, thiz);
+    jint ret_value = J4AC_android_media_MediaCodec__BufferInfo__size__get(env, thiz);
     if (J4A_ExceptionCheck__catchAll(env)) {
         return 0;
     }
@@ -144,25 +144,25 @@ jint J4AC_MediaCodec__BufferInfo__size__get__catchAll(JNIEnv *env, jobject thiz)
     return ret_value;
 }
 
-void J4AC_MediaCodec__BufferInfo__size__set(JNIEnv *env, jobject thiz, jint value)
+void J4AC_android_media_MediaCodec__BufferInfo__size__set(JNIEnv *env, jobject thiz, jint value)
 {
-    (*env)->SetIntField(env, thiz, class_J4AC_MediaCodec__BufferInfo.field_size, value);
+    (*env)->SetIntField(env, thiz, class_J4AC_android_media_MediaCodec__BufferInfo.field_size, value);
 }
 
-void J4AC_MediaCodec__BufferInfo__size__set__catchAll(JNIEnv *env, jobject thiz, jint value)
+void J4AC_android_media_MediaCodec__BufferInfo__size__set__catchAll(JNIEnv *env, jobject thiz, jint value)
 {
-    J4AC_MediaCodec__BufferInfo__size__set(env, thiz, value);
+    J4AC_android_media_MediaCodec__BufferInfo__size__set(env, thiz, value);
     J4A_ExceptionCheck__catchAll(env);
 }
 
-jobject J4AC_MediaCodec__BufferInfo__BufferInfo(JNIEnv *env)
+jobject J4AC_android_media_MediaCodec__BufferInfo__BufferInfo(JNIEnv *env)
 {
-    return (*env)->NewObject(env, class_J4AC_MediaCodec__BufferInfo.id, class_J4AC_MediaCodec__BufferInfo.constructor_BufferInfo);
+    return (*env)->NewObject(env, class_J4AC_android_media_MediaCodec__BufferInfo.id, class_J4AC_android_media_MediaCodec__BufferInfo.constructor_BufferInfo);
 }
 
-jobject J4AC_MediaCodec__BufferInfo__BufferInfo__catchAll(JNIEnv *env)
+jobject J4AC_android_media_MediaCodec__BufferInfo__BufferInfo__catchAll(JNIEnv *env)
 {
-    jobject ret_object = J4AC_MediaCodec__BufferInfo__BufferInfo(env);
+    jobject ret_object = J4AC_android_media_MediaCodec__BufferInfo__BufferInfo(env);
     if (J4A_ExceptionCheck__catchAll(env) || !ret_object) {
         return NULL;
     }
@@ -170,10 +170,10 @@ jobject J4AC_MediaCodec__BufferInfo__BufferInfo__catchAll(JNIEnv *env)
     return ret_object;
 }
 
-jobject J4AC_MediaCodec__BufferInfo__BufferInfo__asGlobalRef__catchAll(JNIEnv *env)
+jobject J4AC_android_media_MediaCodec__BufferInfo__BufferInfo__asGlobalRef__catchAll(JNIEnv *env)
 {
     jobject ret_object   = NULL;
-    jobject local_object = J4AC_MediaCodec__BufferInfo__BufferInfo__catchAll(env);
+    jobject local_object = J4AC_android_media_MediaCodec__BufferInfo__BufferInfo__catchAll(env);
     if (J4A_ExceptionCheck__catchAll(env) || !local_object) {
         ret_object = NULL;
         goto fail;
@@ -190,7 +190,7 @@ fail:
     return ret_object;
 }
 
-int J4A_loadClass__J4AC_MediaCodec__BufferInfo(JNIEnv *env)
+int J4A_loadClass__J4AC_android_media_MediaCodec__BufferInfo(JNIEnv *env)
 {
     int         ret                   = -1;
     const char *J4A_UNUSED(name)      = NULL;
@@ -199,43 +199,43 @@ int J4A_loadClass__J4AC_MediaCodec__BufferInfo(JNIEnv *env)
     int         J4A_UNUSED(api_level) = 0;
 
     sign = "android/media/MediaCodec$BufferInfo";
-    class_J4AC_MediaCodec__BufferInfo.id = J4A_FindClass__asGlobalRef__catchAll(env, sign);
-    if (class_J4AC_MediaCodec__BufferInfo.id == NULL)
+    class_J4AC_android_media_MediaCodec__BufferInfo.id = J4A_FindClass__asGlobalRef__catchAll(env, sign);
+    if (class_J4AC_android_media_MediaCodec__BufferInfo.id == NULL)
         goto fail;
 
-    class_id = class_J4AC_MediaCodec__BufferInfo.id;
+    class_id = class_J4AC_android_media_MediaCodec__BufferInfo.id;
     name     = "flags";
     sign     = "I";
-    class_J4AC_MediaCodec__BufferInfo.field_flags = JJK_GetFieldID__catchAll(env, class_id, name, sign);
-    if (class_J4AC_MediaCodec__BufferInfo.field_flags == NULL)
+    class_J4AC_android_media_MediaCodec__BufferInfo.field_flags = JJK_GetFieldID__catchAll(env, class_id, name, sign);
+    if (class_J4AC_android_media_MediaCodec__BufferInfo.field_flags == NULL)
         goto fail;
 
-    class_id = class_J4AC_MediaCodec__BufferInfo.id;
+    class_id = class_J4AC_android_media_MediaCodec__BufferInfo.id;
     name     = "offset";
     sign     = "I";
-    class_J4AC_MediaCodec__BufferInfo.field_offset = JJK_GetFieldID__catchAll(env, class_id, name, sign);
-    if (class_J4AC_MediaCodec__BufferInfo.field_offset == NULL)
+    class_J4AC_android_media_MediaCodec__BufferInfo.field_offset = JJK_GetFieldID__catchAll(env, class_id, name, sign);
+    if (class_J4AC_android_media_MediaCodec__BufferInfo.field_offset == NULL)
         goto fail;
 
-    class_id = class_J4AC_MediaCodec__BufferInfo.id;
+    class_id = class_J4AC_android_media_MediaCodec__BufferInfo.id;
     name     = "presentationTimeUs";
     sign     = "J";
-    class_J4AC_MediaCodec__BufferInfo.field_presentationTimeUs = JJK_GetFieldID__catchAll(env, class_id, name, sign);
-    if (class_J4AC_MediaCodec__BufferInfo.field_presentationTimeUs == NULL)
+    class_J4AC_android_media_MediaCodec__BufferInfo.field_presentationTimeUs = JJK_GetFieldID__catchAll(env, class_id, name, sign);
+    if (class_J4AC_android_media_MediaCodec__BufferInfo.field_presentationTimeUs == NULL)
         goto fail;
 
-    class_id = class_J4AC_MediaCodec__BufferInfo.id;
+    class_id = class_J4AC_android_media_MediaCodec__BufferInfo.id;
     name     = "size";
     sign     = "I";
-    class_J4AC_MediaCodec__BufferInfo.field_size = JJK_GetFieldID__catchAll(env, class_id, name, sign);
-    if (class_J4AC_MediaCodec__BufferInfo.field_size == NULL)
+    class_J4AC_android_media_MediaCodec__BufferInfo.field_size = JJK_GetFieldID__catchAll(env, class_id, name, sign);
+    if (class_J4AC_android_media_MediaCodec__BufferInfo.field_size == NULL)
         goto fail;
 
-    class_id = class_J4AC_MediaCodec__BufferInfo.id;
+    class_id = class_J4AC_android_media_MediaCodec__BufferInfo.id;
     name     = "<init>";
     sign     = "()V";
-    class_J4AC_MediaCodec__BufferInfo.constructor_BufferInfo = JJK_GetMethodID__catchAll(env, class_id, name, sign);
-    if (class_J4AC_MediaCodec__BufferInfo.constructor_BufferInfo == NULL)
+    class_J4AC_android_media_MediaCodec__BufferInfo.constructor_BufferInfo = JJK_GetMethodID__catchAll(env, class_id, name, sign);
+    if (class_J4AC_android_media_MediaCodec__BufferInfo.constructor_BufferInfo == NULL)
         goto fail;
 
     ALOGD("J4ALoader: OK: '%s' loaded\n", "android.media.MediaCodec$BufferInfo");
@@ -244,14 +244,14 @@ fail:
     return ret;
 }
 
-jobject J4AC_MediaCodec__createByCodecName(JNIEnv *env, jstring name)
+jobject J4AC_android_media_MediaCodec__createByCodecName(JNIEnv *env, jstring name)
 {
-    return (*env)->CallStaticObjectMethod(env, class_J4AC_MediaCodec.id, class_J4AC_MediaCodec.method_createByCodecName, name);
+    return (*env)->CallStaticObjectMethod(env, class_J4AC_android_media_MediaCodec.id, class_J4AC_android_media_MediaCodec.method_createByCodecName, name);
 }
 
-jobject J4AC_MediaCodec__createByCodecName__catchAll(JNIEnv *env, jstring name)
+jobject J4AC_android_media_MediaCodec__createByCodecName__catchAll(JNIEnv *env, jstring name)
 {
-    jobject ret_object = J4AC_MediaCodec__createByCodecName(env, name);
+    jobject ret_object = J4AC_android_media_MediaCodec__createByCodecName(env, name);
     if (J4A_ExceptionCheck__catchAll(env) || !ret_object) {
         return NULL;
     }
@@ -259,10 +259,10 @@ jobject J4AC_MediaCodec__createByCodecName__catchAll(JNIEnv *env, jstring name)
     return ret_object;
 }
 
-jobject J4AC_MediaCodec__createByCodecName__asGlobalRef__catchAll(JNIEnv *env, jstring name)
+jobject J4AC_android_media_MediaCodec__createByCodecName__asGlobalRef__catchAll(JNIEnv *env, jstring name)
 {
     jobject ret_object   = NULL;
-    jobject local_object = J4AC_MediaCodec__createByCodecName__catchAll(env, name);
+    jobject local_object = J4AC_android_media_MediaCodec__createByCodecName__catchAll(env, name);
     if (J4A_ExceptionCheck__catchAll(env) || !local_object) {
         ret_object = NULL;
         goto fail;
@@ -279,7 +279,7 @@ fail:
     return ret_object;
 }
 
-jobject J4AC_MediaCodec__createByCodecName__withCString(JNIEnv *env, const char *name_cstr__)
+jobject J4AC_android_media_MediaCodec__createByCodecName__withCString(JNIEnv *env, const char *name_cstr__)
 {
     jobject ret_object = NULL;
     jstring name = NULL;
@@ -288,7 +288,7 @@ jobject J4AC_MediaCodec__createByCodecName__withCString(JNIEnv *env, const char 
     if (J4A_ExceptionCheck__throwAny(env) || !name)
         goto fail;
 
-    ret_object = J4AC_MediaCodec__createByCodecName(env, name);
+    ret_object = J4AC_android_media_MediaCodec__createByCodecName(env, name);
     if (J4A_ExceptionCheck__throwAny(env) || !ret_object) {
         ret_object = NULL;
         goto fail;
@@ -299,7 +299,7 @@ fail:
     return ret_object;
 }
 
-jobject J4AC_MediaCodec__createByCodecName__withCString__catchAll(JNIEnv *env, const char *name_cstr__)
+jobject J4AC_android_media_MediaCodec__createByCodecName__withCString__catchAll(JNIEnv *env, const char *name_cstr__)
 {
     jobject ret_object = NULL;
     jstring name = NULL;
@@ -308,7 +308,7 @@ jobject J4AC_MediaCodec__createByCodecName__withCString__catchAll(JNIEnv *env, c
     if (J4A_ExceptionCheck__catchAll(env) || !name)
         goto fail;
 
-    ret_object = J4AC_MediaCodec__createByCodecName__catchAll(env, name);
+    ret_object = J4AC_android_media_MediaCodec__createByCodecName__catchAll(env, name);
     if (J4A_ExceptionCheck__catchAll(env) || !ret_object) {
         ret_object = NULL;
         goto fail;
@@ -319,10 +319,10 @@ fail:
     return ret_object;
 }
 
-jobject J4AC_MediaCodec__createByCodecName__withCString__asGlobalRef__catchAll(JNIEnv *env, const char *name_cstr__)
+jobject J4AC_android_media_MediaCodec__createByCodecName__withCString__asGlobalRef__catchAll(JNIEnv *env, const char *name_cstr__)
 {
     jobject ret_object   = NULL;
-    jobject local_object = J4AC_MediaCodec__createByCodecName__withCString__catchAll(env, name_cstr__);
+    jobject local_object = J4AC_android_media_MediaCodec__createByCodecName__withCString__catchAll(env, name_cstr__);
     if (J4A_ExceptionCheck__catchAll(env) || !local_object) {
         ret_object = NULL;
         goto fail;
@@ -339,25 +339,25 @@ fail:
     return ret_object;
 }
 
-void J4AC_MediaCodec__configure(JNIEnv *env, jobject thiz, jobject format, jobject surface, jobject crypto, jint flags)
+void J4AC_android_media_MediaCodec__configure(JNIEnv *env, jobject thiz, jobject format, jobject surface, jobject crypto, jint flags)
 {
-    (*env)->CallVoidMethod(env, thiz, class_J4AC_MediaCodec.method_configure, format, surface, crypto, flags);
+    (*env)->CallVoidMethod(env, thiz, class_J4AC_android_media_MediaCodec.method_configure, format, surface, crypto, flags);
 }
 
-void J4AC_MediaCodec__configure__catchAll(JNIEnv *env, jobject thiz, jobject format, jobject surface, jobject crypto, jint flags)
+void J4AC_android_media_MediaCodec__configure__catchAll(JNIEnv *env, jobject thiz, jobject format, jobject surface, jobject crypto, jint flags)
 {
-    J4AC_MediaCodec__configure(env, thiz, format, surface, crypto, flags);
+    J4AC_android_media_MediaCodec__configure(env, thiz, format, surface, crypto, flags);
     J4A_ExceptionCheck__catchAll(env);
 }
 
-jobject J4AC_MediaCodec__getOutputFormat(JNIEnv *env, jobject thiz)
+jobject J4AC_android_media_MediaCodec__getOutputFormat(JNIEnv *env, jobject thiz)
 {
-    return (*env)->CallObjectMethod(env, thiz, class_J4AC_MediaCodec.method_getOutputFormat);
+    return (*env)->CallObjectMethod(env, thiz, class_J4AC_android_media_MediaCodec.method_getOutputFormat);
 }
 
-jobject J4AC_MediaCodec__getOutputFormat__catchAll(JNIEnv *env, jobject thiz)
+jobject J4AC_android_media_MediaCodec__getOutputFormat__catchAll(JNIEnv *env, jobject thiz)
 {
-    jobject ret_object = J4AC_MediaCodec__getOutputFormat(env, thiz);
+    jobject ret_object = J4AC_android_media_MediaCodec__getOutputFormat(env, thiz);
     if (J4A_ExceptionCheck__catchAll(env) || !ret_object) {
         return NULL;
     }
@@ -365,10 +365,10 @@ jobject J4AC_MediaCodec__getOutputFormat__catchAll(JNIEnv *env, jobject thiz)
     return ret_object;
 }
 
-jobject J4AC_MediaCodec__getOutputFormat__asGlobalRef__catchAll(JNIEnv *env, jobject thiz)
+jobject J4AC_android_media_MediaCodec__getOutputFormat__asGlobalRef__catchAll(JNIEnv *env, jobject thiz)
 {
     jobject ret_object   = NULL;
-    jobject local_object = J4AC_MediaCodec__getOutputFormat__catchAll(env, thiz);
+    jobject local_object = J4AC_android_media_MediaCodec__getOutputFormat__catchAll(env, thiz);
     if (J4A_ExceptionCheck__catchAll(env) || !local_object) {
         ret_object = NULL;
         goto fail;
@@ -385,14 +385,14 @@ fail:
     return ret_object;
 }
 
-jobjectArray J4AC_MediaCodec__getInputBuffers(JNIEnv *env, jobject thiz)
+jobjectArray J4AC_android_media_MediaCodec__getInputBuffers(JNIEnv *env, jobject thiz)
 {
-    return (*env)->CallObjectMethod(env, thiz, class_J4AC_MediaCodec.method_getInputBuffers);
+    return (*env)->CallObjectMethod(env, thiz, class_J4AC_android_media_MediaCodec.method_getInputBuffers);
 }
 
-jobjectArray J4AC_MediaCodec__getInputBuffers__catchAll(JNIEnv *env, jobject thiz)
+jobjectArray J4AC_android_media_MediaCodec__getInputBuffers__catchAll(JNIEnv *env, jobject thiz)
 {
-    jobjectArray ret_object = J4AC_MediaCodec__getInputBuffers(env, thiz);
+    jobjectArray ret_object = J4AC_android_media_MediaCodec__getInputBuffers(env, thiz);
     if (J4A_ExceptionCheck__catchAll(env) || !ret_object) {
         return NULL;
     }
@@ -400,10 +400,10 @@ jobjectArray J4AC_MediaCodec__getInputBuffers__catchAll(JNIEnv *env, jobject thi
     return ret_object;
 }
 
-jobjectArray J4AC_MediaCodec__getInputBuffers__asGlobalRef__catchAll(JNIEnv *env, jobject thiz)
+jobjectArray J4AC_android_media_MediaCodec__getInputBuffers__asGlobalRef__catchAll(JNIEnv *env, jobject thiz)
 {
     jobjectArray ret_object   = NULL;
-    jobjectArray local_object = J4AC_MediaCodec__getInputBuffers__catchAll(env, thiz);
+    jobjectArray local_object = J4AC_android_media_MediaCodec__getInputBuffers__catchAll(env, thiz);
     if (J4A_ExceptionCheck__catchAll(env) || !local_object) {
         ret_object = NULL;
         goto fail;
@@ -420,14 +420,14 @@ fail:
     return ret_object;
 }
 
-jint J4AC_MediaCodec__dequeueInputBuffer(JNIEnv *env, jobject thiz, jlong timeoutUs)
+jint J4AC_android_media_MediaCodec__dequeueInputBuffer(JNIEnv *env, jobject thiz, jlong timeoutUs)
 {
-    return (*env)->CallIntMethod(env, thiz, class_J4AC_MediaCodec.method_dequeueInputBuffer, timeoutUs);
+    return (*env)->CallIntMethod(env, thiz, class_J4AC_android_media_MediaCodec.method_dequeueInputBuffer, timeoutUs);
 }
 
-jint J4AC_MediaCodec__dequeueInputBuffer__catchAll(JNIEnv *env, jobject thiz, jlong timeoutUs)
+jint J4AC_android_media_MediaCodec__dequeueInputBuffer__catchAll(JNIEnv *env, jobject thiz, jlong timeoutUs)
 {
-    jint ret_value = J4AC_MediaCodec__dequeueInputBuffer(env, thiz, timeoutUs);
+    jint ret_value = J4AC_android_media_MediaCodec__dequeueInputBuffer(env, thiz, timeoutUs);
     if (J4A_ExceptionCheck__catchAll(env)) {
         return 0;
     }
@@ -435,25 +435,25 @@ jint J4AC_MediaCodec__dequeueInputBuffer__catchAll(JNIEnv *env, jobject thiz, jl
     return ret_value;
 }
 
-void J4AC_MediaCodec__queueInputBuffer(JNIEnv *env, jobject thiz, jint index, jint offset, jint size, jlong presentationTimeUs, jint flags)
+void J4AC_android_media_MediaCodec__queueInputBuffer(JNIEnv *env, jobject thiz, jint index, jint offset, jint size, jlong presentationTimeUs, jint flags)
 {
-    (*env)->CallVoidMethod(env, thiz, class_J4AC_MediaCodec.method_queueInputBuffer, index, offset, size, presentationTimeUs, flags);
+    (*env)->CallVoidMethod(env, thiz, class_J4AC_android_media_MediaCodec.method_queueInputBuffer, index, offset, size, presentationTimeUs, flags);
 }
 
-void J4AC_MediaCodec__queueInputBuffer__catchAll(JNIEnv *env, jobject thiz, jint index, jint offset, jint size, jlong presentationTimeUs, jint flags)
+void J4AC_android_media_MediaCodec__queueInputBuffer__catchAll(JNIEnv *env, jobject thiz, jint index, jint offset, jint size, jlong presentationTimeUs, jint flags)
 {
-    J4AC_MediaCodec__queueInputBuffer(env, thiz, index, offset, size, presentationTimeUs, flags);
+    J4AC_android_media_MediaCodec__queueInputBuffer(env, thiz, index, offset, size, presentationTimeUs, flags);
     J4A_ExceptionCheck__catchAll(env);
 }
 
-jint J4AC_MediaCodec__dequeueOutputBuffer(JNIEnv *env, jobject thiz, jobject info, jlong timeoutUs)
+jint J4AC_android_media_MediaCodec__dequeueOutputBuffer(JNIEnv *env, jobject thiz, jobject info, jlong timeoutUs)
 {
-    return (*env)->CallIntMethod(env, thiz, class_J4AC_MediaCodec.method_dequeueOutputBuffer, info, timeoutUs);
+    return (*env)->CallIntMethod(env, thiz, class_J4AC_android_media_MediaCodec.method_dequeueOutputBuffer, info, timeoutUs);
 }
 
-jint J4AC_MediaCodec__dequeueOutputBuffer__catchAll(JNIEnv *env, jobject thiz, jobject info, jlong timeoutUs)
+jint J4AC_android_media_MediaCodec__dequeueOutputBuffer__catchAll(JNIEnv *env, jobject thiz, jobject info, jlong timeoutUs)
 {
-    jint ret_value = J4AC_MediaCodec__dequeueOutputBuffer(env, thiz, info, timeoutUs);
+    jint ret_value = J4AC_android_media_MediaCodec__dequeueOutputBuffer(env, thiz, info, timeoutUs);
     if (J4A_ExceptionCheck__catchAll(env)) {
         return 0;
     }
@@ -461,62 +461,62 @@ jint J4AC_MediaCodec__dequeueOutputBuffer__catchAll(JNIEnv *env, jobject thiz, j
     return ret_value;
 }
 
-void J4AC_MediaCodec__releaseOutputBuffer(JNIEnv *env, jobject thiz, jint index, jboolean render)
+void J4AC_android_media_MediaCodec__releaseOutputBuffer(JNIEnv *env, jobject thiz, jint index, jboolean render)
 {
-    (*env)->CallVoidMethod(env, thiz, class_J4AC_MediaCodec.method_releaseOutputBuffer, index, render);
+    (*env)->CallVoidMethod(env, thiz, class_J4AC_android_media_MediaCodec.method_releaseOutputBuffer, index, render);
 }
 
-void J4AC_MediaCodec__releaseOutputBuffer__catchAll(JNIEnv *env, jobject thiz, jint index, jboolean render)
+void J4AC_android_media_MediaCodec__releaseOutputBuffer__catchAll(JNIEnv *env, jobject thiz, jint index, jboolean render)
 {
-    J4AC_MediaCodec__releaseOutputBuffer(env, thiz, index, render);
+    J4AC_android_media_MediaCodec__releaseOutputBuffer(env, thiz, index, render);
     J4A_ExceptionCheck__catchAll(env);
 }
 
-void J4AC_MediaCodec__start(JNIEnv *env, jobject thiz)
+void J4AC_android_media_MediaCodec__start(JNIEnv *env, jobject thiz)
 {
-    (*env)->CallVoidMethod(env, thiz, class_J4AC_MediaCodec.method_start);
+    (*env)->CallVoidMethod(env, thiz, class_J4AC_android_media_MediaCodec.method_start);
 }
 
-void J4AC_MediaCodec__start__catchAll(JNIEnv *env, jobject thiz)
+void J4AC_android_media_MediaCodec__start__catchAll(JNIEnv *env, jobject thiz)
 {
-    J4AC_MediaCodec__start(env, thiz);
+    J4AC_android_media_MediaCodec__start(env, thiz);
     J4A_ExceptionCheck__catchAll(env);
 }
 
-void J4AC_MediaCodec__stop(JNIEnv *env, jobject thiz)
+void J4AC_android_media_MediaCodec__stop(JNIEnv *env, jobject thiz)
 {
-    (*env)->CallVoidMethod(env, thiz, class_J4AC_MediaCodec.method_stop);
+    (*env)->CallVoidMethod(env, thiz, class_J4AC_android_media_MediaCodec.method_stop);
 }
 
-void J4AC_MediaCodec__stop__catchAll(JNIEnv *env, jobject thiz)
+void J4AC_android_media_MediaCodec__stop__catchAll(JNIEnv *env, jobject thiz)
 {
-    J4AC_MediaCodec__stop(env, thiz);
+    J4AC_android_media_MediaCodec__stop(env, thiz);
     J4A_ExceptionCheck__catchAll(env);
 }
 
-void J4AC_MediaCodec__flush(JNIEnv *env, jobject thiz)
+void J4AC_android_media_MediaCodec__flush(JNIEnv *env, jobject thiz)
 {
-    (*env)->CallVoidMethod(env, thiz, class_J4AC_MediaCodec.method_flush);
+    (*env)->CallVoidMethod(env, thiz, class_J4AC_android_media_MediaCodec.method_flush);
 }
 
-void J4AC_MediaCodec__flush__catchAll(JNIEnv *env, jobject thiz)
+void J4AC_android_media_MediaCodec__flush__catchAll(JNIEnv *env, jobject thiz)
 {
-    J4AC_MediaCodec__flush(env, thiz);
+    J4AC_android_media_MediaCodec__flush(env, thiz);
     J4A_ExceptionCheck__catchAll(env);
 }
 
-void J4AC_MediaCodec__release(JNIEnv *env, jobject thiz)
+void J4AC_android_media_MediaCodec__release(JNIEnv *env, jobject thiz)
 {
-    (*env)->CallVoidMethod(env, thiz, class_J4AC_MediaCodec.method_release);
+    (*env)->CallVoidMethod(env, thiz, class_J4AC_android_media_MediaCodec.method_release);
 }
 
-void J4AC_MediaCodec__release__catchAll(JNIEnv *env, jobject thiz)
+void J4AC_android_media_MediaCodec__release__catchAll(JNIEnv *env, jobject thiz)
 {
-    J4AC_MediaCodec__release(env, thiz);
+    J4AC_android_media_MediaCodec__release(env, thiz);
     J4A_ExceptionCheck__catchAll(env);
 }
 
-int J4A_loadClass__J4AC_MediaCodec(JNIEnv *env)
+int J4A_loadClass__J4AC_android_media_MediaCodec(JNIEnv *env)
 {
     int         ret                   = -1;
     const char *J4A_UNUSED(name)      = NULL;
@@ -532,96 +532,96 @@ int J4A_loadClass__J4AC_MediaCodec(JNIEnv *env)
     }
 
     sign = "android/media/MediaCodec";
-    class_J4AC_MediaCodec.id = J4A_FindClass__asGlobalRef__catchAll(env, sign);
-    if (class_J4AC_MediaCodec.id == NULL)
+    class_J4AC_android_media_MediaCodec.id = J4A_FindClass__asGlobalRef__catchAll(env, sign);
+    if (class_J4AC_android_media_MediaCodec.id == NULL)
         goto fail;
 
-    ret = J4A_loadClass__J4AC_MediaCodec__BufferInfo(env);
+    ret = J4A_loadClass__J4AC_android_media_MediaCodec__BufferInfo(env);
     if (ret)
         goto fail;
 
-    class_id = class_J4AC_MediaCodec.id;
+    class_id = class_J4AC_android_media_MediaCodec.id;
     name     = "createByCodecName";
     sign     = "(Ljava/lang/String;)Landroid/media/MediaCodec;";
-    class_J4AC_MediaCodec.method_createByCodecName = J4A_GetStaticMethodID__catchAll(env, class_id, name, sign);
-    if (class_J4AC_MediaCodec.method_createByCodecName == NULL)
+    class_J4AC_android_media_MediaCodec.method_createByCodecName = J4A_GetStaticMethodID__catchAll(env, class_id, name, sign);
+    if (class_J4AC_android_media_MediaCodec.method_createByCodecName == NULL)
         goto fail;
 
-    class_id = class_J4AC_MediaCodec.id;
+    class_id = class_J4AC_android_media_MediaCodec.id;
     name     = "configure";
     sign     = "(Landroid/media/MediaFormat;Landroid/view/Surface;Landroid/media/MediaCrypto;I)V";
-    class_J4AC_MediaCodec.method_configure = JJK_GetMethodID__catchAll(env, class_id, name, sign);
-    if (class_J4AC_MediaCodec.method_configure == NULL)
+    class_J4AC_android_media_MediaCodec.method_configure = JJK_GetMethodID__catchAll(env, class_id, name, sign);
+    if (class_J4AC_android_media_MediaCodec.method_configure == NULL)
         goto fail;
 
-    class_id = class_J4AC_MediaCodec.id;
+    class_id = class_J4AC_android_media_MediaCodec.id;
     name     = "getOutputFormat";
     sign     = "()Landroid/media/MediaFormat;";
-    class_J4AC_MediaCodec.method_getOutputFormat = JJK_GetMethodID__catchAll(env, class_id, name, sign);
-    if (class_J4AC_MediaCodec.method_getOutputFormat == NULL)
+    class_J4AC_android_media_MediaCodec.method_getOutputFormat = JJK_GetMethodID__catchAll(env, class_id, name, sign);
+    if (class_J4AC_android_media_MediaCodec.method_getOutputFormat == NULL)
         goto fail;
 
-    class_id = class_J4AC_MediaCodec.id;
+    class_id = class_J4AC_android_media_MediaCodec.id;
     name     = "getInputBuffers";
     sign     = "()[Ljava/nio/ByteBuffer;";
-    class_J4AC_MediaCodec.method_getInputBuffers = JJK_GetMethodID__catchAll(env, class_id, name, sign);
-    if (class_J4AC_MediaCodec.method_getInputBuffers == NULL)
+    class_J4AC_android_media_MediaCodec.method_getInputBuffers = JJK_GetMethodID__catchAll(env, class_id, name, sign);
+    if (class_J4AC_android_media_MediaCodec.method_getInputBuffers == NULL)
         goto fail;
 
-    class_id = class_J4AC_MediaCodec.id;
+    class_id = class_J4AC_android_media_MediaCodec.id;
     name     = "dequeueInputBuffer";
     sign     = "(J)I";
-    class_J4AC_MediaCodec.method_dequeueInputBuffer = JJK_GetMethodID__catchAll(env, class_id, name, sign);
-    if (class_J4AC_MediaCodec.method_dequeueInputBuffer == NULL)
+    class_J4AC_android_media_MediaCodec.method_dequeueInputBuffer = JJK_GetMethodID__catchAll(env, class_id, name, sign);
+    if (class_J4AC_android_media_MediaCodec.method_dequeueInputBuffer == NULL)
         goto fail;
 
-    class_id = class_J4AC_MediaCodec.id;
+    class_id = class_J4AC_android_media_MediaCodec.id;
     name     = "queueInputBuffer";
     sign     = "(IIIJI)V";
-    class_J4AC_MediaCodec.method_queueInputBuffer = JJK_GetMethodID__catchAll(env, class_id, name, sign);
-    if (class_J4AC_MediaCodec.method_queueInputBuffer == NULL)
+    class_J4AC_android_media_MediaCodec.method_queueInputBuffer = JJK_GetMethodID__catchAll(env, class_id, name, sign);
+    if (class_J4AC_android_media_MediaCodec.method_queueInputBuffer == NULL)
         goto fail;
 
-    class_id = class_J4AC_MediaCodec.id;
+    class_id = class_J4AC_android_media_MediaCodec.id;
     name     = "dequeueOutputBuffer";
     sign     = "(Landroid/media/MediaCodec$BufferInfo;J)I";
-    class_J4AC_MediaCodec.method_dequeueOutputBuffer = JJK_GetMethodID__catchAll(env, class_id, name, sign);
-    if (class_J4AC_MediaCodec.method_dequeueOutputBuffer == NULL)
+    class_J4AC_android_media_MediaCodec.method_dequeueOutputBuffer = JJK_GetMethodID__catchAll(env, class_id, name, sign);
+    if (class_J4AC_android_media_MediaCodec.method_dequeueOutputBuffer == NULL)
         goto fail;
 
-    class_id = class_J4AC_MediaCodec.id;
+    class_id = class_J4AC_android_media_MediaCodec.id;
     name     = "releaseOutputBuffer";
     sign     = "(IZ)V";
-    class_J4AC_MediaCodec.method_releaseOutputBuffer = JJK_GetMethodID__catchAll(env, class_id, name, sign);
-    if (class_J4AC_MediaCodec.method_releaseOutputBuffer == NULL)
+    class_J4AC_android_media_MediaCodec.method_releaseOutputBuffer = JJK_GetMethodID__catchAll(env, class_id, name, sign);
+    if (class_J4AC_android_media_MediaCodec.method_releaseOutputBuffer == NULL)
         goto fail;
 
-    class_id = class_J4AC_MediaCodec.id;
+    class_id = class_J4AC_android_media_MediaCodec.id;
     name     = "start";
     sign     = "()V";
-    class_J4AC_MediaCodec.method_start = JJK_GetMethodID__catchAll(env, class_id, name, sign);
-    if (class_J4AC_MediaCodec.method_start == NULL)
+    class_J4AC_android_media_MediaCodec.method_start = JJK_GetMethodID__catchAll(env, class_id, name, sign);
+    if (class_J4AC_android_media_MediaCodec.method_start == NULL)
         goto fail;
 
-    class_id = class_J4AC_MediaCodec.id;
+    class_id = class_J4AC_android_media_MediaCodec.id;
     name     = "stop";
     sign     = "()V";
-    class_J4AC_MediaCodec.method_stop = JJK_GetMethodID__catchAll(env, class_id, name, sign);
-    if (class_J4AC_MediaCodec.method_stop == NULL)
+    class_J4AC_android_media_MediaCodec.method_stop = JJK_GetMethodID__catchAll(env, class_id, name, sign);
+    if (class_J4AC_android_media_MediaCodec.method_stop == NULL)
         goto fail;
 
-    class_id = class_J4AC_MediaCodec.id;
+    class_id = class_J4AC_android_media_MediaCodec.id;
     name     = "flush";
     sign     = "()V";
-    class_J4AC_MediaCodec.method_flush = JJK_GetMethodID__catchAll(env, class_id, name, sign);
-    if (class_J4AC_MediaCodec.method_flush == NULL)
+    class_J4AC_android_media_MediaCodec.method_flush = JJK_GetMethodID__catchAll(env, class_id, name, sign);
+    if (class_J4AC_android_media_MediaCodec.method_flush == NULL)
         goto fail;
 
-    class_id = class_J4AC_MediaCodec.id;
+    class_id = class_J4AC_android_media_MediaCodec.id;
     name     = "release";
     sign     = "()V";
-    class_J4AC_MediaCodec.method_release = JJK_GetMethodID__catchAll(env, class_id, name, sign);
-    if (class_J4AC_MediaCodec.method_release == NULL)
+    class_J4AC_android_media_MediaCodec.method_release = JJK_GetMethodID__catchAll(env, class_id, name, sign);
+    if (class_J4AC_android_media_MediaCodec.method_release == NULL)
         goto fail;
 
     ALOGD("J4ALoader: OK: '%s' loaded\n", "android.media.MediaCodec");

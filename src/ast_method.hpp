@@ -50,6 +50,7 @@ private:
     static const int FLAG_WITH_C_STRING;
     static const int FLAG_AS_GLOBAL_REF;
     static const int FLAG_AS_C_BUFFER;
+    static const int FLAG_SIMPLE_NAME;
 
     bool _has_string_arg();
 
@@ -66,6 +67,7 @@ private:
 
 public:
     virtual void build_c_func_decl(std::ostream &os) override;
+    virtual void build_c_simple_func_decl(std::ostream &os) override;
     // virtual void build_c_class_decl(std::ostream &os);
     virtual void build_c_member_id_decl(std::ostream &os) override;
     virtual void build_c_member_id_load(std::ostream &os) override;
@@ -84,6 +86,10 @@ public:
         get_argument_list()->debug_print(0);
         std::cout << ");" << std::endl;
     }
+
+private:
+    typedef std::map<j4a::string, j4a::string> SimpleNameMap;
+    std::map<j4a::string, j4a::string> m_simple_name_map;
 };
 
 NS_AST_END

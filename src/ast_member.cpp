@@ -61,6 +61,22 @@ void MemberList::build_all_c_func_decl(std::ostream &os)
     }
 }
 
+void MemberList::build_all_c_simple_func_decl(std::ostream &os)
+{
+    if (this->size() > 0) {
+        MemberList::iterator begin = this->begin();
+        MemberList::iterator end   = this->end();
+
+        for (NULL; begin != end; ++begin) {
+            (*begin)->reset_build_format();
+
+            (*begin)->build_c_simple_func_decl(os);
+
+            (*begin)->reset_build_format();
+        }
+    }
+}
+
 void MemberList::build_all_c_member_id_decl(std::ostream &os)
 {
     if (this->size() > 0) {

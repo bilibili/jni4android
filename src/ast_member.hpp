@@ -72,6 +72,7 @@ public:
 public:
     // .h files
     virtual void build_c_func_decl(std::ostream &os) {;}
+    virtual void build_c_simple_func_decl(std::ostream &os) {;}
 
     // .c files
     virtual void build_c_class_decl(std::ostream &os) {;}
@@ -99,6 +100,7 @@ public:
 
     // .h files
     void build_all_c_func_decl(std::ostream &os);
+    void build_all_c_simple_func_decl(std::ostream &os);
 
     // .c files
     void build_all_c_class_decl(std::ostream &os);

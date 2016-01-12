@@ -49,7 +49,7 @@ public:
         return os;
     }
 
-    bool is_simple_c_class_name() {
+    bool need_c_simple_class_name() {
         return get_annotation_at("SimpleCClassName") != NULL;
     }
 
@@ -57,6 +57,7 @@ public:
     // class Member
     // @Override
     virtual void build_c_func_decl(std::ostream &os) override;
+    virtual void build_c_simple_func_decl(std::ostream &os) override;
     // @Override
     virtual void build_c_class_decl(std::ostream &os) override;
     // @Override
@@ -95,10 +96,21 @@ public:
             // inner class
             os << get_parent()->get_this_class()->get_c_class_name();
             os << "__";
-        } else if (!is_simple_c_class_name()) {
+        } else {
             os << "J4AC_";
             os << get_this_package()->get_c_long_name();
             os << "_";
+        }
+        os << get_name();
+        return os;
+    }
+
+    j4a::string get_c_simple_class_name() {
+        std::ostringstream os;
+        if (get_parent()->get_this_class()) {
+            // inner class
+            os << get_parent()->get_this_class()->get_c_simple_class_name();
+            os << "__";
         } else {
             os << "J4AC_";
         }

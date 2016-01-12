@@ -25,17 +25,28 @@
 
 #include "j4a/j4a_internal.h"
 
-jobject J4AC_ByteBuffer__allocate(JNIEnv *env, jint capacity);
-jobject J4AC_ByteBuffer__allocate__catchAll(JNIEnv *env, jint capacity);
-jobject J4AC_ByteBuffer__allocate__asGlobalRef__catchAll(JNIEnv *env, jint capacity);
-jobject J4AC_ByteBuffer__allocateDirect(JNIEnv *env, jint capacity);
-jobject J4AC_ByteBuffer__allocateDirect__catchAll(JNIEnv *env, jint capacity);
-jobject J4AC_ByteBuffer__allocateDirect__asGlobalRef__catchAll(JNIEnv *env, jint capacity);
-jobject J4AC_ByteBuffer__limit(JNIEnv *env, jobject thiz, jint newLimit);
-jobject J4AC_ByteBuffer__limit__catchAll(JNIEnv *env, jobject thiz, jint newLimit);
-jobject J4AC_ByteBuffer__limit__asGlobalRef__catchAll(JNIEnv *env, jobject thiz, jint newLimit);
-int J4A_loadClass__J4AC_ByteBuffer(JNIEnv *env);
+jobject J4AC_java_nio_ByteBuffer__allocate(JNIEnv *env, jint capacity);
+jobject J4AC_java_nio_ByteBuffer__allocate__catchAll(JNIEnv *env, jint capacity);
+jobject J4AC_java_nio_ByteBuffer__allocate__asGlobalRef__catchAll(JNIEnv *env, jint capacity);
+jobject J4AC_java_nio_ByteBuffer__allocateDirect(JNIEnv *env, jint capacity);
+jobject J4AC_java_nio_ByteBuffer__allocateDirect__catchAll(JNIEnv *env, jint capacity);
+jobject J4AC_java_nio_ByteBuffer__allocateDirect__asGlobalRef__catchAll(JNIEnv *env, jint capacity);
+jobject J4AC_java_nio_ByteBuffer__limit(JNIEnv *env, jobject thiz, jint newLimit);
+jobject J4AC_java_nio_ByteBuffer__limit__catchAll(JNIEnv *env, jobject thiz, jint newLimit);
+jobject J4AC_java_nio_ByteBuffer__limit__asGlobalRef__catchAll(JNIEnv *env, jobject thiz, jint newLimit);
+int J4A_loadClass__J4AC_java_nio_ByteBuffer(JNIEnv *env);
 
-#define J4A_HAVE__J4AC_ByteBuffer
+#define J4A_HAVE__J4AC_java_nio_ByteBuffer
+
+#define J4AC_ByteBuffer__allocate J4AC_java_nio_ByteBuffer__allocate
+#define J4AC_ByteBuffer__allocate__asGlobalRef__catchAll J4AC_java_nio_ByteBuffer__allocate__asGlobalRef__catchAll
+#define J4AC_ByteBuffer__allocate__catchAll J4AC_java_nio_ByteBuffer__allocate__catchAll
+#define J4AC_ByteBuffer__allocateDirect J4AC_java_nio_ByteBuffer__allocateDirect
+#define J4AC_ByteBuffer__allocateDirect__asGlobalRef__catchAll J4AC_java_nio_ByteBuffer__allocateDirect__asGlobalRef__catchAll
+#define J4AC_ByteBuffer__allocateDirect__catchAll J4AC_java_nio_ByteBuffer__allocateDirect__catchAll
+#define J4AC_ByteBuffer__limit J4AC_java_nio_ByteBuffer__limit
+#define J4AC_ByteBuffer__limit__asGlobalRef__catchAll J4AC_java_nio_ByteBuffer__limit__asGlobalRef__catchAll
+#define J4AC_ByteBuffer__limit__catchAll J4AC_java_nio_ByteBuffer__limit__catchAll
+#define J4A_loadClass__J4AC_ByteBuffer J4A_loadClass__J4AC_java_nio_ByteBuffer
 
 #endif//J4A__java_nio_ByteBuffer__H

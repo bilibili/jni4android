@@ -29,6 +29,7 @@ const int Method::FLAG_CATCH_ALL     = 0x0001;
 const int Method::FLAG_WITH_C_STRING = 0x0002;
 const int Method::FLAG_AS_GLOBAL_REF = 0x0004;
 const int Method::FLAG_AS_C_BUFFER   = 0x0008;
+const int Method::FLAG_SIMPLE_NAME   = 0x0010;
 
 j4a::string Method::get_c_jni_sign()
 {
@@ -115,9 +116,15 @@ void Method::_build_c_call_jni_statement(std::ostream &os, int flags)
     os << ")";
 }
 
-void Method::_build_c_func_name(std::ostream &os, int flags)
+void Method::_build_c_func_name(std::ostream &oos, int flags)
 {
-    os << get_this_class()->get_c_class_name();
+    std::ostringstream os;
+
+    if (flags & FLAG_SIMPLE_NAME) {
+        os << get_this_class()->get_c_simple_class_name();
+    } else {
+        os << get_this_class()->get_c_class_name();
+    }
     os << "__";
     os << get_name();
 
@@ -136,6 +143,19 @@ void Method::_build_c_func_name(std::ostream &os, int flags)
     if (flags & FLAG_CATCH_ALL) {
         os << "__catchAll";
     }
+
+    if (flags & FLAG_SIMPLE_NAME) {
+        ; // do nothing
+    } else {
+        if (m_simple_name_map.find(j4a::string(os)) == m_simple_name_map.end()) {
+            std::ostringstream sos;
+            _build_c_func_name(sos, flags | FLAG_SIMPLE_NAME);
+
+            m_simple_name_map[j4a::string(os)] = j4a::string(sos);
+        }
+    }
+
+    oos << os;
 }
 
 void Method::_build_c_func_decl_statement(std::ostream &os, int flags)
@@ -232,6 +252,27 @@ void Method::build_c_func_decl(std::ostream &os)
             os << ";" << std::endl;
         }        
     }
+}
+
+//@Override
+void Method::build_c_simple_func_decl(std::ostream &os)
+{
+    m_simple_name_map.clear();
+
+    std::ostringstream tos;
+    build_c_func_decl(tos);
+
+    SimpleNameMap::iterator begin = m_simple_name_map.begin();
+    SimpleNameMap::iterator end   = m_simple_name_map.end();
+    for (NULL; begin != end; begin++) {
+        os  << "#define "
+            << begin->second
+            << " "
+            << begin->first
+            << std::endl;
+    }
+
+    m_simple_name_map.clear();
 }
 
 //@Override

@@ -22,21 +22,21 @@
 
 #include "PlaybackParams.h"
 
-typedef struct J4AC_PlaybackParams {
+typedef struct J4AC_android_media_PlaybackParams {
     jclass id;
 
     jmethodID method_setSpeed;
-} J4AC_PlaybackParams;
-static J4AC_PlaybackParams class_J4AC_PlaybackParams;
+} J4AC_android_media_PlaybackParams;
+static J4AC_android_media_PlaybackParams class_J4AC_android_media_PlaybackParams;
 
-jobject J4AC_PlaybackParams__setSpeed(JNIEnv *env, jobject thiz, jfloat speed)
+jobject J4AC_android_media_PlaybackParams__setSpeed(JNIEnv *env, jobject thiz, jfloat speed)
 {
-    return (*env)->CallObjectMethod(env, thiz, class_J4AC_PlaybackParams.method_setSpeed, speed);
+    return (*env)->CallObjectMethod(env, thiz, class_J4AC_android_media_PlaybackParams.method_setSpeed, speed);
 }
 
-jobject J4AC_PlaybackParams__setSpeed__catchAll(JNIEnv *env, jobject thiz, jfloat speed)
+jobject J4AC_android_media_PlaybackParams__setSpeed__catchAll(JNIEnv *env, jobject thiz, jfloat speed)
 {
-    jobject ret_object = J4AC_PlaybackParams__setSpeed(env, thiz, speed);
+    jobject ret_object = J4AC_android_media_PlaybackParams__setSpeed(env, thiz, speed);
     if (J4A_ExceptionCheck__catchAll(env) || !ret_object) {
         return NULL;
     }
@@ -44,10 +44,10 @@ jobject J4AC_PlaybackParams__setSpeed__catchAll(JNIEnv *env, jobject thiz, jfloa
     return ret_object;
 }
 
-jobject J4AC_PlaybackParams__setSpeed__asGlobalRef__catchAll(JNIEnv *env, jobject thiz, jfloat speed)
+jobject J4AC_android_media_PlaybackParams__setSpeed__asGlobalRef__catchAll(JNIEnv *env, jobject thiz, jfloat speed)
 {
     jobject ret_object   = NULL;
-    jobject local_object = J4AC_PlaybackParams__setSpeed__catchAll(env, thiz, speed);
+    jobject local_object = J4AC_android_media_PlaybackParams__setSpeed__catchAll(env, thiz, speed);
     if (J4A_ExceptionCheck__catchAll(env) || !local_object) {
         ret_object = NULL;
         goto fail;
@@ -64,7 +64,7 @@ fail:
     return ret_object;
 }
 
-int J4A_loadClass__J4AC_PlaybackParams(JNIEnv *env)
+int J4A_loadClass__J4AC_android_media_PlaybackParams(JNIEnv *env)
 {
     int         ret                   = -1;
     const char *J4A_UNUSED(name)      = NULL;
@@ -80,15 +80,15 @@ int J4A_loadClass__J4AC_PlaybackParams(JNIEnv *env)
     }
 
     sign = "android/media/PlaybackParams";
-    class_J4AC_PlaybackParams.id = J4A_FindClass__asGlobalRef__catchAll(env, sign);
-    if (class_J4AC_PlaybackParams.id == NULL)
+    class_J4AC_android_media_PlaybackParams.id = J4A_FindClass__asGlobalRef__catchAll(env, sign);
+    if (class_J4AC_android_media_PlaybackParams.id == NULL)
         goto fail;
 
-    class_id = class_J4AC_PlaybackParams.id;
+    class_id = class_J4AC_android_media_PlaybackParams.id;
     name     = "setSpeed";
     sign     = "(F)Landroid/media/PlaybackParams;";
-    class_J4AC_PlaybackParams.method_setSpeed = JJK_GetMethodID__catchAll(env, class_id, name, sign);
-    if (class_J4AC_PlaybackParams.method_setSpeed == NULL)
+    class_J4AC_android_media_PlaybackParams.method_setSpeed = JJK_GetMethodID__catchAll(env, class_id, name, sign);
+    if (class_J4AC_android_media_PlaybackParams.method_setSpeed == NULL)
         goto fail;
 
     ALOGD("J4ALoader: OK: '%s' loaded\n", "android.media.PlaybackParams");

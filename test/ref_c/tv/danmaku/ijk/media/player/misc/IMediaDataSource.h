@@ -25,14 +25,22 @@
 
 #include "j4a/j4a_internal.h"
 
-jint J4AC_IMediaDataSource__readAt(JNIEnv *env, jobject thiz, jlong position, jbyteArray buffer, jint offset, jint size);
-jint J4AC_IMediaDataSource__readAt__catchAll(JNIEnv *env, jobject thiz, jlong position, jbyteArray buffer, jint offset, jint size);
-jlong J4AC_IMediaDataSource__getSize(JNIEnv *env, jobject thiz);
-jlong J4AC_IMediaDataSource__getSize__catchAll(JNIEnv *env, jobject thiz);
-void J4AC_IMediaDataSource__close(JNIEnv *env, jobject thiz);
-void J4AC_IMediaDataSource__close__catchAll(JNIEnv *env, jobject thiz);
-int J4A_loadClass__J4AC_IMediaDataSource(JNIEnv *env);
+jint J4AC_tv_danmaku_ijk_media_player_misc_IMediaDataSource__readAt(JNIEnv *env, jobject thiz, jlong position, jbyteArray buffer, jint offset, jint size);
+jint J4AC_tv_danmaku_ijk_media_player_misc_IMediaDataSource__readAt__catchAll(JNIEnv *env, jobject thiz, jlong position, jbyteArray buffer, jint offset, jint size);
+jlong J4AC_tv_danmaku_ijk_media_player_misc_IMediaDataSource__getSize(JNIEnv *env, jobject thiz);
+jlong J4AC_tv_danmaku_ijk_media_player_misc_IMediaDataSource__getSize__catchAll(JNIEnv *env, jobject thiz);
+void J4AC_tv_danmaku_ijk_media_player_misc_IMediaDataSource__close(JNIEnv *env, jobject thiz);
+void J4AC_tv_danmaku_ijk_media_player_misc_IMediaDataSource__close__catchAll(JNIEnv *env, jobject thiz);
+int J4A_loadClass__J4AC_tv_danmaku_ijk_media_player_misc_IMediaDataSource(JNIEnv *env);
 
-#define J4A_HAVE__J4AC_IMediaDataSource
+#define J4A_HAVE__J4AC_tv_danmaku_ijk_media_player_misc_IMediaDataSource
+
+#define J4AC_IMediaDataSource__readAt J4AC_tv_danmaku_ijk_media_player_misc_IMediaDataSource__readAt
+#define J4AC_IMediaDataSource__readAt__catchAll J4AC_tv_danmaku_ijk_media_player_misc_IMediaDataSource__readAt__catchAll
+#define J4AC_IMediaDataSource__getSize J4AC_tv_danmaku_ijk_media_player_misc_IMediaDataSource__getSize
+#define J4AC_IMediaDataSource__getSize__catchAll J4AC_tv_danmaku_ijk_media_player_misc_IMediaDataSource__getSize__catchAll
+#define J4AC_IMediaDataSource__close J4AC_tv_danmaku_ijk_media_player_misc_IMediaDataSource__close
+#define J4AC_IMediaDataSource__close__catchAll J4AC_tv_danmaku_ijk_media_player_misc_IMediaDataSource__close__catchAll
+#define J4A_loadClass__J4AC_IMediaDataSource J4A_loadClass__J4AC_tv_danmaku_ijk_media_player_misc_IMediaDataSource
 
 #endif//J4A__tv_danmaku_ijk_media_player_misc_IMediaDataSource__H
