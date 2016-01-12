@@ -238,7 +238,7 @@ int J4A_loadClass__J4AC_android_media_MediaCodec__BufferInfo(JNIEnv *env)
     if (class_J4AC_android_media_MediaCodec__BufferInfo.constructor_BufferInfo == NULL)
         goto fail;
 
-    ALOGD("J4ALoader: OK: '%s' loaded\n", "android.media.MediaCodec$BufferInfo");
+    J4A_ALOGD("J4ALoader: OK: '%s' loaded\n", "android.media.MediaCodec$BufferInfo");
     ret = 0;
 fail:
     return ret;
@@ -527,7 +527,7 @@ int J4A_loadClass__J4AC_android_media_MediaCodec(JNIEnv *env)
     api_level = J4A_GetSystemAndroidApiLevel(env);
 
     if (api_level < 16) {
-        ALOGW("J4ALoader: Ignore: '%s' need API %d\n", "android.media.MediaCodec", api_level);
+        J4A_ALOGW("J4ALoader: Ignore: '%s' need API %d\n", "android.media.MediaCodec", api_level);
         goto ignore;
     }
 
@@ -624,7 +624,7 @@ int J4A_loadClass__J4AC_android_media_MediaCodec(JNIEnv *env)
     if (class_J4AC_android_media_MediaCodec.method_release == NULL)
         goto fail;
 
-    ALOGD("J4ALoader: OK: '%s' loaded\n", "android.media.MediaCodec");
+    J4A_ALOGD("J4ALoader: OK: '%s' loaded\n", "android.media.MediaCodec");
 ignore:
     ret = 0;
 fail:

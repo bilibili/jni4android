@@ -81,7 +81,7 @@ int J4A_loadClass__J4AC_android_os_Build__VERSION(JNIEnv *env)
     if (class_J4AC_android_os_Build__VERSION.field_SDK_INT == NULL)
         goto fail;
 
-    ALOGD("J4ALoader: OK: '%s' loaded\n", "android.os.Build$VERSION");
+    J4A_ALOGD("J4ALoader: OK: '%s' loaded\n", "android.os.Build$VERSION");
     ret = 0;
 fail:
     return ret;
@@ -104,7 +104,7 @@ int J4A_loadClass__J4AC_android_os_Build(JNIEnv *env)
     if (ret)
         goto fail;
 
-    ALOGD("J4ALoader: OK: '%s' loaded\n", "android.os.Build");
+    J4A_ALOGD("J4ALoader: OK: '%s' loaded\n", "android.os.Build");
     ret = 0;
 fail:
     return ret;

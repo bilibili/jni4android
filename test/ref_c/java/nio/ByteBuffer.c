@@ -170,7 +170,7 @@ int J4A_loadClass__J4AC_java_nio_ByteBuffer(JNIEnv *env)
     if (class_J4AC_java_nio_ByteBuffer.method_limit == NULL)
         goto fail;
 
-    ALOGD("J4ALoader: OK: '%s' loaded\n", "java.nio.ByteBuffer");
+    J4A_ALOGD("J4ALoader: OK: '%s' loaded\n", "java.nio.ByteBuffer");
     ret = 0;
 fail:
     return ret;

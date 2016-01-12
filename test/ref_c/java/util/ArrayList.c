@@ -107,7 +107,7 @@ int J4A_loadClass__J4AC_java_util_ArrayList(JNIEnv *env)
     if (class_J4AC_java_util_ArrayList.method_add == NULL)
         goto fail;
 
-    ALOGD("J4ALoader: OK: '%s' loaded\n", "java.util.ArrayList");
+    J4A_ALOGD("J4ALoader: OK: '%s' loaded\n", "java.util.ArrayList");
     ret = 0;
 fail:
     return ret;

@@ -75,7 +75,7 @@ int J4A_loadClass__J4AC_android_media_PlaybackParams(JNIEnv *env)
     api_level = J4A_GetSystemAndroidApiLevel(env);
 
     if (api_level < 23) {
-        ALOGW("J4ALoader: Ignore: '%s' need API %d\n", "android.media.PlaybackParams", api_level);
+        J4A_ALOGW("J4ALoader: Ignore: '%s' need API %d\n", "android.media.PlaybackParams", api_level);
         goto ignore;
     }
 
@@ -91,7 +91,7 @@ int J4A_loadClass__J4AC_android_media_PlaybackParams(JNIEnv *env)
     if (class_J4AC_android_media_PlaybackParams.method_setSpeed == NULL)
         goto fail;
 
-    ALOGD("J4ALoader: OK: '%s' loaded\n", "android.media.PlaybackParams");
+    J4A_ALOGD("J4ALoader: OK: '%s' loaded\n", "android.media.PlaybackParams");
 ignore:
     ret = 0;
 fail:

@@ -493,7 +493,7 @@ int J4A_loadClass__J4AC_android_os_Bundle(JNIEnv *env)
     if (class_J4AC_android_os_Bundle.method_putParcelableArrayList == NULL)
         goto fail;
 
-    ALOGD("J4ALoader: OK: '%s' loaded\n", "android.os.Bundle");
+    J4A_ALOGD("J4ALoader: OK: '%s' loaded\n", "android.os.Bundle");
     ret = 0;
 fail:
     return ret;

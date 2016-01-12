@@ -307,7 +307,7 @@ int J4A_loadClass__J4AC_android_media_MediaFormat(JNIEnv *env)
     api_level = J4A_GetSystemAndroidApiLevel(env);
 
     if (api_level < 16) {
-        ALOGW("J4ALoader: Ignore: '%s' need API %d\n", "android.media.MediaFormat", api_level);
+        J4A_ALOGW("J4ALoader: Ignore: '%s' need API %d\n", "android.media.MediaFormat", api_level);
         goto ignore;
     }
 
@@ -351,7 +351,7 @@ int J4A_loadClass__J4AC_android_media_MediaFormat(JNIEnv *env)
     if (class_J4AC_android_media_MediaFormat.method_setByteBuffer == NULL)
         goto fail;
 
-    ALOGD("J4ALoader: OK: '%s' loaded\n", "android.media.MediaFormat");
+    J4A_ALOGD("J4ALoader: OK: '%s' loaded\n", "android.media.MediaFormat");
 ignore:
     ret = 0;
 fail:

@@ -406,7 +406,7 @@ int J4A_loadClass__J4AC_android_media_AudioTrack(JNIEnv *env)
             goto fail;
     }
 
-    ALOGD("J4ALoader: OK: '%s' loaded\n", "android.media.AudioTrack");
+    J4A_ALOGD("J4ALoader: OK: '%s' loaded\n", "android.media.AudioTrack");
     ret = 0;
 fail:
     return ret;

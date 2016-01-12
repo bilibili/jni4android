@@ -266,7 +266,7 @@ int J4A_GetSystemAndroidApiLevel(JNIEnv *env)
     if (SDK_INT > 0)
         return SDK_INT;
 
-    SDK_INT = J4A_android_os_Build__VERSION__SDK_INT__get__catchAll(env);
+    SDK_INT = J4AC_android_os_Build__VERSION__SDK_INT__get__catchAll(env);
     J4A_ALOGI("API-Level: %d\n", SDK_INT);
     return SDK_INT;
 }

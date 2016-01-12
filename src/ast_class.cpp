@@ -111,7 +111,7 @@ void Class::build_c_func_impl(std::ostream &os)
         os << std::endl;
         os << "    api_level = J4A_GetSystemAndroidApiLevel(env);\n" << std::endl;
         os << "    if (api_level < " << annotation->get_value() << ") {" << std::endl;
-        os << "        ALOGW(" << j4a::make_quoted("J4ALoader: Ignore: '%s' need API %d\\n") << ", " << j4a::make_quoted(get_java_long_name()) << ", api_level);" << std::endl;
+        os << "        J4A_ALOGW(" << j4a::make_quoted("J4ALoader: Ignore: '%s' need API %d\\n") << ", " << j4a::make_quoted(get_java_long_name()) << ", api_level);" << std::endl;
         os << "        goto ignore;" << std::endl;
         os << "    }" << std::endl;
     }
@@ -123,7 +123,7 @@ void Class::build_c_func_impl(std::ostream &os)
     os << "        goto fail;" << std::endl;
     get_member_list()->build_all_c_member_id_load(os);
     os << std::endl;
-    os << "    ALOGD(" << j4a::make_quoted("J4ALoader: OK: '%s' loaded\\n") << ", " << j4a::make_quoted(get_java_long_name()) << ");" << std::endl;
+    os << "    J4A_ALOGD(" << j4a::make_quoted("J4ALoader: OK: '%s' loaded\\n") << ", " << j4a::make_quoted(get_java_long_name()) << ");" << std::endl;
     if (need_label_ignore)
         os << "ignore:" << std::endl;
     os << "    ret = 0;" << std::endl;

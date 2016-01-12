@@ -40,7 +40,7 @@ int J4A_loadClass__J4AC_java_nio_Buffer(JNIEnv *env)
     if (class_J4AC_java_nio_Buffer.id == NULL)
         goto fail;
 
-    ALOGD("J4ALoader: OK: '%s' loaded\n", "java.nio.Buffer");
+    J4A_ALOGD("J4ALoader: OK: '%s' loaded\n", "java.nio.Buffer");
     ret = 0;
 fail:
     return ret;
