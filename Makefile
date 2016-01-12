@@ -90,8 +90,8 @@ ifneq ("$<", "jni/j4a/class/.c")
 	$(J4A) $< -o $@
 	@diff test/ref_c/$*.c $@
 	@diff test/ref_c/$*.h jni/j4a/class/$*.h
-	@#@cp $@                 test/ref_c/$*.c
-	@#@cp jni/j4a/class/$*.h test/ref_c/$*.h
+	@#cp $@                 test/ref_c/$*.c
+	@#cp jni/j4a/class/$*.h test/ref_c/$*.h
 endif
 
 test: resettest j4a $(TEST_C_SRCS)

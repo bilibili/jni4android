@@ -63,7 +63,7 @@ void CompilationUnit::do_build(std::ostream &h_os, std::ostream &c_os)
     h_os << "#ifndef " << get_header_macro() << std::endl;
     h_os << "#define " << get_header_macro() << std::endl;
     h_os << std::endl;
-    h_os << "#include \"j4a/j4a_internal.h\"" << std::endl;
+    h_os << "#include \"j4a/j4a_base.h\"" << std::endl;
     h_os << std::endl;
 
     clazz->build_c_func_decl(h_os);

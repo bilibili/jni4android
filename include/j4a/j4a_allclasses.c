@@ -18,7 +18,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
  */
 
-#include "j4a/j4a_internal.h"
+#include "j4a/j4a_base.h"
 #include "j4a/class/java/nio/ByteBuffer.h"
 #include "j4a/class/java/util/ArrayList.h"
 #include "j4a/class/android/os/Build.h"

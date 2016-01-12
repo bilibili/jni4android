@@ -23,7 +23,7 @@
 #ifndef J4A__tv_danmaku_ijk_media_player_IjkMediaPlayer__H
 #define J4A__tv_danmaku_ijk_media_player_IjkMediaPlayer__H
 
-#include "j4a/j4a_internal.h"
+#include "j4a/j4a_base.h"
 
 jlong J4AC_tv_danmaku_ijk_media_player_IjkMediaPlayer__mNativeMediaPlayer__get(JNIEnv *env, jobject thiz);
 jlong J4AC_tv_danmaku_ijk_media_player_IjkMediaPlayer__mNativeMediaPlayer__get__catchAll(JNIEnv *env, jobject thiz);

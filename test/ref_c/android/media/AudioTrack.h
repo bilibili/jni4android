@@ -23,7 +23,7 @@
 #ifndef J4A__android_media_AudioTrack__H
 #define J4A__android_media_AudioTrack__H
 
-#include "j4a/j4a_internal.h"
+#include "j4a/j4a_base.h"
 
 jobject J4AC_android_media_AudioTrack__AudioTrack(JNIEnv *env, jint streamType, jint sampleRateInHz, jint channelConfig, jint audioFormat, jint bufferSizeInBytes, jint mode);
 jobject J4AC_android_media_AudioTrack__AudioTrack__catchAll(JNIEnv *env, jint streamType, jint sampleRateInHz, jint channelConfig, jint audioFormat, jint bufferSizeInBytes, jint mode);

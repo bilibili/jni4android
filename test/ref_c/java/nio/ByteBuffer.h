@@ -23,7 +23,7 @@
 #ifndef J4A__java_nio_ByteBuffer__H
 #define J4A__java_nio_ByteBuffer__H
 
-#include "j4a/j4a_internal.h"
+#include "j4a/j4a_base.h"
 
 jobject J4AC_java_nio_ByteBuffer__allocate(JNIEnv *env, jint capacity);
 jobject J4AC_java_nio_ByteBuffer__allocate__catchAll(JNIEnv *env, jint capacity);

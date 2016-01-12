@@ -23,7 +23,7 @@
 #ifndef J4A__tv_danmaku_ijk_media_player_misc_IMediaDataSource__H
 #define J4A__tv_danmaku_ijk_media_player_misc_IMediaDataSource__H
 
-#include "j4a/j4a_internal.h"
+#include "j4a/j4a_base.h"
 
 jint J4AC_tv_danmaku_ijk_media_player_misc_IMediaDataSource__readAt(JNIEnv *env, jobject thiz, jlong position, jbyteArray buffer, jint offset, jint size);
 jint J4AC_tv_danmaku_ijk_media_player_misc_IMediaDataSource__readAt__catchAll(JNIEnv *env, jobject thiz, jlong position, jbyteArray buffer, jint offset, jint size);

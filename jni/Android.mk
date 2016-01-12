@@ -28,7 +28,7 @@ LOCAL_C_INCLUDES += $(LOCAL_PATH)
 # $(call import-module,android/cpufeatures)
 
 LOCAL_SRC_FILES += j4a/j4a_allclasses.c
-LOCAL_SRC_FILES += j4a/j4a_internal.c
+LOCAL_SRC_FILES += j4a/j4a_base.c
 LOCAL_SRC_FILES += j4a/class/android/media/AudioTrack.c
 LOCAL_SRC_FILES += j4a/class/android/media/MediaCodec.c
 LOCAL_SRC_FILES += j4a/class/android/media/MediaFormat.c

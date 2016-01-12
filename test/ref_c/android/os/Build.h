@@ -23,7 +23,7 @@
 #ifndef J4A__android_os_Build__H
 #define J4A__android_os_Build__H
 
-#include "j4a/j4a_internal.h"
+#include "j4a/j4a_base.h"
 
 jint J4AC_android_os_Build__VERSION__SDK_INT__get(JNIEnv *env);
 jint J4AC_android_os_Build__VERSION__SDK_INT__get__catchAll(JNIEnv *env);
