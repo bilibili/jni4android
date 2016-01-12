@@ -104,6 +104,9 @@ void Class::build_c_func_impl(std::ostream &os)
     os << "    const char *J4A_UNUSED(sign)      = NULL;" << std::endl;
     os << "    jclass      J4A_UNUSED(class_id)  = NULL;" << std::endl;
     os << "    int         J4A_UNUSED(api_level) = 0;" << std::endl;
+    os << std::endl;
+    os << "    if (" << get_c_jni_id() << " != NULL)" << std::endl;
+    os << "        return 0;" << std::endl;
 
     Annotation *annotation = get_annotation_at("MinApi");
     if (annotation) {

@@ -69,6 +69,9 @@ int J4A_loadClass__J4AC_android_os_Build__VERSION(JNIEnv *env)
     jclass      J4A_UNUSED(class_id)  = NULL;
     int         J4A_UNUSED(api_level) = 0;
 
+    if (class_J4AC_android_os_Build__VERSION.id != NULL)
+        return 0;
+
     sign = "android/os/Build$VERSION";
     class_J4AC_android_os_Build__VERSION.id = J4A_FindClass__asGlobalRef__catchAll(env, sign);
     if (class_J4AC_android_os_Build__VERSION.id == NULL)
@@ -94,6 +97,9 @@ int J4A_loadClass__J4AC_android_os_Build(JNIEnv *env)
     const char *J4A_UNUSED(sign)      = NULL;
     jclass      J4A_UNUSED(class_id)  = NULL;
     int         J4A_UNUSED(api_level) = 0;
+
+    if (class_J4AC_android_os_Build.id != NULL)
+        return 0;
 
     sign = "android/os/Build";
     class_J4AC_android_os_Build.id = J4A_FindClass__asGlobalRef__catchAll(env, sign);

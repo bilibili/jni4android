@@ -35,6 +35,9 @@ int J4A_loadClass__J4AC_java_nio_Buffer(JNIEnv *env)
     jclass      J4A_UNUSED(class_id)  = NULL;
     int         J4A_UNUSED(api_level) = 0;
 
+    if (class_J4AC_java_nio_Buffer.id != NULL)
+        return 0;
+
     sign = "java/nio/Buffer";
     class_J4AC_java_nio_Buffer.id = J4A_FindClass__asGlobalRef__catchAll(env, sign);
     if (class_J4AC_java_nio_Buffer.id == NULL)

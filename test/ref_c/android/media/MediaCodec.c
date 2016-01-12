@@ -198,6 +198,9 @@ int J4A_loadClass__J4AC_android_media_MediaCodec__BufferInfo(JNIEnv *env)
     jclass      J4A_UNUSED(class_id)  = NULL;
     int         J4A_UNUSED(api_level) = 0;
 
+    if (class_J4AC_android_media_MediaCodec__BufferInfo.id != NULL)
+        return 0;
+
     sign = "android/media/MediaCodec$BufferInfo";
     class_J4AC_android_media_MediaCodec__BufferInfo.id = J4A_FindClass__asGlobalRef__catchAll(env, sign);
     if (class_J4AC_android_media_MediaCodec__BufferInfo.id == NULL)
@@ -523,6 +526,9 @@ int J4A_loadClass__J4AC_android_media_MediaCodec(JNIEnv *env)
     const char *J4A_UNUSED(sign)      = NULL;
     jclass      J4A_UNUSED(class_id)  = NULL;
     int         J4A_UNUSED(api_level) = 0;
+
+    if (class_J4AC_android_media_MediaCodec.id != NULL)
+        return 0;
 
     api_level = J4A_GetSystemAndroidApiLevel(env);
 

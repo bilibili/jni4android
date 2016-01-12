@@ -304,6 +304,9 @@ int J4A_loadClass__J4AC_android_media_MediaFormat(JNIEnv *env)
     jclass      J4A_UNUSED(class_id)  = NULL;
     int         J4A_UNUSED(api_level) = 0;
 
+    if (class_J4AC_android_media_MediaFormat.id != NULL)
+        return 0;
+
     api_level = J4A_GetSystemAndroidApiLevel(env);
 
     if (api_level < 16) {

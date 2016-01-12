@@ -292,6 +292,9 @@ int J4A_loadClass__J4AC_android_media_AudioTrack(JNIEnv *env)
     jclass      J4A_UNUSED(class_id)  = NULL;
     int         J4A_UNUSED(api_level) = 0;
 
+    if (class_J4AC_android_media_AudioTrack.id != NULL)
+        return 0;
+
     sign = "android/media/AudioTrack";
     class_J4AC_android_media_AudioTrack.id = J4A_FindClass__asGlobalRef__catchAll(env, sign);
     if (class_J4AC_android_media_AudioTrack.id == NULL)
