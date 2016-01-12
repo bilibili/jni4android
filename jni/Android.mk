@@ -27,9 +27,19 @@ LOCAL_C_INCLUDES += $(LOCAL_PATH)
 # LOCAL_STATIC_LIBRARIES += cpufeatures
 # $(call import-module,android/cpufeatures)
 
-# LOCAL_SRC_FILES := $(subst $(LOCAL_PATH)/,,$(wildcard $(LOCAL_PATH)/*.c))
 LOCAL_SRC_FILES += j4a/j4a_allclasses.c
 LOCAL_SRC_FILES += j4a/j4a_internal.c
+LOCAL_SRC_FILES += j4a/class/android/media/AudioTrack.c
+LOCAL_SRC_FILES += j4a/class/android/media/MediaCodec.c
+LOCAL_SRC_FILES += j4a/class/android/media/MediaFormat.c
+LOCAL_SRC_FILES += j4a/class/android/media/PlaybackParams.c
+LOCAL_SRC_FILES += j4a/class/android/os/Build.c
+LOCAL_SRC_FILES += j4a/class/android/os/Bundel.c
+LOCAL_SRC_FILES += j4a/class/java/nio/Buffer.c
+LOCAL_SRC_FILES += j4a/class/java/nio/ByteBuffer.c
+LOCAL_SRC_FILES += j4a/class/java/util/ArrayList.c
+LOCAL_SRC_FILES += j4a/class/tv/danmaku/ijk/media/player/IjkMediaPlayer.c
+LOCAL_SRC_FILES += j4a/class/tv/danmaku/ijk/media/player/misc/IMediaDataSource.c
 
 LOCAL_MODULE := j4a
 include $(BUILD_STATIC_LIBRARY)
