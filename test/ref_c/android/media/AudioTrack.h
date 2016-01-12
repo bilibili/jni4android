@@ -61,6 +61,4 @@ int J4A_loadClass__J4AC_AudioTrack(JNIEnv *env);
 
 #define J4A_HAVE__J4AC_AudioTrack
 
-#include "AudioTrack.util.h"
-
 #endif//J4A__android_media_AudioTrack__H

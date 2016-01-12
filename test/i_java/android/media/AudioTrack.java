@@ -1,7 +1,6 @@
 package android.media;
 
 @SimpleCClassName
-@IncludeUtil
 public class AudioTrack {
     public AudioTrack(int streamType, int sampleRateInHz, int channelConfig, int audioFormat, int bufferSizeInBytes, int mode);
 

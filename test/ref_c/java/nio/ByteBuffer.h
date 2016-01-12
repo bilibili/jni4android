@@ -38,6 +38,4 @@ int J4A_loadClass__J4AC_ByteBuffer(JNIEnv *env);
 
 #define J4A_HAVE__J4AC_ByteBuffer
 
-#include "ByteBuffer.util.h"
-
 #endif//J4A__java_nio_ByteBuffer__H

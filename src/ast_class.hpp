@@ -53,10 +53,6 @@ public:
         return get_annotation_at("SimpleCClassName") != NULL;
     }
 
-    bool is_include_util() {
-        return get_annotation_at("IncludeUtil") != NULL;   
-    }
-
 public:
     // class Member
     // @Override
