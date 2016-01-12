@@ -79,23 +79,25 @@ TEST_JAVA_SRCS = \
 	test/i_java/tv/danmaku/ijk/media/player/misc/IMediaDataSource.java \
 	test/i_java/tv/danmaku/ijk/media/player/IjkMediaPlayer.java \
 
-TEST_C_SRCS := $(TEST_JAVA_SRCS:test/i_java/%.java=test/o_c/%.c)
+TEST_C_SRCS := $(TEST_JAVA_SRCS:test/i_java/%.java=jni/j4a/class/%.c)
 TEST_H_SRCS := $(TEST_C_SRCS:%.c=%.h)
 
-$(TEST_C_SRCS): test/o_c/%.c: j4a
+$(TEST_C_SRCS): jni/j4a/class/%.c: j4a
 
-$(TEST_C_SRCS): test/o_c/%.c: test/i_java/%.java
-ifneq ("$<", "test/o_c/.c")
+$(TEST_C_SRCS): jni/j4a/class/%.c: test/i_java/%.java
+ifneq ("$<", "jni/j4a/class/.c")
 	@mkdir -p $(shell dirname $@)
 	$(J4A) $< -o $@
 	@diff test/ref_c/$*.c $@
-	@diff test/ref_c/$*.h test/o_c/$*.h
+	@diff test/ref_c/$*.h jni/j4a/class/$*.h
 endif
 
-test: cleantest j4a $(TEST_C_SRCS)
+test: resettest j4a $(TEST_C_SRCS)
 
-cleantest:
+resettest:
 	@rm -f $(TEST_C_SRCS)
+	@mkdir -p jni
+	@cp -r include/* jni/
 
 
 

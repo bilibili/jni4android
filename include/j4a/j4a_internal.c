@@ -19,7 +19,7 @@
  */
 
 #include "j4a_internal.h"
-#include "j4a/android/os/Build.h"
+#include "j4a/class/android/os/Build.h"
 
 /********************
  * Exception Handle
