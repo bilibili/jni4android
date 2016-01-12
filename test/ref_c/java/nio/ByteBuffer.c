@@ -166,7 +166,7 @@ int J4A_loadClass__J4AC_java_nio_ByteBuffer(JNIEnv *env)
     class_id = class_J4AC_java_nio_ByteBuffer.id;
     name     = "limit";
     sign     = "(I)Ljava/nio/Buffer;";
-    class_J4AC_java_nio_ByteBuffer.method_limit = JJK_GetMethodID__catchAll(env, class_id, name, sign);
+    class_J4AC_java_nio_ByteBuffer.method_limit = J4A_GetMethodID__catchAll(env, class_id, name, sign);
     if (class_J4AC_java_nio_ByteBuffer.method_limit == NULL)
         goto fail;
 

@@ -300,7 +300,7 @@ int J4A_loadClass__J4AC_android_media_AudioTrack(JNIEnv *env)
     class_id = class_J4AC_android_media_AudioTrack.id;
     name     = "<init>";
     sign     = "(IIIIII)V";
-    class_J4AC_android_media_AudioTrack.constructor_AudioTrack = JJK_GetMethodID__catchAll(env, class_id, name, sign);
+    class_J4AC_android_media_AudioTrack.constructor_AudioTrack = J4A_GetMethodID__catchAll(env, class_id, name, sign);
     if (class_J4AC_android_media_AudioTrack.constructor_AudioTrack == NULL)
         goto fail;
 
@@ -335,56 +335,56 @@ int J4A_loadClass__J4AC_android_media_AudioTrack(JNIEnv *env)
     class_id = class_J4AC_android_media_AudioTrack.id;
     name     = "play";
     sign     = "()V";
-    class_J4AC_android_media_AudioTrack.method_play = JJK_GetMethodID__catchAll(env, class_id, name, sign);
+    class_J4AC_android_media_AudioTrack.method_play = J4A_GetMethodID__catchAll(env, class_id, name, sign);
     if (class_J4AC_android_media_AudioTrack.method_play == NULL)
         goto fail;
 
     class_id = class_J4AC_android_media_AudioTrack.id;
     name     = "pause";
     sign     = "()V";
-    class_J4AC_android_media_AudioTrack.method_pause = JJK_GetMethodID__catchAll(env, class_id, name, sign);
+    class_J4AC_android_media_AudioTrack.method_pause = J4A_GetMethodID__catchAll(env, class_id, name, sign);
     if (class_J4AC_android_media_AudioTrack.method_pause == NULL)
         goto fail;
 
     class_id = class_J4AC_android_media_AudioTrack.id;
     name     = "stop";
     sign     = "()V";
-    class_J4AC_android_media_AudioTrack.method_stop = JJK_GetMethodID__catchAll(env, class_id, name, sign);
+    class_J4AC_android_media_AudioTrack.method_stop = J4A_GetMethodID__catchAll(env, class_id, name, sign);
     if (class_J4AC_android_media_AudioTrack.method_stop == NULL)
         goto fail;
 
     class_id = class_J4AC_android_media_AudioTrack.id;
     name     = "flush";
     sign     = "()V";
-    class_J4AC_android_media_AudioTrack.method_flush = JJK_GetMethodID__catchAll(env, class_id, name, sign);
+    class_J4AC_android_media_AudioTrack.method_flush = J4A_GetMethodID__catchAll(env, class_id, name, sign);
     if (class_J4AC_android_media_AudioTrack.method_flush == NULL)
         goto fail;
 
     class_id = class_J4AC_android_media_AudioTrack.id;
     name     = "release";
     sign     = "()V";
-    class_J4AC_android_media_AudioTrack.method_release = JJK_GetMethodID__catchAll(env, class_id, name, sign);
+    class_J4AC_android_media_AudioTrack.method_release = J4A_GetMethodID__catchAll(env, class_id, name, sign);
     if (class_J4AC_android_media_AudioTrack.method_release == NULL)
         goto fail;
 
     class_id = class_J4AC_android_media_AudioTrack.id;
     name     = "write";
     sign     = "([BII)I";
-    class_J4AC_android_media_AudioTrack.method_write = JJK_GetMethodID__catchAll(env, class_id, name, sign);
+    class_J4AC_android_media_AudioTrack.method_write = J4A_GetMethodID__catchAll(env, class_id, name, sign);
     if (class_J4AC_android_media_AudioTrack.method_write == NULL)
         goto fail;
 
     class_id = class_J4AC_android_media_AudioTrack.id;
     name     = "setStereoVolume";
     sign     = "(FF)I";
-    class_J4AC_android_media_AudioTrack.method_setStereoVolume = JJK_GetMethodID__catchAll(env, class_id, name, sign);
+    class_J4AC_android_media_AudioTrack.method_setStereoVolume = J4A_GetMethodID__catchAll(env, class_id, name, sign);
     if (class_J4AC_android_media_AudioTrack.method_setStereoVolume == NULL)
         goto fail;
 
     class_id = class_J4AC_android_media_AudioTrack.id;
     name     = "getAudioSessionId";
     sign     = "()I";
-    class_J4AC_android_media_AudioTrack.method_getAudioSessionId = JJK_GetMethodID__catchAll(env, class_id, name, sign);
+    class_J4AC_android_media_AudioTrack.method_getAudioSessionId = J4A_GetMethodID__catchAll(env, class_id, name, sign);
     if (class_J4AC_android_media_AudioTrack.method_getAudioSessionId == NULL)
         goto fail;
 
@@ -392,7 +392,7 @@ int J4A_loadClass__J4AC_android_media_AudioTrack(JNIEnv *env)
         class_id = class_J4AC_android_media_AudioTrack.id;
         name     = "getPlaybackParams";
         sign     = "()Landroid/media/PlaybackParams;";
-        class_J4AC_android_media_AudioTrack.method_getPlaybackParams = JJK_GetMethodID__catchAll(env, class_id, name, sign);
+        class_J4AC_android_media_AudioTrack.method_getPlaybackParams = J4A_GetMethodID__catchAll(env, class_id, name, sign);
         if (class_J4AC_android_media_AudioTrack.method_getPlaybackParams == NULL)
             goto fail;
     }
@@ -401,7 +401,7 @@ int J4A_loadClass__J4AC_android_media_AudioTrack(JNIEnv *env)
         class_id = class_J4AC_android_media_AudioTrack.id;
         name     = "setPlaybackParams";
         sign     = "(Landroid/media/PlaybackParams;)V";
-        class_J4AC_android_media_AudioTrack.method_setPlaybackParams = JJK_GetMethodID__catchAll(env, class_id, name, sign);
+        class_J4AC_android_media_AudioTrack.method_setPlaybackParams = J4A_GetMethodID__catchAll(env, class_id, name, sign);
         if (class_J4AC_android_media_AudioTrack.method_setPlaybackParams == NULL)
             goto fail;
     }

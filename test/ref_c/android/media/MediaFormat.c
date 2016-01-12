@@ -319,7 +319,7 @@ int J4A_loadClass__J4AC_android_media_MediaFormat(JNIEnv *env)
     class_id = class_J4AC_android_media_MediaFormat.id;
     name     = "<init>";
     sign     = "()V";
-    class_J4AC_android_media_MediaFormat.constructor_MediaFormat = JJK_GetMethodID__catchAll(env, class_id, name, sign);
+    class_J4AC_android_media_MediaFormat.constructor_MediaFormat = J4A_GetMethodID__catchAll(env, class_id, name, sign);
     if (class_J4AC_android_media_MediaFormat.constructor_MediaFormat == NULL)
         goto fail;
 
@@ -333,21 +333,21 @@ int J4A_loadClass__J4AC_android_media_MediaFormat(JNIEnv *env)
     class_id = class_J4AC_android_media_MediaFormat.id;
     name     = "getInteger";
     sign     = "(Ljava/lang/String;)I";
-    class_J4AC_android_media_MediaFormat.method_getInteger = JJK_GetMethodID__catchAll(env, class_id, name, sign);
+    class_J4AC_android_media_MediaFormat.method_getInteger = J4A_GetMethodID__catchAll(env, class_id, name, sign);
     if (class_J4AC_android_media_MediaFormat.method_getInteger == NULL)
         goto fail;
 
     class_id = class_J4AC_android_media_MediaFormat.id;
     name     = "setInteger";
     sign     = "(Ljava/lang/String;I)V";
-    class_J4AC_android_media_MediaFormat.method_setInteger = JJK_GetMethodID__catchAll(env, class_id, name, sign);
+    class_J4AC_android_media_MediaFormat.method_setInteger = J4A_GetMethodID__catchAll(env, class_id, name, sign);
     if (class_J4AC_android_media_MediaFormat.method_setInteger == NULL)
         goto fail;
 
     class_id = class_J4AC_android_media_MediaFormat.id;
     name     = "setByteBuffer";
     sign     = "(Ljava/lang/String;Ljava/nio/ByteBuffer;)V";
-    class_J4AC_android_media_MediaFormat.method_setByteBuffer = JJK_GetMethodID__catchAll(env, class_id, name, sign);
+    class_J4AC_android_media_MediaFormat.method_setByteBuffer = J4A_GetMethodID__catchAll(env, class_id, name, sign);
     if (class_J4AC_android_media_MediaFormat.method_setByteBuffer == NULL)
         goto fail;
 

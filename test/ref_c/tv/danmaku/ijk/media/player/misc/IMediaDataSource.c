@@ -88,21 +88,21 @@ int J4A_loadClass__J4AC_tv_danmaku_ijk_media_player_misc_IMediaDataSource(JNIEnv
     class_id = class_J4AC_tv_danmaku_ijk_media_player_misc_IMediaDataSource.id;
     name     = "readAt";
     sign     = "(J[BII)I";
-    class_J4AC_tv_danmaku_ijk_media_player_misc_IMediaDataSource.method_readAt = JJK_GetMethodID__catchAll(env, class_id, name, sign);
+    class_J4AC_tv_danmaku_ijk_media_player_misc_IMediaDataSource.method_readAt = J4A_GetMethodID__catchAll(env, class_id, name, sign);
     if (class_J4AC_tv_danmaku_ijk_media_player_misc_IMediaDataSource.method_readAt == NULL)
         goto fail;
 
     class_id = class_J4AC_tv_danmaku_ijk_media_player_misc_IMediaDataSource.id;
     name     = "getSize";
     sign     = "()J";
-    class_J4AC_tv_danmaku_ijk_media_player_misc_IMediaDataSource.method_getSize = JJK_GetMethodID__catchAll(env, class_id, name, sign);
+    class_J4AC_tv_danmaku_ijk_media_player_misc_IMediaDataSource.method_getSize = J4A_GetMethodID__catchAll(env, class_id, name, sign);
     if (class_J4AC_tv_danmaku_ijk_media_player_misc_IMediaDataSource.method_getSize == NULL)
         goto fail;
 
     class_id = class_J4AC_tv_danmaku_ijk_media_player_misc_IMediaDataSource.id;
     name     = "close";
     sign     = "()V";
-    class_J4AC_tv_danmaku_ijk_media_player_misc_IMediaDataSource.method_close = JJK_GetMethodID__catchAll(env, class_id, name, sign);
+    class_J4AC_tv_danmaku_ijk_media_player_misc_IMediaDataSource.method_close = J4A_GetMethodID__catchAll(env, class_id, name, sign);
     if (class_J4AC_tv_danmaku_ijk_media_player_misc_IMediaDataSource.method_close == NULL)
         goto fail;
 

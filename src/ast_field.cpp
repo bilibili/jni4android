@@ -58,7 +58,7 @@ void Field::build_c_member_id_load(std::ostream &os)
     os << build_indent() << "class_id = " << get_this_class()->get_c_jni_id() << ";\n";
     os << build_indent() << "name     = \"" << get_name() << "\";\n";
     os << build_indent() << "sign     = \"" << get_c_jni_sign() << "\";\n";
-    os << build_indent() << get_c_jni_id() << " = " << (is_static() ? "J4A_GetStaticFieldID__catchAll" : "JJK_GetFieldID__catchAll")
+    os << build_indent() << get_c_jni_id() << " = " << (is_static() ? "J4A_GetStaticFieldID__catchAll" : "J4A_GetFieldID__catchAll")
                             << "(env, class_id, name, sign);\n";
     os << build_indent() << "if (" << get_c_jni_id() << " == NULL)\n";
     os << build_indent() << "    goto fail;\n";

@@ -454,42 +454,42 @@ int J4A_loadClass__J4AC_android_os_Bundle(JNIEnv *env)
     class_id = class_J4AC_android_os_Bundle.id;
     name     = "<init>";
     sign     = "()V";
-    class_J4AC_android_os_Bundle.constructor_Bundle = JJK_GetMethodID__catchAll(env, class_id, name, sign);
+    class_J4AC_android_os_Bundle.constructor_Bundle = J4A_GetMethodID__catchAll(env, class_id, name, sign);
     if (class_J4AC_android_os_Bundle.constructor_Bundle == NULL)
         goto fail;
 
     class_id = class_J4AC_android_os_Bundle.id;
     name     = "getInt";
     sign     = "(Ljava/lang/String;I)I";
-    class_J4AC_android_os_Bundle.method_getInt = JJK_GetMethodID__catchAll(env, class_id, name, sign);
+    class_J4AC_android_os_Bundle.method_getInt = J4A_GetMethodID__catchAll(env, class_id, name, sign);
     if (class_J4AC_android_os_Bundle.method_getInt == NULL)
         goto fail;
 
     class_id = class_J4AC_android_os_Bundle.id;
     name     = "putInt";
     sign     = "(Ljava/lang/String;I)V";
-    class_J4AC_android_os_Bundle.method_putInt = JJK_GetMethodID__catchAll(env, class_id, name, sign);
+    class_J4AC_android_os_Bundle.method_putInt = J4A_GetMethodID__catchAll(env, class_id, name, sign);
     if (class_J4AC_android_os_Bundle.method_putInt == NULL)
         goto fail;
 
     class_id = class_J4AC_android_os_Bundle.id;
     name     = "getString";
     sign     = "(Ljava/lang/String;)Ljava/lang/String;";
-    class_J4AC_android_os_Bundle.method_getString = JJK_GetMethodID__catchAll(env, class_id, name, sign);
+    class_J4AC_android_os_Bundle.method_getString = J4A_GetMethodID__catchAll(env, class_id, name, sign);
     if (class_J4AC_android_os_Bundle.method_getString == NULL)
         goto fail;
 
     class_id = class_J4AC_android_os_Bundle.id;
     name     = "putString";
     sign     = "(Ljava/lang/String;Ljava/lang/String;)V";
-    class_J4AC_android_os_Bundle.method_putString = JJK_GetMethodID__catchAll(env, class_id, name, sign);
+    class_J4AC_android_os_Bundle.method_putString = J4A_GetMethodID__catchAll(env, class_id, name, sign);
     if (class_J4AC_android_os_Bundle.method_putString == NULL)
         goto fail;
 
     class_id = class_J4AC_android_os_Bundle.id;
     name     = "putParcelableArrayList";
     sign     = "(Ljava/lang/String;Ljava/util/ArrayList;)V";
-    class_J4AC_android_os_Bundle.method_putParcelableArrayList = JJK_GetMethodID__catchAll(env, class_id, name, sign);
+    class_J4AC_android_os_Bundle.method_putParcelableArrayList = J4A_GetMethodID__catchAll(env, class_id, name, sign);
     if (class_J4AC_android_os_Bundle.method_putParcelableArrayList == NULL)
         goto fail;
 

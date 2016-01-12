@@ -96,14 +96,14 @@ int J4A_loadClass__J4AC_java_util_ArrayList(JNIEnv *env)
     class_id = class_J4AC_java_util_ArrayList.id;
     name     = "<init>";
     sign     = "()V";
-    class_J4AC_java_util_ArrayList.constructor_ArrayList = JJK_GetMethodID__catchAll(env, class_id, name, sign);
+    class_J4AC_java_util_ArrayList.constructor_ArrayList = J4A_GetMethodID__catchAll(env, class_id, name, sign);
     if (class_J4AC_java_util_ArrayList.constructor_ArrayList == NULL)
         goto fail;
 
     class_id = class_J4AC_java_util_ArrayList.id;
     name     = "add";
     sign     = "(Ljava/lang/Object;)Z";
-    class_J4AC_java_util_ArrayList.method_add = JJK_GetMethodID__catchAll(env, class_id, name, sign);
+    class_J4AC_java_util_ArrayList.method_add = J4A_GetMethodID__catchAll(env, class_id, name, sign);
     if (class_J4AC_java_util_ArrayList.method_add == NULL)
         goto fail;
 

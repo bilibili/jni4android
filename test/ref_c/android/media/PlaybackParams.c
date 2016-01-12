@@ -87,7 +87,7 @@ int J4A_loadClass__J4AC_android_media_PlaybackParams(JNIEnv *env)
     class_id = class_J4AC_android_media_PlaybackParams.id;
     name     = "setSpeed";
     sign     = "(F)Landroid/media/PlaybackParams;";
-    class_J4AC_android_media_PlaybackParams.method_setSpeed = JJK_GetMethodID__catchAll(env, class_id, name, sign);
+    class_J4AC_android_media_PlaybackParams.method_setSpeed = J4A_GetMethodID__catchAll(env, class_id, name, sign);
     if (class_J4AC_android_media_PlaybackParams.method_setSpeed == NULL)
         goto fail;
 

@@ -314,14 +314,14 @@ int J4A_loadClass__J4AC_tv_danmaku_ijk_media_player_IjkMediaPlayer(JNIEnv *env)
     class_id = class_J4AC_tv_danmaku_ijk_media_player_IjkMediaPlayer.id;
     name     = "mNativeMediaPlayer";
     sign     = "J";
-    class_J4AC_tv_danmaku_ijk_media_player_IjkMediaPlayer.field_mNativeMediaPlayer = JJK_GetFieldID__catchAll(env, class_id, name, sign);
+    class_J4AC_tv_danmaku_ijk_media_player_IjkMediaPlayer.field_mNativeMediaPlayer = J4A_GetFieldID__catchAll(env, class_id, name, sign);
     if (class_J4AC_tv_danmaku_ijk_media_player_IjkMediaPlayer.field_mNativeMediaPlayer == NULL)
         goto fail;
 
     class_id = class_J4AC_tv_danmaku_ijk_media_player_IjkMediaPlayer.id;
     name     = "mNativeMediaDataSource";
     sign     = "J";
-    class_J4AC_tv_danmaku_ijk_media_player_IjkMediaPlayer.field_mNativeMediaDataSource = JJK_GetFieldID__catchAll(env, class_id, name, sign);
+    class_J4AC_tv_danmaku_ijk_media_player_IjkMediaPlayer.field_mNativeMediaDataSource = J4A_GetFieldID__catchAll(env, class_id, name, sign);
     if (class_J4AC_tv_danmaku_ijk_media_player_IjkMediaPlayer.field_mNativeMediaDataSource == NULL)
         goto fail;
 
