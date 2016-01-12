@@ -20,34 +20,34 @@
  */
 
 
-#ifndef JJK__android_media_MediaFormat__H
-#define JJK__android_media_MediaFormat__H
+#ifndef J4A__android_media_MediaFormat__H
+#define J4A__android_media_MediaFormat__H
 
-#include "ijksdl/android/jjk/internal/jjk_internal.h"
+#include "j4a/j4a_internal.h"
 
-jobject JJKC_MediaFormat__MediaFormat(JNIEnv *env);
-jobject JJKC_MediaFormat__MediaFormat__catchAll(JNIEnv *env);
-jobject JJKC_MediaFormat__MediaFormat__asGlobalRef__catchAll(JNIEnv *env);
-jobject JJKC_MediaFormat__createVideoFormat(JNIEnv *env, jstring mime, jint width, jint height);
-jobject JJKC_MediaFormat__createVideoFormat__catchAll(JNIEnv *env, jstring mime, jint width, jint height);
-jobject JJKC_MediaFormat__createVideoFormat__asGlobalRef__catchAll(JNIEnv *env, jstring mime, jint width, jint height);
-jobject JJKC_MediaFormat__createVideoFormat__withCString(JNIEnv *env, const char *mime_cstr__, jint width, jint height);
-jobject JJKC_MediaFormat__createVideoFormat__withCString__catchAll(JNIEnv *env, const char *mime_cstr__, jint width, jint height);
-jobject JJKC_MediaFormat__createVideoFormat__withCString__asGlobalRef__catchAll(JNIEnv *env, const char *mime_cstr__, jint width, jint height);
-jint JJKC_MediaFormat__getInteger(JNIEnv *env, jobject thiz, jstring name);
-jint JJKC_MediaFormat__getInteger__catchAll(JNIEnv *env, jobject thiz, jstring name);
-jint JJKC_MediaFormat__getInteger__withCString(JNIEnv *env, jobject thiz, const char *name_cstr__);
-jint JJKC_MediaFormat__getInteger__withCString__catchAll(JNIEnv *env, jobject thiz, const char *name_cstr__);
-void JJKC_MediaFormat__setInteger(JNIEnv *env, jobject thiz, jstring name, jint value);
-void JJKC_MediaFormat__setInteger__catchAll(JNIEnv *env, jobject thiz, jstring name, jint value);
-void JJKC_MediaFormat__setInteger__withCString(JNIEnv *env, jobject thiz, const char *name_cstr__, jint value);
-void JJKC_MediaFormat__setInteger__withCString__catchAll(JNIEnv *env, jobject thiz, const char *name_cstr__, jint value);
-void JJKC_MediaFormat__setByteBuffer(JNIEnv *env, jobject thiz, jstring name, jobject bytes);
-void JJKC_MediaFormat__setByteBuffer__catchAll(JNIEnv *env, jobject thiz, jstring name, jobject bytes);
-void JJKC_MediaFormat__setByteBuffer__withCString(JNIEnv *env, jobject thiz, const char *name_cstr__, jobject bytes);
-void JJKC_MediaFormat__setByteBuffer__withCString__catchAll(JNIEnv *env, jobject thiz, const char *name_cstr__, jobject bytes);
-int JJK_loadClass__JJKC_MediaFormat(JNIEnv *env);
+jobject J4AC_MediaFormat__MediaFormat(JNIEnv *env);
+jobject J4AC_MediaFormat__MediaFormat__catchAll(JNIEnv *env);
+jobject J4AC_MediaFormat__MediaFormat__asGlobalRef__catchAll(JNIEnv *env);
+jobject J4AC_MediaFormat__createVideoFormat(JNIEnv *env, jstring mime, jint width, jint height);
+jobject J4AC_MediaFormat__createVideoFormat__catchAll(JNIEnv *env, jstring mime, jint width, jint height);
+jobject J4AC_MediaFormat__createVideoFormat__asGlobalRef__catchAll(JNIEnv *env, jstring mime, jint width, jint height);
+jobject J4AC_MediaFormat__createVideoFormat__withCString(JNIEnv *env, const char *mime_cstr__, jint width, jint height);
+jobject J4AC_MediaFormat__createVideoFormat__withCString__catchAll(JNIEnv *env, const char *mime_cstr__, jint width, jint height);
+jobject J4AC_MediaFormat__createVideoFormat__withCString__asGlobalRef__catchAll(JNIEnv *env, const char *mime_cstr__, jint width, jint height);
+jint J4AC_MediaFormat__getInteger(JNIEnv *env, jobject thiz, jstring name);
+jint J4AC_MediaFormat__getInteger__catchAll(JNIEnv *env, jobject thiz, jstring name);
+jint J4AC_MediaFormat__getInteger__withCString(JNIEnv *env, jobject thiz, const char *name_cstr__);
+jint J4AC_MediaFormat__getInteger__withCString__catchAll(JNIEnv *env, jobject thiz, const char *name_cstr__);
+void J4AC_MediaFormat__setInteger(JNIEnv *env, jobject thiz, jstring name, jint value);
+void J4AC_MediaFormat__setInteger__catchAll(JNIEnv *env, jobject thiz, jstring name, jint value);
+void J4AC_MediaFormat__setInteger__withCString(JNIEnv *env, jobject thiz, const char *name_cstr__, jint value);
+void J4AC_MediaFormat__setInteger__withCString__catchAll(JNIEnv *env, jobject thiz, const char *name_cstr__, jint value);
+void J4AC_MediaFormat__setByteBuffer(JNIEnv *env, jobject thiz, jstring name, jobject bytes);
+void J4AC_MediaFormat__setByteBuffer__catchAll(JNIEnv *env, jobject thiz, jstring name, jobject bytes);
+void J4AC_MediaFormat__setByteBuffer__withCString(JNIEnv *env, jobject thiz, const char *name_cstr__, jobject bytes);
+void J4AC_MediaFormat__setByteBuffer__withCString__catchAll(JNIEnv *env, jobject thiz, const char *name_cstr__, jobject bytes);
+int J4A_loadClass__J4AC_MediaFormat(JNIEnv *env);
 
-#define JJK_HAVE__JJKC_MediaFormat
+#define J4A_HAVE__J4AC_MediaFormat
 
-#endif//JJK__android_media_MediaFormat__H
+#endif//J4A__android_media_MediaFormat__H

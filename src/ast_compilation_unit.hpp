@@ -44,7 +44,7 @@ public:
 public:
     j4a::string get_header_macro() {
         std::ostringstream os;
-        os << "JJK__";
+        os << "J4A__";
         os << get_package()->get_c_long_name();
         os << "_";
         os << get_clazz()->get_name();
@@ -54,7 +54,7 @@ public:
 
     j4a::string get_include_path() {
         std::ostringstream os;
-        os << "ijksdl/android/jjk/c/";
+        os << "j4a/class/";
         os << get_package()->get_fs_long_path();
         os << "/";
         os << get_clazz()->get_name();

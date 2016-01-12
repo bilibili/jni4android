@@ -20,42 +20,42 @@
  */
 
 
-#ifndef JJK__android_os_Bundle__H
-#define JJK__android_os_Bundle__H
+#ifndef J4A__android_os_Bundle__H
+#define J4A__android_os_Bundle__H
 
-#include "ijksdl/android/jjk/internal/jjk_internal.h"
+#include "j4a/j4a_internal.h"
 
-jobject JJKC_Bundle__Bundle(JNIEnv *env);
-jobject JJKC_Bundle__Bundle__catchAll(JNIEnv *env);
-jobject JJKC_Bundle__Bundle__asGlobalRef__catchAll(JNIEnv *env);
-jint JJKC_Bundle__getInt(JNIEnv *env, jobject thiz, jstring key, jint defaultValue);
-jint JJKC_Bundle__getInt__catchAll(JNIEnv *env, jobject thiz, jstring key, jint defaultValue);
-jint JJKC_Bundle__getInt__withCString(JNIEnv *env, jobject thiz, const char *key_cstr__, jint defaultValue);
-jint JJKC_Bundle__getInt__withCString__catchAll(JNIEnv *env, jobject thiz, const char *key_cstr__, jint defaultValue);
-void JJKC_Bundle__putInt(JNIEnv *env, jobject thiz, jstring key, jint value);
-void JJKC_Bundle__putInt__catchAll(JNIEnv *env, jobject thiz, jstring key, jint value);
-void JJKC_Bundle__putInt__withCString(JNIEnv *env, jobject thiz, const char *key_cstr__, jint value);
-void JJKC_Bundle__putInt__withCString__catchAll(JNIEnv *env, jobject thiz, const char *key_cstr__, jint value);
-jstring JJKC_Bundle__getString(JNIEnv *env, jobject thiz, jstring key);
-jstring JJKC_Bundle__getString__catchAll(JNIEnv *env, jobject thiz, jstring key);
-jstring JJKC_Bundle__getString__asGlobalRef__catchAll(JNIEnv *env, jobject thiz, jstring key);
-const char *JJKC_Bundle__getString__asCBuffer(JNIEnv *env, jobject thiz, jstring key, char *out_buf, int out_len);
-const char *JJKC_Bundle__getString__asCBuffer__catchAll(JNIEnv *env, jobject thiz, jstring key, char *out_buf, int out_len);
-jstring JJKC_Bundle__getString__withCString(JNIEnv *env, jobject thiz, const char *key_cstr__);
-jstring JJKC_Bundle__getString__withCString__catchAll(JNIEnv *env, jobject thiz, const char *key_cstr__);
-jstring JJKC_Bundle__getString__withCString__asGlobalRef__catchAll(JNIEnv *env, jobject thiz, const char *key_cstr__);
-const char *JJKC_Bundle__getString__withCString__asCBuffer(JNIEnv *env, jobject thiz, const char *key_cstr__, char *out_buf, int out_len);
-const char *JJKC_Bundle__getString__withCString__asCBuffer__catchAll(JNIEnv *env, jobject thiz, const char *key_cstr__, char *out_buf, int out_len);
-void JJKC_Bundle__putString(JNIEnv *env, jobject thiz, jstring key, jstring value);
-void JJKC_Bundle__putString__catchAll(JNIEnv *env, jobject thiz, jstring key, jstring value);
-void JJKC_Bundle__putString__withCString(JNIEnv *env, jobject thiz, const char *key_cstr__, const char *value_cstr__);
-void JJKC_Bundle__putString__withCString__catchAll(JNIEnv *env, jobject thiz, const char *key_cstr__, const char *value_cstr__);
-void JJKC_Bundle__putParcelableArrayList(JNIEnv *env, jobject thiz, jstring key, jobject value);
-void JJKC_Bundle__putParcelableArrayList__catchAll(JNIEnv *env, jobject thiz, jstring key, jobject value);
-void JJKC_Bundle__putParcelableArrayList__withCString(JNIEnv *env, jobject thiz, const char *key_cstr__, jobject value);
-void JJKC_Bundle__putParcelableArrayList__withCString__catchAll(JNIEnv *env, jobject thiz, const char *key_cstr__, jobject value);
-int JJK_loadClass__JJKC_Bundle(JNIEnv *env);
+jobject J4AC_Bundle__Bundle(JNIEnv *env);
+jobject J4AC_Bundle__Bundle__catchAll(JNIEnv *env);
+jobject J4AC_Bundle__Bundle__asGlobalRef__catchAll(JNIEnv *env);
+jint J4AC_Bundle__getInt(JNIEnv *env, jobject thiz, jstring key, jint defaultValue);
+jint J4AC_Bundle__getInt__catchAll(JNIEnv *env, jobject thiz, jstring key, jint defaultValue);
+jint J4AC_Bundle__getInt__withCString(JNIEnv *env, jobject thiz, const char *key_cstr__, jint defaultValue);
+jint J4AC_Bundle__getInt__withCString__catchAll(JNIEnv *env, jobject thiz, const char *key_cstr__, jint defaultValue);
+void J4AC_Bundle__putInt(JNIEnv *env, jobject thiz, jstring key, jint value);
+void J4AC_Bundle__putInt__catchAll(JNIEnv *env, jobject thiz, jstring key, jint value);
+void J4AC_Bundle__putInt__withCString(JNIEnv *env, jobject thiz, const char *key_cstr__, jint value);
+void J4AC_Bundle__putInt__withCString__catchAll(JNIEnv *env, jobject thiz, const char *key_cstr__, jint value);
+jstring J4AC_Bundle__getString(JNIEnv *env, jobject thiz, jstring key);
+jstring J4AC_Bundle__getString__catchAll(JNIEnv *env, jobject thiz, jstring key);
+jstring J4AC_Bundle__getString__asGlobalRef__catchAll(JNIEnv *env, jobject thiz, jstring key);
+const char *J4AC_Bundle__getString__asCBuffer(JNIEnv *env, jobject thiz, jstring key, char *out_buf, int out_len);
+const char *J4AC_Bundle__getString__asCBuffer__catchAll(JNIEnv *env, jobject thiz, jstring key, char *out_buf, int out_len);
+jstring J4AC_Bundle__getString__withCString(JNIEnv *env, jobject thiz, const char *key_cstr__);
+jstring J4AC_Bundle__getString__withCString__catchAll(JNIEnv *env, jobject thiz, const char *key_cstr__);
+jstring J4AC_Bundle__getString__withCString__asGlobalRef__catchAll(JNIEnv *env, jobject thiz, const char *key_cstr__);
+const char *J4AC_Bundle__getString__withCString__asCBuffer(JNIEnv *env, jobject thiz, const char *key_cstr__, char *out_buf, int out_len);
+const char *J4AC_Bundle__getString__withCString__asCBuffer__catchAll(JNIEnv *env, jobject thiz, const char *key_cstr__, char *out_buf, int out_len);
+void J4AC_Bundle__putString(JNIEnv *env, jobject thiz, jstring key, jstring value);
+void J4AC_Bundle__putString__catchAll(JNIEnv *env, jobject thiz, jstring key, jstring value);
+void J4AC_Bundle__putString__withCString(JNIEnv *env, jobject thiz, const char *key_cstr__, const char *value_cstr__);
+void J4AC_Bundle__putString__withCString__catchAll(JNIEnv *env, jobject thiz, const char *key_cstr__, const char *value_cstr__);
+void J4AC_Bundle__putParcelableArrayList(JNIEnv *env, jobject thiz, jstring key, jobject value);
+void J4AC_Bundle__putParcelableArrayList__catchAll(JNIEnv *env, jobject thiz, jstring key, jobject value);
+void J4AC_Bundle__putParcelableArrayList__withCString(JNIEnv *env, jobject thiz, const char *key_cstr__, jobject value);
+void J4AC_Bundle__putParcelableArrayList__withCString__catchAll(JNIEnv *env, jobject thiz, const char *key_cstr__, jobject value);
+int J4A_loadClass__J4AC_Bundle(JNIEnv *env);
 
-#define JJK_HAVE__JJKC_Bundle
+#define J4A_HAVE__J4AC_Bundle
 
-#endif//JJK__android_os_Bundle__H
+#endif//J4A__android_os_Bundle__H

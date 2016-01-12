@@ -20,16 +20,16 @@
  */
 
 
-#ifndef JJK__android_media_PlaybackParams__H
-#define JJK__android_media_PlaybackParams__H
+#ifndef J4A__android_media_PlaybackParams__H
+#define J4A__android_media_PlaybackParams__H
 
-#include "ijksdl/android/jjk/internal/jjk_internal.h"
+#include "j4a/j4a_internal.h"
 
-jobject JJKC_PlaybackParams__setSpeed(JNIEnv *env, jobject thiz, jfloat speed);
-jobject JJKC_PlaybackParams__setSpeed__catchAll(JNIEnv *env, jobject thiz, jfloat speed);
-jobject JJKC_PlaybackParams__setSpeed__asGlobalRef__catchAll(JNIEnv *env, jobject thiz, jfloat speed);
-int JJK_loadClass__JJKC_PlaybackParams(JNIEnv *env);
+jobject J4AC_PlaybackParams__setSpeed(JNIEnv *env, jobject thiz, jfloat speed);
+jobject J4AC_PlaybackParams__setSpeed__catchAll(JNIEnv *env, jobject thiz, jfloat speed);
+jobject J4AC_PlaybackParams__setSpeed__asGlobalRef__catchAll(JNIEnv *env, jobject thiz, jfloat speed);
+int J4A_loadClass__J4AC_PlaybackParams(JNIEnv *env);
 
-#define JJK_HAVE__JJKC_PlaybackParams
+#define J4A_HAVE__J4AC_PlaybackParams
 
-#endif//JJK__android_media_PlaybackParams__H
+#endif//J4A__android_media_PlaybackParams__H

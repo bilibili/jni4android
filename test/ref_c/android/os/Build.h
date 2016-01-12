@@ -20,15 +20,15 @@
  */
 
 
-#ifndef JJK__android_os_Build__H
-#define JJK__android_os_Build__H
+#ifndef J4A__android_os_Build__H
+#define J4A__android_os_Build__H
 
-#include "ijksdl/android/jjk/internal/jjk_internal.h"
+#include "j4a/j4a_internal.h"
 
-jint JJKC_android_os_Build__VERSION__SDK_INT__get(JNIEnv *env);
-jint JJKC_android_os_Build__VERSION__SDK_INT__get__catchAll(JNIEnv *env);
-void JJKC_android_os_Build__VERSION__SDK_INT__set(JNIEnv *env, jint value);
-void JJKC_android_os_Build__VERSION__SDK_INT__set__catchAll(JNIEnv *env, jint value);
-int JJK_loadClass__JJKC_android_os_Build(JNIEnv *env);
+jint J4AC_android_os_Build__VERSION__SDK_INT__get(JNIEnv *env);
+jint J4AC_android_os_Build__VERSION__SDK_INT__get__catchAll(JNIEnv *env);
+void J4AC_android_os_Build__VERSION__SDK_INT__set(JNIEnv *env, jint value);
+void J4AC_android_os_Build__VERSION__SDK_INT__set__catchAll(JNIEnv *env, jint value);
+int J4A_loadClass__J4AC_android_os_Build(JNIEnv *env);
 
-#endif//JJK__android_os_Build__H
+#endif//J4A__android_os_Build__H

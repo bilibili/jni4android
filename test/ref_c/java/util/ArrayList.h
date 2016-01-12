@@ -20,18 +20,18 @@
  */
 
 
-#ifndef JJK__java_util_ArrayList__H
-#define JJK__java_util_ArrayList__H
+#ifndef J4A__java_util_ArrayList__H
+#define J4A__java_util_ArrayList__H
 
-#include "ijksdl/android/jjk/internal/jjk_internal.h"
+#include "j4a/j4a_internal.h"
 
-jobject JJKC_ArrayList__ArrayList(JNIEnv *env);
-jobject JJKC_ArrayList__ArrayList__catchAll(JNIEnv *env);
-jobject JJKC_ArrayList__ArrayList__asGlobalRef__catchAll(JNIEnv *env);
-jboolean JJKC_ArrayList__add(JNIEnv *env, jobject thiz, jobject object);
-jboolean JJKC_ArrayList__add__catchAll(JNIEnv *env, jobject thiz, jobject object);
-int JJK_loadClass__JJKC_ArrayList(JNIEnv *env);
+jobject J4AC_ArrayList__ArrayList(JNIEnv *env);
+jobject J4AC_ArrayList__ArrayList__catchAll(JNIEnv *env);
+jobject J4AC_ArrayList__ArrayList__asGlobalRef__catchAll(JNIEnv *env);
+jboolean J4AC_ArrayList__add(JNIEnv *env, jobject thiz, jobject object);
+jboolean J4AC_ArrayList__add__catchAll(JNIEnv *env, jobject thiz, jobject object);
+int J4A_loadClass__J4AC_ArrayList(JNIEnv *env);
 
-#define JJK_HAVE__JJKC_ArrayList
+#define J4A_HAVE__J4AC_ArrayList
 
-#endif//JJK__java_util_ArrayList__H
+#endif//J4A__java_util_ArrayList__H

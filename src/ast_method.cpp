@@ -247,14 +247,14 @@ void Method::build_c_member_id_load(std::ostream &os)
 
     Annotation *annotation = get_annotation_at("MinApi");
     if (annotation) {
-        os << build_indent() << "if (JJK_GetSystemAndroidApiLevel(env) >= " << annotation->get_value() << ") {" << std::endl;
+        os << build_indent() << "if (J4A_GetSystemAndroidApiLevel(env) >= " << annotation->get_value() << ") {" << std::endl;
         increase_build_indent(4);
     }
 
     os << build_indent() << "class_id = " << get_this_class()->get_c_jni_id() << ";\n";
     os << build_indent() << "name     = \"" << get_c_jni_method_name() << "\";\n";
     os << build_indent() << "sign     = \"" << get_c_jni_sign() << "\";\n";
-    os << build_indent() << get_c_jni_id() << " = " << (is_static() ? "JJK_GetStaticMethodID__catchAll" : "JJK_GetMethodID__catchAll")
+    os << build_indent() << get_c_jni_id() << " = " << (is_static() ? "J4A_GetStaticMethodID__catchAll" : "JJK_GetMethodID__catchAll")
                             << "(env, class_id, name, sign);\n";
     os << build_indent() << "if (" << get_c_jni_id() << " == NULL)\n";
     os << build_indent() << "    goto fail;\n";
@@ -286,9 +286,9 @@ void Method::_build_c_func_string_argument_cast_statements(std::ostream &os, int
 
         os << "    " << name << " = (*env)->NewStringUTF(env, " << name << "_cstr__);" << std::endl;
         if (flags & FLAG_CATCH_ALL) {
-            os << "    if (JJK_ExceptionCheck__catchAll(env) || !" << name << ")" << std::endl;
+            os << "    if (J4A_ExceptionCheck__catchAll(env) || !" << name << ")" << std::endl;
         } else {
-            os << "    if (JJK_ExceptionCheck__throwAny(env) || !" << name << ")" << std::endl;
+            os << "    if (J4A_ExceptionCheck__throwAny(env) || !" << name << ")" << std::endl;
         }
         os << "        goto fail;" << std::endl;
     }
@@ -303,7 +303,7 @@ void Method::_build_c_func_string_argument_release_statements(std::ostream &os, 
             continue;
         j4a::string name = (*begin)->get_name();
 
-        os << "    JJK_DeleteLocalRef__p(env, &" << name << ");" << std::endl;
+        os << "    J4A_DeleteLocalRef__p(env, &" << name << ");" << std::endl;
     }
 }
 
@@ -325,7 +325,7 @@ void Method::_build_c_func_impl_void_type_statement(std::ostream &os, int flags)
         _build_c_func_string_argument_release_statements(os, flags);
     } else if (flags & FLAG_CATCH_ALL) {
         os << "    "; _build_c_func_call_statement(os, flags & ~FLAG_CATCH_ALL); os << ";" << std::endl;
-        os << "    JJK_ExceptionCheck__catchAll(env);" << std::endl;
+        os << "    J4A_ExceptionCheck__catchAll(env);" << std::endl;
     } else {
         os << "    "; _build_c_call_jni_statement(os, flags); os << ";" << std::endl;
     }
@@ -348,9 +348,9 @@ void Method::_build_c_func_impl_basic_type_statement(std::ostream &os, int flags
         os << std::endl;
         os << "    ret_value = "; _build_c_func_call_statement(os, flags & ~FLAG_WITH_C_STRING); os << ";" << std::endl;
         if (flags & FLAG_CATCH_ALL) {
-            os << "    if (JJK_ExceptionCheck__catchAll(env)) {" << std::endl;
+            os << "    if (J4A_ExceptionCheck__catchAll(env)) {" << std::endl;
         } else {
-            os << "    if (JJK_ExceptionCheck__throwAny(env)) {" << std::endl;
+            os << "    if (J4A_ExceptionCheck__throwAny(env)) {" << std::endl;
         }
         os << "        ret_value = " << get_type()->get_c_default_value() << ";" << std::endl;
         os << "        goto fail;" << std::endl;
@@ -361,7 +361,7 @@ void Method::_build_c_func_impl_basic_type_statement(std::ostream &os, int flags
         os << "    return ret_value;" << std::endl;
     } else if (flags & FLAG_CATCH_ALL) {
         os << "    " << get_type()->get_c_type() << " ret_value = "; _build_c_func_call_statement(os, flags & ~FLAG_CATCH_ALL); os << ";" << std::endl;
-        os << "    if (JJK_ExceptionCheck__catchAll(env)) {" << std::endl;
+        os << "    if (J4A_ExceptionCheck__catchAll(env)) {" << std::endl;
         os << "        return " << get_type()->get_c_default_value() << ";" << std::endl;
         os << "    }" << std::endl;
         os << std::endl;
@@ -386,18 +386,18 @@ void Method::_build_c_func_impl_reference_type_statement(std::ostream &os, int f
         os << "    const char *c_str     = NULL;" << std::endl;
         os << "    " << get_type()->get_c_type() << " local_string = "; _build_c_func_call_statement(os, flags & ~(FLAG_AS_GLOBAL_REF | FLAG_AS_C_BUFFER)); os << ";" << std::endl;
         if (flags & FLAG_CATCH_ALL) {
-            os << "    if (JJK_ExceptionCheck__catchAll(env) || !local_string) {" << std::endl;
+            os << "    if (J4A_ExceptionCheck__catchAll(env) || !local_string) {" << std::endl;
         } else {
-            os << "    if (JJK_ExceptionCheck__throwAny(env) || !local_string) {" << std::endl;
+            os << "    if (J4A_ExceptionCheck__throwAny(env) || !local_string) {" << std::endl;
         }
         os << "        goto fail;" << std::endl;
         os << "    }" << std::endl;
         os << std::endl;
         os << "    c_str = (*env)->GetStringUTFChars(env, local_string, NULL );" << std::endl;
         if (flags & FLAG_CATCH_ALL) {
-            os << "    if (JJK_ExceptionCheck__catchAll(env) || !c_str) {" << std::endl;
+            os << "    if (J4A_ExceptionCheck__catchAll(env) || !c_str) {" << std::endl;
         } else {
-            os << "    if (JJK_ExceptionCheck__throwAny(env) || !c_str) {" << std::endl;
+            os << "    if (J4A_ExceptionCheck__throwAny(env) || !c_str) {" << std::endl;
         }
         os << "        goto fail;" << std::endl;
         os << "    }" << std::endl;
@@ -406,30 +406,30 @@ void Method::_build_c_func_impl_reference_type_statement(std::ostream &os, int f
         os << "    ret_value = out_buf;" << std::endl;
         os << std::endl;
         os << "fail:" << std::endl;
-        os << "    JJK_ReleaseStringUTFChars__p(env, local_string, &c_str);" << std::endl;
-        os << "    JJK_DeleteLocalRef__p(env, &local_string);" << std::endl;
+        os << "    J4A_ReleaseStringUTFChars__p(env, local_string, &c_str);" << std::endl;
+        os << "    J4A_DeleteLocalRef__p(env, &local_string);" << std::endl;
         os << "    return ret_value;" << std::endl;
     } else if (flags & FLAG_AS_GLOBAL_REF) {
         assert(get_type()->is_reference_type());
         os << "    " << get_type()->get_c_type() << " ret_object   = " << get_type()->get_c_default_value() << ";" << std::endl;
         os << "    " << get_type()->get_c_type() << " local_object = "; _build_c_func_call_statement(os, flags & ~FLAG_AS_GLOBAL_REF); os << ";" << std::endl;
         if (flags & FLAG_CATCH_ALL) {
-            os << "    if (JJK_ExceptionCheck__catchAll(env) || !local_object) {" << std::endl;
+            os << "    if (J4A_ExceptionCheck__catchAll(env) || !local_object) {" << std::endl;
         } else {
-            os << "    if (JJK_ExceptionCheck__throwAny(env) || !local_object) {" << std::endl;
+            os << "    if (J4A_ExceptionCheck__throwAny(env) || !local_object) {" << std::endl;
         }
         os << "        ret_object = " << get_type()->get_c_default_value() << ";" << std::endl;
         os << "        goto fail;" << std::endl;
         os << "    }" << std::endl;
         os << std::endl;
-        os << "    ret_object = JJK_NewGlobalRef__catchAll(env, local_object);\n";
+        os << "    ret_object = J4A_NewGlobalRef__catchAll(env, local_object);\n";
         os << "    if (!ret_object) {" << std::endl;
         os << "        ret_object = " << get_type()->get_c_default_value() << ";" << std::endl;
         os << "        goto fail;" << std::endl;
         os << "    }" << std::endl;
         os << std::endl;
         os << "fail:" << std::endl;
-        os << "    JJK_DeleteLocalRef__p(env, &local_object);\n";
+        os << "    J4A_DeleteLocalRef__p(env, &local_object);\n";
         os << "    return ret_object;\n";
     } else if (flags & FLAG_WITH_C_STRING) {
         assert(_has_string_arg());
@@ -438,9 +438,9 @@ void Method::_build_c_func_impl_reference_type_statement(std::ostream &os, int f
         os << std::endl;
         os << "    ret_object = "; _build_c_func_call_statement(os, flags & ~FLAG_WITH_C_STRING); os << ";" << std::endl;
         if (flags & FLAG_CATCH_ALL) {
-            os << "    if (JJK_ExceptionCheck__catchAll(env) || !ret_object) {" << std::endl;
+            os << "    if (J4A_ExceptionCheck__catchAll(env) || !ret_object) {" << std::endl;
         } else {
-            os << "    if (JJK_ExceptionCheck__throwAny(env) || !ret_object) {" << std::endl;
+            os << "    if (J4A_ExceptionCheck__throwAny(env) || !ret_object) {" << std::endl;
         }
         os << "        ret_object = " << get_type()->get_c_default_value() << ";" << std::endl;
         os << "        goto fail;" << std::endl;
@@ -451,7 +451,7 @@ void Method::_build_c_func_impl_reference_type_statement(std::ostream &os, int f
         os << "    return ret_object;" << std::endl;
     } else if (flags & FLAG_CATCH_ALL) {
         os << "    " << get_type()->get_c_type() << " ret_object = "; _build_c_func_call_statement(os, flags & ~FLAG_CATCH_ALL); os << ";" << std::endl;
-        os << "    if (JJK_ExceptionCheck__catchAll(env) || !ret_object) {" << std::endl;
+        os << "    if (J4A_ExceptionCheck__catchAll(env) || !ret_object) {" << std::endl;
         os << "        return " << get_type()->get_c_default_value() << ";" << std::endl;
         os << "    }" << std::endl;
         os << std::endl;

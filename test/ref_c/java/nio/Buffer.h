@@ -20,11 +20,11 @@
  */
 
 
-#ifndef JJK__java_nio_Buffer__H
-#define JJK__java_nio_Buffer__H
+#ifndef J4A__java_nio_Buffer__H
+#define J4A__java_nio_Buffer__H
 
-#include "ijksdl/android/jjk/internal/jjk_internal.h"
+#include "j4a/j4a_internal.h"
 
-int JJK_loadClass__JJKC_java_nio_Buffer(JNIEnv *env);
+int J4A_loadClass__J4AC_java_nio_Buffer(JNIEnv *env);
 
-#endif//JJK__java_nio_Buffer__H
+#endif//J4A__java_nio_Buffer__H

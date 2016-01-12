@@ -22,7 +22,7 @@
 
 #include "MediaFormat.h"
 
-typedef struct JJKC_MediaFormat {
+typedef struct J4AC_MediaFormat {
     jclass id;
 
     jmethodID constructor_MediaFormat;
@@ -30,328 +30,328 @@ typedef struct JJKC_MediaFormat {
     jmethodID method_getInteger;
     jmethodID method_setInteger;
     jmethodID method_setByteBuffer;
-} JJKC_MediaFormat;
-static JJKC_MediaFormat class_JJKC_MediaFormat;
+} J4AC_MediaFormat;
+static J4AC_MediaFormat class_J4AC_MediaFormat;
 
-jobject JJKC_MediaFormat__MediaFormat(JNIEnv *env)
+jobject J4AC_MediaFormat__MediaFormat(JNIEnv *env)
 {
-    return (*env)->NewObject(env, class_JJKC_MediaFormat.id, class_JJKC_MediaFormat.constructor_MediaFormat);
+    return (*env)->NewObject(env, class_J4AC_MediaFormat.id, class_J4AC_MediaFormat.constructor_MediaFormat);
 }
 
-jobject JJKC_MediaFormat__MediaFormat__catchAll(JNIEnv *env)
+jobject J4AC_MediaFormat__MediaFormat__catchAll(JNIEnv *env)
 {
-    jobject ret_object = JJKC_MediaFormat__MediaFormat(env);
-    if (JJK_ExceptionCheck__catchAll(env) || !ret_object) {
+    jobject ret_object = J4AC_MediaFormat__MediaFormat(env);
+    if (J4A_ExceptionCheck__catchAll(env) || !ret_object) {
         return NULL;
     }
 
     return ret_object;
 }
 
-jobject JJKC_MediaFormat__MediaFormat__asGlobalRef__catchAll(JNIEnv *env)
+jobject J4AC_MediaFormat__MediaFormat__asGlobalRef__catchAll(JNIEnv *env)
 {
     jobject ret_object   = NULL;
-    jobject local_object = JJKC_MediaFormat__MediaFormat__catchAll(env);
-    if (JJK_ExceptionCheck__catchAll(env) || !local_object) {
+    jobject local_object = J4AC_MediaFormat__MediaFormat__catchAll(env);
+    if (J4A_ExceptionCheck__catchAll(env) || !local_object) {
         ret_object = NULL;
         goto fail;
     }
 
-    ret_object = JJK_NewGlobalRef__catchAll(env, local_object);
+    ret_object = J4A_NewGlobalRef__catchAll(env, local_object);
     if (!ret_object) {
         ret_object = NULL;
         goto fail;
     }
 
 fail:
-    JJK_DeleteLocalRef__p(env, &local_object);
+    J4A_DeleteLocalRef__p(env, &local_object);
     return ret_object;
 }
 
-jobject JJKC_MediaFormat__createVideoFormat(JNIEnv *env, jstring mime, jint width, jint height)
+jobject J4AC_MediaFormat__createVideoFormat(JNIEnv *env, jstring mime, jint width, jint height)
 {
-    return (*env)->CallStaticObjectMethod(env, class_JJKC_MediaFormat.id, class_JJKC_MediaFormat.method_createVideoFormat, mime, width, height);
+    return (*env)->CallStaticObjectMethod(env, class_J4AC_MediaFormat.id, class_J4AC_MediaFormat.method_createVideoFormat, mime, width, height);
 }
 
-jobject JJKC_MediaFormat__createVideoFormat__catchAll(JNIEnv *env, jstring mime, jint width, jint height)
+jobject J4AC_MediaFormat__createVideoFormat__catchAll(JNIEnv *env, jstring mime, jint width, jint height)
 {
-    jobject ret_object = JJKC_MediaFormat__createVideoFormat(env, mime, width, height);
-    if (JJK_ExceptionCheck__catchAll(env) || !ret_object) {
+    jobject ret_object = J4AC_MediaFormat__createVideoFormat(env, mime, width, height);
+    if (J4A_ExceptionCheck__catchAll(env) || !ret_object) {
         return NULL;
     }
 
     return ret_object;
 }
 
-jobject JJKC_MediaFormat__createVideoFormat__asGlobalRef__catchAll(JNIEnv *env, jstring mime, jint width, jint height)
+jobject J4AC_MediaFormat__createVideoFormat__asGlobalRef__catchAll(JNIEnv *env, jstring mime, jint width, jint height)
 {
     jobject ret_object   = NULL;
-    jobject local_object = JJKC_MediaFormat__createVideoFormat__catchAll(env, mime, width, height);
-    if (JJK_ExceptionCheck__catchAll(env) || !local_object) {
+    jobject local_object = J4AC_MediaFormat__createVideoFormat__catchAll(env, mime, width, height);
+    if (J4A_ExceptionCheck__catchAll(env) || !local_object) {
         ret_object = NULL;
         goto fail;
     }
 
-    ret_object = JJK_NewGlobalRef__catchAll(env, local_object);
+    ret_object = J4A_NewGlobalRef__catchAll(env, local_object);
     if (!ret_object) {
         ret_object = NULL;
         goto fail;
     }
 
 fail:
-    JJK_DeleteLocalRef__p(env, &local_object);
+    J4A_DeleteLocalRef__p(env, &local_object);
     return ret_object;
 }
 
-jobject JJKC_MediaFormat__createVideoFormat__withCString(JNIEnv *env, const char *mime_cstr__, jint width, jint height)
+jobject J4AC_MediaFormat__createVideoFormat__withCString(JNIEnv *env, const char *mime_cstr__, jint width, jint height)
 {
     jobject ret_object = NULL;
     jstring mime = NULL;
 
     mime = (*env)->NewStringUTF(env, mime_cstr__);
-    if (JJK_ExceptionCheck__throwAny(env) || !mime)
+    if (J4A_ExceptionCheck__throwAny(env) || !mime)
         goto fail;
 
-    ret_object = JJKC_MediaFormat__createVideoFormat(env, mime, width, height);
-    if (JJK_ExceptionCheck__throwAny(env) || !ret_object) {
+    ret_object = J4AC_MediaFormat__createVideoFormat(env, mime, width, height);
+    if (J4A_ExceptionCheck__throwAny(env) || !ret_object) {
         ret_object = NULL;
         goto fail;
     }
 
 fail:
-    JJK_DeleteLocalRef__p(env, &mime);
+    J4A_DeleteLocalRef__p(env, &mime);
     return ret_object;
 }
 
-jobject JJKC_MediaFormat__createVideoFormat__withCString__catchAll(JNIEnv *env, const char *mime_cstr__, jint width, jint height)
+jobject J4AC_MediaFormat__createVideoFormat__withCString__catchAll(JNIEnv *env, const char *mime_cstr__, jint width, jint height)
 {
     jobject ret_object = NULL;
     jstring mime = NULL;
 
     mime = (*env)->NewStringUTF(env, mime_cstr__);
-    if (JJK_ExceptionCheck__catchAll(env) || !mime)
+    if (J4A_ExceptionCheck__catchAll(env) || !mime)
         goto fail;
 
-    ret_object = JJKC_MediaFormat__createVideoFormat__catchAll(env, mime, width, height);
-    if (JJK_ExceptionCheck__catchAll(env) || !ret_object) {
+    ret_object = J4AC_MediaFormat__createVideoFormat__catchAll(env, mime, width, height);
+    if (J4A_ExceptionCheck__catchAll(env) || !ret_object) {
         ret_object = NULL;
         goto fail;
     }
 
 fail:
-    JJK_DeleteLocalRef__p(env, &mime);
+    J4A_DeleteLocalRef__p(env, &mime);
     return ret_object;
 }
 
-jobject JJKC_MediaFormat__createVideoFormat__withCString__asGlobalRef__catchAll(JNIEnv *env, const char *mime_cstr__, jint width, jint height)
+jobject J4AC_MediaFormat__createVideoFormat__withCString__asGlobalRef__catchAll(JNIEnv *env, const char *mime_cstr__, jint width, jint height)
 {
     jobject ret_object   = NULL;
-    jobject local_object = JJKC_MediaFormat__createVideoFormat__withCString__catchAll(env, mime_cstr__, width, height);
-    if (JJK_ExceptionCheck__catchAll(env) || !local_object) {
+    jobject local_object = J4AC_MediaFormat__createVideoFormat__withCString__catchAll(env, mime_cstr__, width, height);
+    if (J4A_ExceptionCheck__catchAll(env) || !local_object) {
         ret_object = NULL;
         goto fail;
     }
 
-    ret_object = JJK_NewGlobalRef__catchAll(env, local_object);
+    ret_object = J4A_NewGlobalRef__catchAll(env, local_object);
     if (!ret_object) {
         ret_object = NULL;
         goto fail;
     }
 
 fail:
-    JJK_DeleteLocalRef__p(env, &local_object);
+    J4A_DeleteLocalRef__p(env, &local_object);
     return ret_object;
 }
 
-jint JJKC_MediaFormat__getInteger(JNIEnv *env, jobject thiz, jstring name)
+jint J4AC_MediaFormat__getInteger(JNIEnv *env, jobject thiz, jstring name)
 {
-    return (*env)->CallIntMethod(env, thiz, class_JJKC_MediaFormat.method_getInteger, name);
+    return (*env)->CallIntMethod(env, thiz, class_J4AC_MediaFormat.method_getInteger, name);
 }
 
-jint JJKC_MediaFormat__getInteger__catchAll(JNIEnv *env, jobject thiz, jstring name)
+jint J4AC_MediaFormat__getInteger__catchAll(JNIEnv *env, jobject thiz, jstring name)
 {
-    jint ret_value = JJKC_MediaFormat__getInteger(env, thiz, name);
-    if (JJK_ExceptionCheck__catchAll(env)) {
+    jint ret_value = J4AC_MediaFormat__getInteger(env, thiz, name);
+    if (J4A_ExceptionCheck__catchAll(env)) {
         return 0;
     }
 
     return ret_value;
 }
 
-jint JJKC_MediaFormat__getInteger__withCString(JNIEnv *env, jobject thiz, const char *name_cstr__)
+jint J4AC_MediaFormat__getInteger__withCString(JNIEnv *env, jobject thiz, const char *name_cstr__)
 {
     jint ret_value = 0;
     jstring name = NULL;
 
     name = (*env)->NewStringUTF(env, name_cstr__);
-    if (JJK_ExceptionCheck__throwAny(env) || !name)
+    if (J4A_ExceptionCheck__throwAny(env) || !name)
         goto fail;
 
-    ret_value = JJKC_MediaFormat__getInteger(env, thiz, name);
-    if (JJK_ExceptionCheck__throwAny(env)) {
+    ret_value = J4AC_MediaFormat__getInteger(env, thiz, name);
+    if (J4A_ExceptionCheck__throwAny(env)) {
         ret_value = 0;
         goto fail;
     }
 
 fail:
-    JJK_DeleteLocalRef__p(env, &name);
+    J4A_DeleteLocalRef__p(env, &name);
     return ret_value;
 }
 
-jint JJKC_MediaFormat__getInteger__withCString__catchAll(JNIEnv *env, jobject thiz, const char *name_cstr__)
+jint J4AC_MediaFormat__getInteger__withCString__catchAll(JNIEnv *env, jobject thiz, const char *name_cstr__)
 {
     jint ret_value = 0;
     jstring name = NULL;
 
     name = (*env)->NewStringUTF(env, name_cstr__);
-    if (JJK_ExceptionCheck__catchAll(env) || !name)
+    if (J4A_ExceptionCheck__catchAll(env) || !name)
         goto fail;
 
-    ret_value = JJKC_MediaFormat__getInteger__catchAll(env, thiz, name);
-    if (JJK_ExceptionCheck__catchAll(env)) {
+    ret_value = J4AC_MediaFormat__getInteger__catchAll(env, thiz, name);
+    if (J4A_ExceptionCheck__catchAll(env)) {
         ret_value = 0;
         goto fail;
     }
 
 fail:
-    JJK_DeleteLocalRef__p(env, &name);
+    J4A_DeleteLocalRef__p(env, &name);
     return ret_value;
 }
 
-void JJKC_MediaFormat__setInteger(JNIEnv *env, jobject thiz, jstring name, jint value)
+void J4AC_MediaFormat__setInteger(JNIEnv *env, jobject thiz, jstring name, jint value)
 {
-    (*env)->CallVoidMethod(env, thiz, class_JJKC_MediaFormat.method_setInteger, name, value);
+    (*env)->CallVoidMethod(env, thiz, class_J4AC_MediaFormat.method_setInteger, name, value);
 }
 
-void JJKC_MediaFormat__setInteger__catchAll(JNIEnv *env, jobject thiz, jstring name, jint value)
+void J4AC_MediaFormat__setInteger__catchAll(JNIEnv *env, jobject thiz, jstring name, jint value)
 {
-    JJKC_MediaFormat__setInteger(env, thiz, name, value);
-    JJK_ExceptionCheck__catchAll(env);
+    J4AC_MediaFormat__setInteger(env, thiz, name, value);
+    J4A_ExceptionCheck__catchAll(env);
 }
 
-void JJKC_MediaFormat__setInteger__withCString(JNIEnv *env, jobject thiz, const char *name_cstr__, jint value)
-{
-    jstring name = NULL;
-
-    name = (*env)->NewStringUTF(env, name_cstr__);
-    if (JJK_ExceptionCheck__throwAny(env) || !name)
-        goto fail;
-
-    JJKC_MediaFormat__setInteger(env, thiz, name, value);
-
-fail:
-    JJK_DeleteLocalRef__p(env, &name);
-}
-
-void JJKC_MediaFormat__setInteger__withCString__catchAll(JNIEnv *env, jobject thiz, const char *name_cstr__, jint value)
+void J4AC_MediaFormat__setInteger__withCString(JNIEnv *env, jobject thiz, const char *name_cstr__, jint value)
 {
     jstring name = NULL;
 
     name = (*env)->NewStringUTF(env, name_cstr__);
-    if (JJK_ExceptionCheck__catchAll(env) || !name)
+    if (J4A_ExceptionCheck__throwAny(env) || !name)
         goto fail;
 
-    JJKC_MediaFormat__setInteger__catchAll(env, thiz, name, value);
+    J4AC_MediaFormat__setInteger(env, thiz, name, value);
 
 fail:
-    JJK_DeleteLocalRef__p(env, &name);
+    J4A_DeleteLocalRef__p(env, &name);
 }
 
-void JJKC_MediaFormat__setByteBuffer(JNIEnv *env, jobject thiz, jstring name, jobject bytes)
-{
-    (*env)->CallVoidMethod(env, thiz, class_JJKC_MediaFormat.method_setByteBuffer, name, bytes);
-}
-
-void JJKC_MediaFormat__setByteBuffer__catchAll(JNIEnv *env, jobject thiz, jstring name, jobject bytes)
-{
-    JJKC_MediaFormat__setByteBuffer(env, thiz, name, bytes);
-    JJK_ExceptionCheck__catchAll(env);
-}
-
-void JJKC_MediaFormat__setByteBuffer__withCString(JNIEnv *env, jobject thiz, const char *name_cstr__, jobject bytes)
+void J4AC_MediaFormat__setInteger__withCString__catchAll(JNIEnv *env, jobject thiz, const char *name_cstr__, jint value)
 {
     jstring name = NULL;
 
     name = (*env)->NewStringUTF(env, name_cstr__);
-    if (JJK_ExceptionCheck__throwAny(env) || !name)
+    if (J4A_ExceptionCheck__catchAll(env) || !name)
         goto fail;
 
-    JJKC_MediaFormat__setByteBuffer(env, thiz, name, bytes);
+    J4AC_MediaFormat__setInteger__catchAll(env, thiz, name, value);
 
 fail:
-    JJK_DeleteLocalRef__p(env, &name);
+    J4A_DeleteLocalRef__p(env, &name);
 }
 
-void JJKC_MediaFormat__setByteBuffer__withCString__catchAll(JNIEnv *env, jobject thiz, const char *name_cstr__, jobject bytes)
+void J4AC_MediaFormat__setByteBuffer(JNIEnv *env, jobject thiz, jstring name, jobject bytes)
+{
+    (*env)->CallVoidMethod(env, thiz, class_J4AC_MediaFormat.method_setByteBuffer, name, bytes);
+}
+
+void J4AC_MediaFormat__setByteBuffer__catchAll(JNIEnv *env, jobject thiz, jstring name, jobject bytes)
+{
+    J4AC_MediaFormat__setByteBuffer(env, thiz, name, bytes);
+    J4A_ExceptionCheck__catchAll(env);
+}
+
+void J4AC_MediaFormat__setByteBuffer__withCString(JNIEnv *env, jobject thiz, const char *name_cstr__, jobject bytes)
 {
     jstring name = NULL;
 
     name = (*env)->NewStringUTF(env, name_cstr__);
-    if (JJK_ExceptionCheck__catchAll(env) || !name)
+    if (J4A_ExceptionCheck__throwAny(env) || !name)
         goto fail;
 
-    JJKC_MediaFormat__setByteBuffer__catchAll(env, thiz, name, bytes);
+    J4AC_MediaFormat__setByteBuffer(env, thiz, name, bytes);
 
 fail:
-    JJK_DeleteLocalRef__p(env, &name);
+    J4A_DeleteLocalRef__p(env, &name);
 }
 
-int JJK_loadClass__JJKC_MediaFormat(JNIEnv *env)
+void J4AC_MediaFormat__setByteBuffer__withCString__catchAll(JNIEnv *env, jobject thiz, const char *name_cstr__, jobject bytes)
+{
+    jstring name = NULL;
+
+    name = (*env)->NewStringUTF(env, name_cstr__);
+    if (J4A_ExceptionCheck__catchAll(env) || !name)
+        goto fail;
+
+    J4AC_MediaFormat__setByteBuffer__catchAll(env, thiz, name, bytes);
+
+fail:
+    J4A_DeleteLocalRef__p(env, &name);
+}
+
+int J4A_loadClass__J4AC_MediaFormat(JNIEnv *env)
 {
     int         ret                   = -1;
-    const char *JJK_UNUSED(name)      = NULL;
-    const char *JJK_UNUSED(sign)      = NULL;
-    jclass      JJK_UNUSED(class_id)  = NULL;
-    int         JJK_UNUSED(api_level) = 0;
+    const char *J4A_UNUSED(name)      = NULL;
+    const char *J4A_UNUSED(sign)      = NULL;
+    jclass      J4A_UNUSED(class_id)  = NULL;
+    int         J4A_UNUSED(api_level) = 0;
 
-    api_level = JJK_GetSystemAndroidApiLevel(env);
+    api_level = J4A_GetSystemAndroidApiLevel(env);
 
     if (api_level < 16) {
-        ALOGW("JJKLoader: Ignore: '%s' need API %d\n", "android.media.MediaFormat", api_level);
+        ALOGW("J4ALoader: Ignore: '%s' need API %d\n", "android.media.MediaFormat", api_level);
         goto ignore;
     }
 
     sign = "android/media/MediaFormat";
-    class_JJKC_MediaFormat.id = JJK_FindClass__asGlobalRef__catchAll(env, sign);
-    if (class_JJKC_MediaFormat.id == NULL)
+    class_J4AC_MediaFormat.id = J4A_FindClass__asGlobalRef__catchAll(env, sign);
+    if (class_J4AC_MediaFormat.id == NULL)
         goto fail;
 
-    class_id = class_JJKC_MediaFormat.id;
+    class_id = class_J4AC_MediaFormat.id;
     name     = "<init>";
     sign     = "()V";
-    class_JJKC_MediaFormat.constructor_MediaFormat = JJK_GetMethodID__catchAll(env, class_id, name, sign);
-    if (class_JJKC_MediaFormat.constructor_MediaFormat == NULL)
+    class_J4AC_MediaFormat.constructor_MediaFormat = JJK_GetMethodID__catchAll(env, class_id, name, sign);
+    if (class_J4AC_MediaFormat.constructor_MediaFormat == NULL)
         goto fail;
 
-    class_id = class_JJKC_MediaFormat.id;
+    class_id = class_J4AC_MediaFormat.id;
     name     = "createVideoFormat";
     sign     = "(Ljava/lang/String;II)Landroid/media/MediaFormat;";
-    class_JJKC_MediaFormat.method_createVideoFormat = JJK_GetStaticMethodID__catchAll(env, class_id, name, sign);
-    if (class_JJKC_MediaFormat.method_createVideoFormat == NULL)
+    class_J4AC_MediaFormat.method_createVideoFormat = J4A_GetStaticMethodID__catchAll(env, class_id, name, sign);
+    if (class_J4AC_MediaFormat.method_createVideoFormat == NULL)
         goto fail;
 
-    class_id = class_JJKC_MediaFormat.id;
+    class_id = class_J4AC_MediaFormat.id;
     name     = "getInteger";
     sign     = "(Ljava/lang/String;)I";
-    class_JJKC_MediaFormat.method_getInteger = JJK_GetMethodID__catchAll(env, class_id, name, sign);
-    if (class_JJKC_MediaFormat.method_getInteger == NULL)
+    class_J4AC_MediaFormat.method_getInteger = JJK_GetMethodID__catchAll(env, class_id, name, sign);
+    if (class_J4AC_MediaFormat.method_getInteger == NULL)
         goto fail;
 
-    class_id = class_JJKC_MediaFormat.id;
+    class_id = class_J4AC_MediaFormat.id;
     name     = "setInteger";
     sign     = "(Ljava/lang/String;I)V";
-    class_JJKC_MediaFormat.method_setInteger = JJK_GetMethodID__catchAll(env, class_id, name, sign);
-    if (class_JJKC_MediaFormat.method_setInteger == NULL)
+    class_J4AC_MediaFormat.method_setInteger = JJK_GetMethodID__catchAll(env, class_id, name, sign);
+    if (class_J4AC_MediaFormat.method_setInteger == NULL)
         goto fail;
 
-    class_id = class_JJKC_MediaFormat.id;
+    class_id = class_J4AC_MediaFormat.id;
     name     = "setByteBuffer";
     sign     = "(Ljava/lang/String;Ljava/nio/ByteBuffer;)V";
-    class_JJKC_MediaFormat.method_setByteBuffer = JJK_GetMethodID__catchAll(env, class_id, name, sign);
-    if (class_JJKC_MediaFormat.method_setByteBuffer == NULL)
+    class_J4AC_MediaFormat.method_setByteBuffer = JJK_GetMethodID__catchAll(env, class_id, name, sign);
+    if (class_J4AC_MediaFormat.method_setByteBuffer == NULL)
         goto fail;
 
-    ALOGD("JJKLoader: OK: '%s' loaded\n", "android.media.MediaFormat");
+    ALOGD("J4ALoader: OK: '%s' loaded\n", "android.media.MediaFormat");
 ignore:
     ret = 0;
 fail:

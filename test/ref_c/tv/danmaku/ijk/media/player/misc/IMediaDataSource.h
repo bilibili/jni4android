@@ -20,19 +20,19 @@
  */
 
 
-#ifndef JJK__tv_danmaku_ijk_media_player_misc_IMediaDataSource__H
-#define JJK__tv_danmaku_ijk_media_player_misc_IMediaDataSource__H
+#ifndef J4A__tv_danmaku_ijk_media_player_misc_IMediaDataSource__H
+#define J4A__tv_danmaku_ijk_media_player_misc_IMediaDataSource__H
 
-#include "ijksdl/android/jjk/internal/jjk_internal.h"
+#include "j4a/j4a_internal.h"
 
-jint JJKC_IMediaDataSource__readAt(JNIEnv *env, jobject thiz, jlong position, jbyteArray buffer, jint offset, jint size);
-jint JJKC_IMediaDataSource__readAt__catchAll(JNIEnv *env, jobject thiz, jlong position, jbyteArray buffer, jint offset, jint size);
-jlong JJKC_IMediaDataSource__getSize(JNIEnv *env, jobject thiz);
-jlong JJKC_IMediaDataSource__getSize__catchAll(JNIEnv *env, jobject thiz);
-void JJKC_IMediaDataSource__close(JNIEnv *env, jobject thiz);
-void JJKC_IMediaDataSource__close__catchAll(JNIEnv *env, jobject thiz);
-int JJK_loadClass__JJKC_IMediaDataSource(JNIEnv *env);
+jint J4AC_IMediaDataSource__readAt(JNIEnv *env, jobject thiz, jlong position, jbyteArray buffer, jint offset, jint size);
+jint J4AC_IMediaDataSource__readAt__catchAll(JNIEnv *env, jobject thiz, jlong position, jbyteArray buffer, jint offset, jint size);
+jlong J4AC_IMediaDataSource__getSize(JNIEnv *env, jobject thiz);
+jlong J4AC_IMediaDataSource__getSize__catchAll(JNIEnv *env, jobject thiz);
+void J4AC_IMediaDataSource__close(JNIEnv *env, jobject thiz);
+void J4AC_IMediaDataSource__close__catchAll(JNIEnv *env, jobject thiz);
+int J4A_loadClass__J4AC_IMediaDataSource(JNIEnv *env);
 
-#define JJK_HAVE__JJKC_IMediaDataSource
+#define J4A_HAVE__J4AC_IMediaDataSource
 
-#endif//JJK__tv_danmaku_ijk_media_player_misc_IMediaDataSource__H
+#endif//J4A__tv_danmaku_ijk_media_player_misc_IMediaDataSource__H

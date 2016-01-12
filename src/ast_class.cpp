@@ -51,7 +51,7 @@ void Class::build_c_func_decl(std::ostream &os)
     get_member_list()->build_all_c_func_decl(os);
     if (get_parent()->get_this_class() == NULL) {
         // do not export inner class loader
-        os << "int JJK_loadClass__" << get_c_class_name() << "(JNIEnv *env);" << std::endl;
+        os << "int J4A_loadClass__" << get_c_class_name() << "(JNIEnv *env);" << std::endl;
     }
 }
 
@@ -72,7 +72,7 @@ void Class::build_c_class_decl(std::ostream &os)
 void Class::build_c_member_id_load(std::ostream &os)
 {
     os << std::endl;
-    os << build_indent() << "ret = JJK_loadClass__" << get_c_class_name() << "(env);" << std::endl;
+    os << build_indent() << "ret = J4A_loadClass__" << get_c_class_name() << "(env);" << std::endl;
     os << build_indent() << "if (ret)" << std::endl;
     os << build_indent() << "    goto fail;" << std::endl;
 }
@@ -84,33 +84,33 @@ void Class::build_c_func_impl(std::ostream &os)
     get_member_list()->build_all_c_func_impl(os);
 
     os << std::endl;
-    os << "int JJK_loadClass__" << get_c_class_name() << "(JNIEnv *env)" << std::endl;
+    os << "int J4A_loadClass__" << get_c_class_name() << "(JNIEnv *env)" << std::endl;
     os << "{" << std::endl;
     os << "    int         ret                   = -1;" << std::endl;
-    os << "    const char *JJK_UNUSED(name)      = NULL;" << std::endl;
-    os << "    const char *JJK_UNUSED(sign)      = NULL;" << std::endl;
-    os << "    jclass      JJK_UNUSED(class_id)  = NULL;" << std::endl;
-    os << "    int         JJK_UNUSED(api_level) = 0;" << std::endl;
+    os << "    const char *J4A_UNUSED(name)      = NULL;" << std::endl;
+    os << "    const char *J4A_UNUSED(sign)      = NULL;" << std::endl;
+    os << "    jclass      J4A_UNUSED(class_id)  = NULL;" << std::endl;
+    os << "    int         J4A_UNUSED(api_level) = 0;" << std::endl;
 
     Annotation *annotation = get_annotation_at("MinApi");
     if (annotation) {
         need_label_ignore = true;
         os << std::endl;
-        os << "    api_level = JJK_GetSystemAndroidApiLevel(env);\n" << std::endl;
+        os << "    api_level = J4A_GetSystemAndroidApiLevel(env);\n" << std::endl;
         os << "    if (api_level < " << annotation->get_value() << ") {" << std::endl;
-        os << "        ALOGW(" << j4a::make_quoted("JJKLoader: Ignore: '%s' need API %d\\n") << ", " << j4a::make_quoted(get_java_long_name()) << ", api_level);" << std::endl;
+        os << "        ALOGW(" << j4a::make_quoted("J4ALoader: Ignore: '%s' need API %d\\n") << ", " << j4a::make_quoted(get_java_long_name()) << ", api_level);" << std::endl;
         os << "        goto ignore;" << std::endl;
         os << "    }" << std::endl;
     }
 
     os << std::endl;
     os << "    sign = \"" << get_c_jni_sign() << "\";" << std::endl;
-    os << "    " << get_c_jni_id() << " = JJK_FindClass__asGlobalRef__catchAll(env, sign);" << std::endl;
+    os << "    " << get_c_jni_id() << " = J4A_FindClass__asGlobalRef__catchAll(env, sign);" << std::endl;
     os << "    if (" << get_c_jni_id() << " == NULL)" << std::endl;
     os << "        goto fail;" << std::endl;
     get_member_list()->build_all_c_member_id_load(os);
     os << std::endl;
-    os << "    ALOGD(" << j4a::make_quoted("JJKLoader: OK: '%s' loaded\\n") << ", " << j4a::make_quoted(get_java_long_name()) << ");" << std::endl;
+    os << "    ALOGD(" << j4a::make_quoted("J4ALoader: OK: '%s' loaded\\n") << ", " << j4a::make_quoted(get_java_long_name()) << ");" << std::endl;
     if (need_label_ignore)
         os << "ignore:" << std::endl;
     os << "    ret = 0;" << std::endl;
