@@ -88,10 +88,10 @@ $(TEST_C_SRCS): jni/j4a/class/%.c: test/i_java/%.java
 ifneq ("$<", "jni/j4a/class/.c")
 	@mkdir -p $(shell dirname $@)
 	$(J4A) $< -o $@
-	@diff test/ref_c/$*.c $@
-	@diff test/ref_c/$*.h jni/j4a/class/$*.h
 	@#cp $@                 test/ref_c/$*.c
 	@#cp jni/j4a/class/$*.h test/ref_c/$*.h
+	@diff test/ref_c/$*.c $@
+	@diff test/ref_c/$*.h jni/j4a/class/$*.h
 endif
 
 test: resettest j4a $(TEST_C_SRCS)
