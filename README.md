@@ -1,4 +1,7 @@
 # jni4android
+
+[![Build Status](https://travis-ci.org/Bilibili/jni4android.svg?branch=master)](https://travis-ci.org/Bilibili/jni4android)
+
 Generate C wrapper from Pseudo-Java
 
 ### My Build Environment
