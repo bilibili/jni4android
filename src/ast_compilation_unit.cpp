@@ -72,7 +72,7 @@ void CompilationUnit::do_build(
     clazz->build_c_func_decl(h_os);
     h_os << std::endl;
     if (clazz->need_c_simple_class_name()) {
-        h_os << "#define J4A_HAVE__" << clazz->get_c_class_name() << std::endl;
+        h_os << "#define J4A_HAVE_SIMPLE__" << clazz->get_c_class_name() << std::endl;
         h_os << std::endl;
         clazz->build_c_simple_func_decl(h_os);
         h_os << std::endl;

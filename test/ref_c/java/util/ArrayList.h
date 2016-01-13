@@ -31,7 +31,7 @@ jboolean J4AC_java_util_ArrayList__add(JNIEnv *env, jobject thiz, jobject object
 jboolean J4AC_java_util_ArrayList__add__catchAll(JNIEnv *env, jobject thiz, jobject object);
 int J4A_loadClass__J4AC_java_util_ArrayList(JNIEnv *env);
 
-#define J4A_HAVE__J4AC_java_util_ArrayList
+#define J4A_HAVE_SIMPLE__J4AC_java_util_ArrayList
 
 #define J4AC_ArrayList__ArrayList J4AC_java_util_ArrayList__ArrayList
 #define J4AC_ArrayList__ArrayList__asGlobalRef__catchAll J4AC_java_util_ArrayList__ArrayList__asGlobalRef__catchAll

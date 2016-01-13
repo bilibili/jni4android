@@ -47,7 +47,7 @@ void J4AC_android_media_MediaFormat__setByteBuffer__withCString(JNIEnv *env, job
 void J4AC_android_media_MediaFormat__setByteBuffer__withCString__catchAll(JNIEnv *env, jobject thiz, const char *name_cstr__, jobject bytes);
 int J4A_loadClass__J4AC_android_media_MediaFormat(JNIEnv *env);
 
-#define J4A_HAVE__J4AC_android_media_MediaFormat
+#define J4A_HAVE_SIMPLE__J4AC_android_media_MediaFormat
 
 #define J4AC_MediaFormat__MediaFormat J4AC_android_media_MediaFormat__MediaFormat
 #define J4AC_MediaFormat__MediaFormat__asGlobalRef__catchAll J4AC_android_media_MediaFormat__MediaFormat__asGlobalRef__catchAll

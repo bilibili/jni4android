@@ -106,8 +106,6 @@ test: j4a resettest $(TEST_C_SRCS)
 
 resettest:
 	@rm -f $(TEST_C_SRCS)
-	@rm -f $(TEST_CLASS_INCLUDES)
-	@rm -f $(TEST_CLASS_LOADERS)
 	@rm -f $(ROOT_CLASS_INCLUDES)
 	@rm -f $(ROOT_CLASS_LOADERS)
 	@mkdir -p jni

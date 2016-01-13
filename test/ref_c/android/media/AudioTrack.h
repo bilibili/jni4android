@@ -58,7 +58,7 @@ void J4AC_android_media_AudioTrack__setPlaybackParams(JNIEnv *env, jobject thiz,
 void J4AC_android_media_AudioTrack__setPlaybackParams__catchAll(JNIEnv *env, jobject thiz, jobject params);
 int J4A_loadClass__J4AC_android_media_AudioTrack(JNIEnv *env);
 
-#define J4A_HAVE__J4AC_android_media_AudioTrack
+#define J4A_HAVE_SIMPLE__J4AC_android_media_AudioTrack
 
 #define J4AC_AudioTrack__AudioTrack J4AC_android_media_AudioTrack__AudioTrack
 #define J4AC_AudioTrack__AudioTrack__asGlobalRef__catchAll J4AC_android_media_AudioTrack__AudioTrack__asGlobalRef__catchAll

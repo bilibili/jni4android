@@ -75,7 +75,7 @@ void J4AC_android_media_MediaCodec__release(JNIEnv *env, jobject thiz);
 void J4AC_android_media_MediaCodec__release__catchAll(JNIEnv *env, jobject thiz);
 int J4A_loadClass__J4AC_android_media_MediaCodec(JNIEnv *env);
 
-#define J4A_HAVE__J4AC_android_media_MediaCodec
+#define J4A_HAVE_SIMPLE__J4AC_android_media_MediaCodec
 
 #define J4AC_MediaCodec__BufferInfo__BufferInfo J4AC_android_media_MediaCodec__BufferInfo__BufferInfo
 #define J4AC_MediaCodec__BufferInfo__BufferInfo__asGlobalRef__catchAll J4AC_android_media_MediaCodec__BufferInfo__BufferInfo__asGlobalRef__catchAll

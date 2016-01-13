@@ -35,7 +35,7 @@ jobject J4AC_java_nio_ByteBuffer__limit__catchAll(JNIEnv *env, jobject thiz, jin
 jobject J4AC_java_nio_ByteBuffer__limit__asGlobalRef__catchAll(JNIEnv *env, jobject thiz, jint newLimit);
 int J4A_loadClass__J4AC_java_nio_ByteBuffer(JNIEnv *env);
 
-#define J4A_HAVE__J4AC_java_nio_ByteBuffer
+#define J4A_HAVE_SIMPLE__J4AC_java_nio_ByteBuffer
 
 #define J4AC_ByteBuffer__allocate J4AC_java_nio_ByteBuffer__allocate
 #define J4AC_ByteBuffer__allocate__asGlobalRef__catchAll J4AC_java_nio_ByteBuffer__allocate__asGlobalRef__catchAll

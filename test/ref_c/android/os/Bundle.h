@@ -55,7 +55,7 @@ void J4AC_android_os_Bundle__putParcelableArrayList__withCString(JNIEnv *env, jo
 void J4AC_android_os_Bundle__putParcelableArrayList__withCString__catchAll(JNIEnv *env, jobject thiz, const char *key_cstr__, jobject value);
 int J4A_loadClass__J4AC_android_os_Bundle(JNIEnv *env);
 
-#define J4A_HAVE__J4AC_android_os_Bundle
+#define J4A_HAVE_SIMPLE__J4AC_android_os_Bundle
 
 #define J4AC_Bundle__Bundle J4AC_android_os_Bundle__Bundle
 #define J4AC_Bundle__Bundle__asGlobalRef__catchAll J4AC_android_os_Bundle__Bundle__asGlobalRef__catchAll
