@@ -23,6 +23,7 @@
 
 #include <string.h>
 #include <stdbool.h>
+#include <stdint.h>
 #include <jni.h>
 #include <android/log.h>
 
