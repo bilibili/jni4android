@@ -46,6 +46,13 @@ void Field::build_c_func_decl(std::ostream &os)
 }
 
 //@Override
+void Field::build_c_simple_func_decl(std::ostream &os)
+{
+    PropertyGetter::create_for_field(this)->build_c_simple_func_decl(os);
+    PropertySetter::create_for_field(this)->build_c_simple_func_decl(os);
+}
+
+//@Override
 void Field::build_c_member_id_decl(std::ostream &os)
 {
     os << build_indent() << "jfieldID " << get_c_jni_id_name() << ";" << std::endl;

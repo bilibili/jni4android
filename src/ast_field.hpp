@@ -38,6 +38,7 @@ public:
 public:
     // class Member
     virtual void build_c_func_decl(std::ostream &os) override;
+    virtual void build_c_simple_func_decl(std::ostream &os) override;
     // virtual void build_c_class_decl(std::ostream &os) override {;}
     virtual void build_c_member_id_decl(std::ostream &os) override;
     virtual void build_c_member_id_load(std::ostream &os) override;
