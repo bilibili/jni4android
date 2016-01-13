@@ -41,7 +41,6 @@ void show_help()
         << "Usage:" << std::endl
         << "    j4a -h" << std::endl
         << "    j4a -c [-o <output_file>] <input_file>" << std::endl
-        << "    j4a [-o <output_file>] <input_files>" << std::endl
         << std::endl
         << "Startup:" << std::endl
         << "    " << "-c, --compile         " << "compile file." << std::endl
