@@ -27,9 +27,10 @@ make
 ```
 Usage:
     j4a -h
-    j4a [-o <output_file>] <input_file>
+    j4a -c [-o <output_file>] <input_file>
 
 Startup:
+    -c, --compile         compile file.
     -h, --help            print this help.
     -o, --output          output file.
 ```
