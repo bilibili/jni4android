@@ -33,7 +33,7 @@ CXX_OBJS := $(CXX_SRCS:.cpp=.o)
 CXX_DEPS := $(CXX_OBJS:.o=.d)
 -include $(CXX_DEPS)
 
-$(CXX_OBJS): config.mak config.h Makefile
+$(CXX_OBJS): config.mak config.h Makefile src/bison.j4a.tab.cpp src/flex.j4a.yy.cpp
 
 $(CXX_OBJS): %.o: %.cpp
 	$(CXX) $(CPPFLAGS) -MM -MT $@ -MF $(patsubst %.o,%.d,$@) $<
@@ -51,20 +51,20 @@ YACC_DEPS = \
 src/bison.j4a.tab.cpp: $(YACC_DEPS)
 	$(YACC) $(YACC_FLAGS) -o $@ src/bison.j4a.y
 
-j4acc: bison.j4a.tab.cpp
-	$(CXX) -o j4acc bison.j4a.tab.cpp
+j4acc: src/bison.j4a.tab.cpp
+	$(CXX) -o src/j4acc bison.j4a.tab.cpp
 
 
 # YYLEX
 YYLEX_DEPS = \
 	src/flex.j4a.l \
-	src/bison.j4a.tab.o \
+	src/bison.j4a.tab.cpp \
 
 src/flex.j4a.yy.cpp: $(YYLEX_DEPS)
 	$(YYLEX) $(YYLEX_FLAGS) -o $@ src/flex.j4a.l
 
-j4alex: flex.j4a.yy.cpp
-	$(CXX) -o j4alex flex.j4a.yy.cpp
+j4alex: src/flex.j4a.yy.cpp
+	$(CXX) -o src/j4alex flex.j4a.yy.cpp
 
 
 # test java -> c
