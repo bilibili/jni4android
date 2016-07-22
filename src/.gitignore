@@ -1,2 +1,3 @@
 *.output
+bison.j4a.tab.cpp
 flex.j4a.yy.cpp
