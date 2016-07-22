@@ -20,6 +20,7 @@
 
 #include "ast_identifier.hpp"
 #include "ast__context.hpp"
+#include <cstring>
 
 using namespace ast;
 
