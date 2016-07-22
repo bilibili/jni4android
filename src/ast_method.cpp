@@ -155,7 +155,7 @@ void Method::_build_c_func_name(std::ostream &oos, int flags)
         }
     }
 
-    oos << os;
+    oos << os.str();
 }
 
 void Method::_build_c_func_decl_statement(std::ostream &os, int flags)
