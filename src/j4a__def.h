@@ -29,6 +29,7 @@
 #include <stdio.h>
 
 // C++ Headers
+#include <memory>
 #include <ostream>
 
 #define NS_J4A_BEGIN namespace j4a {
