@@ -47,7 +47,7 @@ public:
     int _get_ref() const {return m_ref_count;}
 
 private:
-    volatile int m_ref_count;
+    volatile mutable int m_ref_count;
 
 protected:
     object(): m_ref_count(0) {;}
