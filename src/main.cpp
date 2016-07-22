@@ -66,6 +66,8 @@ int parse_options(int argc, const char * argv[])
             if (optind < argc) {
                 g_options.arguments.push_back(argv[optind]);
                 optind++;
+                if (optind == argc)
+                    break;
                 continue;
             } else {
                 break;   
