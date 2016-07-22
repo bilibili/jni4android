@@ -1,5 +1,5 @@
 include config.mak
-CPPFLAGS = -std=c++11 -I./src -Wno-deprecated-register
+CPPFLAGS = -g -std=c++11 -I./src -Wno-deprecated-register
 YACC_FLAGS = --debug --verbose -d
 YYLEX_FLAGS = 
 J4A = ./j4a
