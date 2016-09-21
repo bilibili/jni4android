@@ -83,32 +83,32 @@ public: \
     } \
     virtual j4a::string get_c_call_instance_method_api() override { \
         std::ostringstream os; \
-        os << "Call" << c_name_in_call_api << (get_is_array() ? "ArrayMethod" : "Method"); \
+        os << "Call" << (get_is_array() ? "Object" : c_name_in_call_api) << "Method"; \
         return os; \
     } \
     virtual j4a::string get_c_call_static_method_api() override { \
         std::ostringstream os; \
-        os << "CallStatic" << c_name_in_call_api << (get_is_array() ? "ArrayMethod" : "Method"); \
+        os << "CallStatic" << (get_is_array() ? "Object" : c_name_in_call_api) << "Method"; \
         return os; \
     } \
     virtual j4a::string get_c_get_instance_field_api() override { \
         std::ostringstream os; \
-        os << "Get" << c_name_in_call_api << (get_is_array() ? "ArrayField" : "Field"); \
+        os << "Get" << (get_is_array() ? "Object" : c_name_in_call_api) << "Field"; \
         return os; \
     } \
     virtual j4a::string get_c_get_static_field_api() override { \
         std::ostringstream os; \
-        os << "GetStatic" << c_name_in_call_api << (get_is_array() ? "ArrayField" : "Field"); \
+        os << "GetStatic" << (get_is_array() ? "Object" : c_name_in_call_api) << "Field"; \
         return os; \
     } \
     virtual j4a::string get_c_set_instance_field_api() override { \
         std::ostringstream os; \
-        os << "Set" << c_name_in_call_api << (get_is_array() ? "ArrayField" : "Field"); \
+        os << "Set" << (get_is_array() ? "Object" : c_name_in_call_api) << "Field"; \
         return os; \
     } \
     virtual j4a::string get_c_set_static_field_api() override { \
         std::ostringstream os; \
-        os << "SetStatic" << c_name_in_call_api << (get_is_array() ? "ArrayField" : "Field"); \
+        os << "SetStatic" << (get_is_array() ? "Object" : c_name_in_call_api) << "Field"; \
         return os; \
     } \
 };
