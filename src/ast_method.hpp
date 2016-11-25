@@ -27,6 +27,9 @@
 
 NS_AST_BEGIN
 
+typedef std::map<std::string, std::string> MethodSignIdMap;
+typedef std::map<std::string, MethodSignIdMap> MethodNameMap;
+
 class Method: public Member
 {
 public:
@@ -52,6 +55,8 @@ private:
     static const int FLAG_AS_C_BUFFER;
     static const int FLAG_SIMPLE_NAME;
 
+    static MethodNameMap s_method_name_id_map;
+
     bool _has_string_arg();
 
     void _build_class_id(std::ostream &os);
@@ -64,6 +69,7 @@ private:
     void _build_c_func_impl_void_type_statement(std::ostream &os, int flags);
     void _build_c_func_impl_reference_type_statement(std::ostream &os, int flags);
     void _build_c_func_impl_basic_type_statement(std::ostream &os, int flags);
+    void _build_c_func_overload_statements(std::ostream &os, int flags);
 
 public:
     virtual void build_c_func_decl(std::ostream &os) override;

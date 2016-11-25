@@ -30,6 +30,8 @@ const int Method::FLAG_WITH_C_STRING = 0x0002;
 const int Method::FLAG_AS_GLOBAL_REF = 0x0004;
 const int Method::FLAG_AS_C_BUFFER   = 0x0008;
 const int Method::FLAG_SIMPLE_NAME   = 0x0010;
+MethodNameMap Method::s_method_name_id_map;
+
 
 j4a::string Method::get_c_jni_sign()
 {
@@ -51,6 +53,7 @@ j4a::string Method::get_c_jni_id_name()
 {
     std::ostringstream os;
     os << "method_" << get_name();
+    _build_c_func_overload_statements(os, 0);
     return os;
 }
 
@@ -128,6 +131,8 @@ void Method::_build_c_func_name(std::ostream &oos, int flags)
     os << "__";
     os << get_name();
 
+    _build_c_func_overload_statements(os, flags);
+
     if (flags & FLAG_WITH_C_STRING) {
         os << "__withCString";
     }
@@ -156,6 +161,53 @@ void Method::_build_c_func_name(std::ostream &oos, int flags)
     }
 
     oos << os.str();
+}
+
+void Method::_build_c_func_overload_statements(std::ostream &oos, int flags)
+{
+    std::ostringstream os_name, os_sign, os_string;
+    os_name << get_this_class()->get_c_class_name();
+    os_name << "__";
+    os_name << get_name();
+
+    ArgumentList::iterator begin = get_argument_list()->begin();
+    ArgumentList::iterator end   = get_argument_list()->end();
+    os_sign << get_name();
+    os_sign << "(";
+    for (NULL; begin != end; ++begin) {
+        os_sign << (*begin)->get_type()->get_c_sign_in_method();
+        if (std::distance(begin,end) != 1) {
+            os_sign << ", ";
+        }
+    }
+    os_sign << ")";
+
+    std::string id = "";
+    bool need_insert_new_map = false;
+    MethodNameMap::const_iterator name_map = s_method_name_id_map.find(os_name.str());
+    if (name_map != s_method_name_id_map.end()) {
+        MethodSignIdMap sign_id_map = name_map->second;
+        MethodSignIdMap::const_iterator sign_map_item = sign_id_map.find(os_sign.str());
+        if (sign_map_item != sign_id_map.end()) {
+            id = sign_map_item->second;
+        } else {
+            id = std::to_string(sign_id_map.size() + 1);
+            sign_id_map.insert(std::pair<std::string, std::string>(os_sign.str(), id));
+        }
+    } else {
+        id = "1";
+        need_insert_new_map = true;
+    }
+
+    if (need_insert_new_map) {
+        MethodSignIdMap sub_map;
+        sub_map.insert(std::pair<std::string, std::string>(os_sign.str(), id));
+        s_method_name_id_map.insert(std::pair<std::string, MethodSignIdMap>(os_name.str(), sub_map));
+    }
+
+    if (id != "" && id != "1") {
+        oos << "__" << id;
+    }
 }
 
 void Method::_build_c_func_decl_statement(std::ostream &os, int flags)
