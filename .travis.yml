@@ -1,17 +1,18 @@
 language: cpp
 os:
-  - osx
+- linux
+- osx
 sudo: false
-env:
-  global:
-  - HASH=master
-  - REPO=https://github.com/Bilibili/jni4android.git
-script:
-- git clone --depth=50 --branch=$HASH $REPO
-- cd jni4android
-- "./configure"
-- make test
+compiler: clang
+cache:
+  timeout: 86400
+  directories:
+  - contrib
+addons:
+  apt:
+    packages:
+    - flex
 before_install:
-  - brew update
-  - brew outdated flex || brew upgrade flex
-  - brew outdated bison || brew upgrade bison
+- ./.travis.before_install.sh
+before_script:
+- ./get-deps.sh
