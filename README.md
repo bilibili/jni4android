@@ -21,6 +21,11 @@ Generate C wrapper from Pseudo-Java
 ```
 git clone https://github.com/Bilibili/jni4android.git jni4android
 cd jni4android
+
+# build dependencies
+# you don't have to run this if you have bison 3.x installed
+./get-deps.sh
+
 ./configure
 make
 ```
