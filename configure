@@ -56,7 +56,7 @@ CMDLINE_SET="
 
 #----- init options -----
 opt_prefix_default="output"
-opt_cxx_default="g++"
+opt_cxx_default="clang++"
 opt_yacc_default="bison"
 opt_yylex_default="flex"
 
