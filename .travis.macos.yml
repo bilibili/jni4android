@@ -2,6 +2,7 @@ language: cpp
 os:
 - osx
 sudo: false
+compiler: clang
 env:
   global:
   - HASH=master
@@ -11,8 +12,4 @@ before_install:
 - brew outdated flex || brew upgrade flex
 - brew outdated bison || brew upgrade bison
 before_script:
-- git clone --depth=50 --branch=$HASH $REPO
-- cd jni4android
 - ./get-deps.sh
-script:
-- ./configure && make && make test

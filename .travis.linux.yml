@@ -1,8 +1,8 @@
 language: cpp
 os:
 - linux
-compiler: clang
 sudo: false
+compiler: clang
 env:
   global:
   - HASH=master
@@ -13,5 +13,3 @@ addons:
     - flex
 before_script:
 - ./get-deps.sh
-script:
-- ./configure --cxx=clang++ && make && make test
