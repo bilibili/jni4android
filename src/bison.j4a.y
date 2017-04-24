@@ -67,7 +67,6 @@
 %type <annotations>           annotations
 %type <argument>              argument
 %type <argument_list>         argument_list
-%type <type>                  basic_type
 %type <clazz>                 class
 %type <clazz>                 class_head
 %type <identifier>            class_identifier
@@ -82,6 +81,7 @@
 %type <num_int>               modifier
 %type <modifier_set>          modifier_set
 %type <qualified_identifier>  package
+%type <type>                  primitive_type
 %type <qualified_identifier>  qualified_identifier
 %type <type>                  reference_type
 %type <type>                  type
@@ -343,39 +343,39 @@ import_list:
       }
 ;
 
-basic_type:
-      basic_type '[' ']' {
+primitive_type:
+      primitive_type '[' ']' {
         $$ = $1;
         $$->set_is_array(true);
-        BISON_LOGF("basic_type: %s[]\n", $$->get_name().c_str());
+        BISON_LOGF("primitive_type: %s[]\n", $$->get_name().c_str());
       }
     | T_BOOLEAN {
         $$ = ast::BooleanType::create();
-        BISON_LOGF("basic_type: %s\n", $$->get_name().c_str()); }
+        BISON_LOGF("primitive_type: %s\n", $$->get_name().c_str()); }
     | T_BYTE {
         $$ = ast::ByteType::create();
-        BISON_LOGF("basic_type: %s\n", $$->get_name().c_str()); }
+        BISON_LOGF("primitive_type: %s\n", $$->get_name().c_str()); }
     | T_FLOAT {
         $$ = ast::FloatType::create();
-        BISON_LOGF("basic_type: %s\n", $$->get_name().c_str()); }
+        BISON_LOGF("primitive_type: %s\n", $$->get_name().c_str()); }
     | T_DOUBLE {
         $$ = ast::DoubleType::create();
-        BISON_LOGF("basic_type: %s\n", $$->get_name().c_str()); }
+        BISON_LOGF("primitive_type: %s\n", $$->get_name().c_str()); }
     | T_CHAR {
         $$ = ast::CharType::create();
-        BISON_LOGF("basic_type: %s\n", $$->get_name().c_str()); }
+        BISON_LOGF("primitive_type: %s\n", $$->get_name().c_str()); }
     | T_SHORT {
         $$ = ast::ShortType::create();
-        BISON_LOGF("basic_type: %s\n", $$->get_name().c_str()); }
+        BISON_LOGF("primitive_type: %s\n", $$->get_name().c_str()); }
     | T_INT {
         $$ = ast::IntType::create();
-        BISON_LOGF("basic_type: %s\n", $$->get_name().c_str()); }
+        BISON_LOGF("primitive_type: %s\n", $$->get_name().c_str()); }
     | T_LONG {
         $$ = ast::LongType::create();
-        BISON_LOGF("basic_type: %s\n", $$->get_name().c_str()); }
+        BISON_LOGF("primitive_type: %s\n", $$->get_name().c_str()); }
     | T_VOID {
         $$ = ast::VoidType::create();
-        BISON_LOGF("basic_type: %s\n", $$->get_name().c_str()); }
+        BISON_LOGF("primitive_type: %s\n", $$->get_name().c_str()); }
 ;
 
 reference_type:
@@ -391,7 +391,7 @@ reference_type:
 ;
 
 type:
-    basic_type     { $$ = $1; }
+    primitive_type { $$ = $1; }
   | reference_type { $$ = $1; }
 
 %%
