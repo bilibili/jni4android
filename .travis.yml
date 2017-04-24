@@ -4,6 +4,10 @@ os:
 - osx
 sudo: false
 compiler: clang
+cache:
+  timeout: 86400
+  directories:
+  - contrib
 addons:
   apt:
     packages:
