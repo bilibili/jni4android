@@ -20,6 +20,8 @@
 %token <num_int>    T_BYTE
 %token <num_int>    T_FLOAT
 %token <num_int>    T_DOUBLE
+%token <num_int>    T_CHAR
+%token <num_int>    T_SHORT
 %token <num_int>    T_INT
 %token <num_int>    T_LONG
 %token <num_int>    T_VOID
@@ -358,6 +360,12 @@ basic_type:
         BISON_LOGF("basic_type: %s\n", $$->get_name().c_str()); }
     | T_DOUBLE {
         $$ = ast::DoubleType::create();
+        BISON_LOGF("basic_type: %s\n", $$->get_name().c_str()); }
+    | T_CHAR {
+        $$ = ast::CharType::create();
+        BISON_LOGF("basic_type: %s\n", $$->get_name().c_str()); }
+    | T_SHORT {
+        $$ = ast::ShortType::create();
         BISON_LOGF("basic_type: %s\n", $$->get_name().c_str()); }
     | T_INT {
         $$ = ast::IntType::create();
