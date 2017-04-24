@@ -2,6 +2,7 @@
 *.d
 /config.h
 /config.mak
+/contrib
 /j4a
 /jni/j4a
 /output
