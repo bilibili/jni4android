@@ -1,1 +1,14 @@
-.travis.linux.yml
+language: cpp
+os:
+- linux
+- osx
+sudo: false
+compiler: clang
+addons:
+  apt:
+    packages:
+    - flex
+before_install:
+- ./.travis.before_install.sh
+before_script:
+- ./get-deps.sh
