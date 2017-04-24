@@ -6,7 +6,7 @@ J4A = ./j4a
 ROOT_CLASS_INCLUDES = jni/j4a/j4a_allclasses.include.h
 ROOT_CLASS_LOADERS = jni/j4a/j4a_allclasses.loader.h
 
-all: j4a test
+all: j4a
 
 CXX_SRCS = \
 	src/ast_annotation.cpp \
