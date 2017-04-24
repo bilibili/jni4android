@@ -17,6 +17,7 @@ before_install:
 before_script:
 - git clone --depth=50 --branch=$HASH $REPO
 - cd jni4android
+- ls -la
 - ./get-deps.sh
 - ./configure --cxx=clang++
 - make tes
