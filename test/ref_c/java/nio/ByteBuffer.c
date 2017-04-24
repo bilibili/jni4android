@@ -27,6 +27,7 @@ typedef struct J4AC_java_nio_ByteBuffer {
     jmethodID method_allocate;
     jmethodID method_allocateDirect;
     jmethodID method_limit;
+    jmethodID method_getDouble;
 } J4AC_java_nio_ByteBuffer;
 static J4AC_java_nio_ByteBuffer class_J4AC_java_nio_ByteBuffer;
 
@@ -135,6 +136,21 @@ fail:
     return ret_object;
 }
 
+jdouble J4AC_java_nio_ByteBuffer__getDouble(JNIEnv *env, jobject thiz)
+{
+    return (*env)->CallDoubleMethod(env, thiz, class_J4AC_java_nio_ByteBuffer.method_getDouble);
+}
+
+jdouble J4AC_java_nio_ByteBuffer__getDouble__catchAll(JNIEnv *env, jobject thiz)
+{
+    jdouble ret_value = J4AC_java_nio_ByteBuffer__getDouble(env, thiz);
+    if (J4A_ExceptionCheck__catchAll(env)) {
+        return 0;
+    }
+
+    return ret_value;
+}
+
 int J4A_loadClass__J4AC_java_nio_ByteBuffer(JNIEnv *env)
 {
     int         ret                   = -1;
@@ -170,6 +186,13 @@ int J4A_loadClass__J4AC_java_nio_ByteBuffer(JNIEnv *env)
     sign     = "(I)Ljava/nio/Buffer;";
     class_J4AC_java_nio_ByteBuffer.method_limit = J4A_GetMethodID__catchAll(env, class_id, name, sign);
     if (class_J4AC_java_nio_ByteBuffer.method_limit == NULL)
+        goto fail;
+
+    class_id = class_J4AC_java_nio_ByteBuffer.id;
+    name     = "getDouble";
+    sign     = "()D";
+    class_J4AC_java_nio_ByteBuffer.method_getDouble = J4A_GetMethodID__catchAll(env, class_id, name, sign);
+    if (class_J4AC_java_nio_ByteBuffer.method_getDouble == NULL)
         goto fail;
 
     J4A_ALOGD("J4ALoader: OK: '%s' loaded\n", "java.nio.ByteBuffer");

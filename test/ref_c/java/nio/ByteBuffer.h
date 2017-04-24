@@ -33,6 +33,8 @@ jobject J4AC_java_nio_ByteBuffer__allocateDirect__asGlobalRef__catchAll(JNIEnv *
 jobject J4AC_java_nio_ByteBuffer__limit(JNIEnv *env, jobject thiz, jint newLimit);
 jobject J4AC_java_nio_ByteBuffer__limit__catchAll(JNIEnv *env, jobject thiz, jint newLimit);
 jobject J4AC_java_nio_ByteBuffer__limit__asGlobalRef__catchAll(JNIEnv *env, jobject thiz, jint newLimit);
+jdouble J4AC_java_nio_ByteBuffer__getDouble(JNIEnv *env, jobject thiz);
+jdouble J4AC_java_nio_ByteBuffer__getDouble__catchAll(JNIEnv *env, jobject thiz);
 int J4A_loadClass__J4AC_java_nio_ByteBuffer(JNIEnv *env);
 
 #define J4A_HAVE_SIMPLE__J4AC_java_nio_ByteBuffer
@@ -46,6 +48,8 @@ int J4A_loadClass__J4AC_java_nio_ByteBuffer(JNIEnv *env);
 #define J4AC_ByteBuffer__limit J4AC_java_nio_ByteBuffer__limit
 #define J4AC_ByteBuffer__limit__asGlobalRef__catchAll J4AC_java_nio_ByteBuffer__limit__asGlobalRef__catchAll
 #define J4AC_ByteBuffer__limit__catchAll J4AC_java_nio_ByteBuffer__limit__catchAll
+#define J4AC_ByteBuffer__getDouble J4AC_java_nio_ByteBuffer__getDouble
+#define J4AC_ByteBuffer__getDouble__catchAll J4AC_java_nio_ByteBuffer__getDouble__catchAll
 #define J4A_loadClass__J4AC_ByteBuffer J4A_loadClass__J4AC_java_nio_ByteBuffer
 
 #endif//J4A__java_nio_ByteBuffer__H
