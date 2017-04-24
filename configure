@@ -63,9 +63,21 @@ opt_yylex_default="flex"
 
 
 # auto detect bison
-if [ -f "/usr/local/opt/bison/bin/bison" ]; then
-    opt_yacc_default="/usr/local/opt/bison/bin/bison"
-fi
+YACC_LIST="
+    $build_root_dir/contrib/build/bin/bison
+    /usr/local/opt/bison/bin/bison
+"
+for alter_yacc in $YACC_LIST; do
+    if [ -f $alter_yacc ]; then
+        opt_yacc_default=$alter_yacc
+        break
+    fi
+done
+#if [ -f "$build_root_dir/contrib/bin/bison" ]; then
+#    opt_yacc_default="$build_root_dir/contrib/bin/bison"
+#elif [ -f "/usr/local/opt/bison/bin/bison" ]; then
+#    opt_yacc_default="/usr/local/opt/bison/bin/bison"
+#fi
 
 
 
