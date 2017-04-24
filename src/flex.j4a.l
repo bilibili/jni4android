@@ -32,6 +32,7 @@ WHITESPACE      ([ \t\v\r\n])
 "boolean"                   {return T_BOOLEAN;}
 "byte"                      {return T_BYTE;}
 "float"                     {return T_FLOAT;}
+"double"                    {return T_DOUBLE;}
 "int"                       {return T_INT;}
 "long"                      {return T_LONG;}
 "void"                      {return T_VOID;}

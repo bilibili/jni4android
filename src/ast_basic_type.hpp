@@ -116,6 +116,7 @@ public: \
 AST_DEFINE__BasicType(BooleanType,  T_BOOLEAN,  "boolean",  "jboolean", "Z", "Boolean", "false");
 AST_DEFINE__BasicType(ByteType,     T_BYTE,     "byte",     "jbyte",    "B", "Byte",    "0");
 AST_DEFINE__BasicType(FloatType,    T_FLOAT,    "float",    "jfloat",   "F", "Float",   "0");
+AST_DEFINE__BasicType(DoubleType,   T_DOUBLE,   "double",   "jdouble",  "D", "Double",  "0");
 AST_DEFINE__BasicType(IntType,      T_INT,      "int",      "jint",     "I", "Int",     "0");
 AST_DEFINE__BasicType(LongType,     T_LONG,     "long",     "jlong",    "J", "Long",    "0");
 AST_DEFINE__BasicType(VoidType,     T_VOID,     "void",     "void",     "V", "Void",    "");
