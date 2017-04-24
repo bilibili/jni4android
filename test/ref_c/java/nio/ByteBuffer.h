@@ -33,8 +33,36 @@ jobject J4AC_java_nio_ByteBuffer__allocateDirect__asGlobalRef__catchAll(JNIEnv *
 jobject J4AC_java_nio_ByteBuffer__limit(JNIEnv *env, jobject thiz, jint newLimit);
 jobject J4AC_java_nio_ByteBuffer__limit__catchAll(JNIEnv *env, jobject thiz, jint newLimit);
 jobject J4AC_java_nio_ByteBuffer__limit__asGlobalRef__catchAll(JNIEnv *env, jobject thiz, jint newLimit);
+jchar J4AC_java_nio_ByteBuffer__getChar(JNIEnv *env, jobject thiz);
+jchar J4AC_java_nio_ByteBuffer__getChar__catchAll(JNIEnv *env, jobject thiz);
+jshort J4AC_java_nio_ByteBuffer__getShort(JNIEnv *env, jobject thiz);
+jshort J4AC_java_nio_ByteBuffer__getShort__catchAll(JNIEnv *env, jobject thiz);
+jint J4AC_java_nio_ByteBuffer__getInt(JNIEnv *env, jobject thiz);
+jint J4AC_java_nio_ByteBuffer__getInt__catchAll(JNIEnv *env, jobject thiz);
+jlong J4AC_java_nio_ByteBuffer__getLong(JNIEnv *env, jobject thiz);
+jlong J4AC_java_nio_ByteBuffer__getLong__catchAll(JNIEnv *env, jobject thiz);
+jfloat J4AC_java_nio_ByteBuffer__getFloat(JNIEnv *env, jobject thiz);
+jfloat J4AC_java_nio_ByteBuffer__getFloat__catchAll(JNIEnv *env, jobject thiz);
 jdouble J4AC_java_nio_ByteBuffer__getDouble(JNIEnv *env, jobject thiz);
 jdouble J4AC_java_nio_ByteBuffer__getDouble__catchAll(JNIEnv *env, jobject thiz);
+jobject J4AC_java_nio_ByteBuffer__putChar(JNIEnv *env, jobject thiz, jchar value);
+jobject J4AC_java_nio_ByteBuffer__putChar__catchAll(JNIEnv *env, jobject thiz, jchar value);
+jobject J4AC_java_nio_ByteBuffer__putChar__asGlobalRef__catchAll(JNIEnv *env, jobject thiz, jchar value);
+jobject J4AC_java_nio_ByteBuffer__putShort(JNIEnv *env, jobject thiz, jshort value);
+jobject J4AC_java_nio_ByteBuffer__putShort__catchAll(JNIEnv *env, jobject thiz, jshort value);
+jobject J4AC_java_nio_ByteBuffer__putShort__asGlobalRef__catchAll(JNIEnv *env, jobject thiz, jshort value);
+jobject J4AC_java_nio_ByteBuffer__putInt(JNIEnv *env, jobject thiz, jint value);
+jobject J4AC_java_nio_ByteBuffer__putInt__catchAll(JNIEnv *env, jobject thiz, jint value);
+jobject J4AC_java_nio_ByteBuffer__putInt__asGlobalRef__catchAll(JNIEnv *env, jobject thiz, jint value);
+jobject J4AC_java_nio_ByteBuffer__putLong(JNIEnv *env, jobject thiz, jlong value);
+jobject J4AC_java_nio_ByteBuffer__putLong__catchAll(JNIEnv *env, jobject thiz, jlong value);
+jobject J4AC_java_nio_ByteBuffer__putLong__asGlobalRef__catchAll(JNIEnv *env, jobject thiz, jlong value);
+jobject J4AC_java_nio_ByteBuffer__putFloat(JNIEnv *env, jobject thiz, jfloat value);
+jobject J4AC_java_nio_ByteBuffer__putFloat__catchAll(JNIEnv *env, jobject thiz, jfloat value);
+jobject J4AC_java_nio_ByteBuffer__putFloat__asGlobalRef__catchAll(JNIEnv *env, jobject thiz, jfloat value);
+jobject J4AC_java_nio_ByteBuffer__putDouble(JNIEnv *env, jobject thiz, jdouble value);
+jobject J4AC_java_nio_ByteBuffer__putDouble__catchAll(JNIEnv *env, jobject thiz, jdouble value);
+jobject J4AC_java_nio_ByteBuffer__putDouble__asGlobalRef__catchAll(JNIEnv *env, jobject thiz, jdouble value);
 int J4A_loadClass__J4AC_java_nio_ByteBuffer(JNIEnv *env);
 
 #define J4A_HAVE_SIMPLE__J4AC_java_nio_ByteBuffer
@@ -48,8 +76,36 @@ int J4A_loadClass__J4AC_java_nio_ByteBuffer(JNIEnv *env);
 #define J4AC_ByteBuffer__limit J4AC_java_nio_ByteBuffer__limit
 #define J4AC_ByteBuffer__limit__asGlobalRef__catchAll J4AC_java_nio_ByteBuffer__limit__asGlobalRef__catchAll
 #define J4AC_ByteBuffer__limit__catchAll J4AC_java_nio_ByteBuffer__limit__catchAll
+#define J4AC_ByteBuffer__getChar J4AC_java_nio_ByteBuffer__getChar
+#define J4AC_ByteBuffer__getChar__catchAll J4AC_java_nio_ByteBuffer__getChar__catchAll
+#define J4AC_ByteBuffer__getShort J4AC_java_nio_ByteBuffer__getShort
+#define J4AC_ByteBuffer__getShort__catchAll J4AC_java_nio_ByteBuffer__getShort__catchAll
+#define J4AC_ByteBuffer__getInt J4AC_java_nio_ByteBuffer__getInt
+#define J4AC_ByteBuffer__getInt__catchAll J4AC_java_nio_ByteBuffer__getInt__catchAll
+#define J4AC_ByteBuffer__getLong J4AC_java_nio_ByteBuffer__getLong
+#define J4AC_ByteBuffer__getLong__catchAll J4AC_java_nio_ByteBuffer__getLong__catchAll
+#define J4AC_ByteBuffer__getFloat J4AC_java_nio_ByteBuffer__getFloat
+#define J4AC_ByteBuffer__getFloat__catchAll J4AC_java_nio_ByteBuffer__getFloat__catchAll
 #define J4AC_ByteBuffer__getDouble J4AC_java_nio_ByteBuffer__getDouble
 #define J4AC_ByteBuffer__getDouble__catchAll J4AC_java_nio_ByteBuffer__getDouble__catchAll
+#define J4AC_ByteBuffer__putChar J4AC_java_nio_ByteBuffer__putChar
+#define J4AC_ByteBuffer__putChar__asGlobalRef__catchAll J4AC_java_nio_ByteBuffer__putChar__asGlobalRef__catchAll
+#define J4AC_ByteBuffer__putChar__catchAll J4AC_java_nio_ByteBuffer__putChar__catchAll
+#define J4AC_ByteBuffer__putShort J4AC_java_nio_ByteBuffer__putShort
+#define J4AC_ByteBuffer__putShort__asGlobalRef__catchAll J4AC_java_nio_ByteBuffer__putShort__asGlobalRef__catchAll
+#define J4AC_ByteBuffer__putShort__catchAll J4AC_java_nio_ByteBuffer__putShort__catchAll
+#define J4AC_ByteBuffer__putInt J4AC_java_nio_ByteBuffer__putInt
+#define J4AC_ByteBuffer__putInt__asGlobalRef__catchAll J4AC_java_nio_ByteBuffer__putInt__asGlobalRef__catchAll
+#define J4AC_ByteBuffer__putInt__catchAll J4AC_java_nio_ByteBuffer__putInt__catchAll
+#define J4AC_ByteBuffer__putLong J4AC_java_nio_ByteBuffer__putLong
+#define J4AC_ByteBuffer__putLong__asGlobalRef__catchAll J4AC_java_nio_ByteBuffer__putLong__asGlobalRef__catchAll
+#define J4AC_ByteBuffer__putLong__catchAll J4AC_java_nio_ByteBuffer__putLong__catchAll
+#define J4AC_ByteBuffer__putFloat J4AC_java_nio_ByteBuffer__putFloat
+#define J4AC_ByteBuffer__putFloat__asGlobalRef__catchAll J4AC_java_nio_ByteBuffer__putFloat__asGlobalRef__catchAll
+#define J4AC_ByteBuffer__putFloat__catchAll J4AC_java_nio_ByteBuffer__putFloat__catchAll
+#define J4AC_ByteBuffer__putDouble J4AC_java_nio_ByteBuffer__putDouble
+#define J4AC_ByteBuffer__putDouble__asGlobalRef__catchAll J4AC_java_nio_ByteBuffer__putDouble__asGlobalRef__catchAll
+#define J4AC_ByteBuffer__putDouble__catchAll J4AC_java_nio_ByteBuffer__putDouble__catchAll
 #define J4A_loadClass__J4AC_ByteBuffer J4A_loadClass__J4AC_java_nio_ByteBuffer
 
 #endif//J4A__java_nio_ByteBuffer__H

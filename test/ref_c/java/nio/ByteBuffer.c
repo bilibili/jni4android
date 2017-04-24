@@ -27,7 +27,18 @@ typedef struct J4AC_java_nio_ByteBuffer {
     jmethodID method_allocate;
     jmethodID method_allocateDirect;
     jmethodID method_limit;
+    jmethodID method_getChar;
+    jmethodID method_getShort;
+    jmethodID method_getInt;
+    jmethodID method_getLong;
+    jmethodID method_getFloat;
     jmethodID method_getDouble;
+    jmethodID method_putChar;
+    jmethodID method_putShort;
+    jmethodID method_putInt;
+    jmethodID method_putLong;
+    jmethodID method_putFloat;
+    jmethodID method_putDouble;
 } J4AC_java_nio_ByteBuffer;
 static J4AC_java_nio_ByteBuffer class_J4AC_java_nio_ByteBuffer;
 
@@ -136,6 +147,81 @@ fail:
     return ret_object;
 }
 
+jchar J4AC_java_nio_ByteBuffer__getChar(JNIEnv *env, jobject thiz)
+{
+    return (*env)->CallCharMethod(env, thiz, class_J4AC_java_nio_ByteBuffer.method_getChar);
+}
+
+jchar J4AC_java_nio_ByteBuffer__getChar__catchAll(JNIEnv *env, jobject thiz)
+{
+    jchar ret_value = J4AC_java_nio_ByteBuffer__getChar(env, thiz);
+    if (J4A_ExceptionCheck__catchAll(env)) {
+        return 0;
+    }
+
+    return ret_value;
+}
+
+jshort J4AC_java_nio_ByteBuffer__getShort(JNIEnv *env, jobject thiz)
+{
+    return (*env)->CallShortMethod(env, thiz, class_J4AC_java_nio_ByteBuffer.method_getShort);
+}
+
+jshort J4AC_java_nio_ByteBuffer__getShort__catchAll(JNIEnv *env, jobject thiz)
+{
+    jshort ret_value = J4AC_java_nio_ByteBuffer__getShort(env, thiz);
+    if (J4A_ExceptionCheck__catchAll(env)) {
+        return 0;
+    }
+
+    return ret_value;
+}
+
+jint J4AC_java_nio_ByteBuffer__getInt(JNIEnv *env, jobject thiz)
+{
+    return (*env)->CallIntMethod(env, thiz, class_J4AC_java_nio_ByteBuffer.method_getInt);
+}
+
+jint J4AC_java_nio_ByteBuffer__getInt__catchAll(JNIEnv *env, jobject thiz)
+{
+    jint ret_value = J4AC_java_nio_ByteBuffer__getInt(env, thiz);
+    if (J4A_ExceptionCheck__catchAll(env)) {
+        return 0;
+    }
+
+    return ret_value;
+}
+
+jlong J4AC_java_nio_ByteBuffer__getLong(JNIEnv *env, jobject thiz)
+{
+    return (*env)->CallLongMethod(env, thiz, class_J4AC_java_nio_ByteBuffer.method_getLong);
+}
+
+jlong J4AC_java_nio_ByteBuffer__getLong__catchAll(JNIEnv *env, jobject thiz)
+{
+    jlong ret_value = J4AC_java_nio_ByteBuffer__getLong(env, thiz);
+    if (J4A_ExceptionCheck__catchAll(env)) {
+        return 0;
+    }
+
+    return ret_value;
+}
+
+jfloat J4AC_java_nio_ByteBuffer__getFloat(JNIEnv *env, jobject thiz)
+{
+    return (*env)->CallFloatMethod(env, thiz, class_J4AC_java_nio_ByteBuffer.method_getFloat);
+}
+
+jfloat J4AC_java_nio_ByteBuffer__getFloat__catchAll(JNIEnv *env, jobject thiz)
+{
+    jfloat ret_value = J4AC_java_nio_ByteBuffer__getFloat(env, thiz);
+    if (J4A_ExceptionCheck__catchAll(env)) {
+        return 0;
+    }
+
+    return ret_value;
+}
+
 jdouble J4AC_java_nio_ByteBuffer__getDouble(JNIEnv *env, jobject thiz)
 {
     return (*env)->CallDoubleMethod(env, thiz, class_J4AC_java_nio_ByteBuffer.method_getDouble);
@@ -149,6 +235,216 @@ jdouble J4AC_java_nio_ByteBuffer__getDouble__catchAll(JNIEnv *env, jobject thiz)
     }
 
     return ret_value;
+}
+
+jobject J4AC_java_nio_ByteBuffer__putChar(JNIEnv *env, jobject thiz, jchar value)
+{
+    return (*env)->CallObjectMethod(env, thiz, class_J4AC_java_nio_ByteBuffer.method_putChar, value);
+}
+
+jobject J4AC_java_nio_ByteBuffer__putChar__catchAll(JNIEnv *env, jobject thiz, jchar value)
+{
+    jobject ret_object = J4AC_java_nio_ByteBuffer__putChar(env, thiz, value);
+    if (J4A_ExceptionCheck__catchAll(env) || !ret_object) {
+        return NULL;
+    }
+
+    return ret_object;
+}
+
+jobject J4AC_java_nio_ByteBuffer__putChar__asGlobalRef__catchAll(JNIEnv *env, jobject thiz, jchar value)
+{
+    jobject ret_object   = NULL;
+    jobject local_object = J4AC_java_nio_ByteBuffer__putChar__catchAll(env, thiz, value);
+    if (J4A_ExceptionCheck__catchAll(env) || !local_object) {
+        ret_object = NULL;
+        goto fail;
+    }
+
+    ret_object = J4A_NewGlobalRef__catchAll(env, local_object);
+    if (!ret_object) {
+        ret_object = NULL;
+        goto fail;
+    }
+
+fail:
+    J4A_DeleteLocalRef__p(env, &local_object);
+    return ret_object;
+}
+
+jobject J4AC_java_nio_ByteBuffer__putShort(JNIEnv *env, jobject thiz, jshort value)
+{
+    return (*env)->CallObjectMethod(env, thiz, class_J4AC_java_nio_ByteBuffer.method_putShort, value);
+}
+
+jobject J4AC_java_nio_ByteBuffer__putShort__catchAll(JNIEnv *env, jobject thiz, jshort value)
+{
+    jobject ret_object = J4AC_java_nio_ByteBuffer__putShort(env, thiz, value);
+    if (J4A_ExceptionCheck__catchAll(env) || !ret_object) {
+        return NULL;
+    }
+
+    return ret_object;
+}
+
+jobject J4AC_java_nio_ByteBuffer__putShort__asGlobalRef__catchAll(JNIEnv *env, jobject thiz, jshort value)
+{
+    jobject ret_object   = NULL;
+    jobject local_object = J4AC_java_nio_ByteBuffer__putShort__catchAll(env, thiz, value);
+    if (J4A_ExceptionCheck__catchAll(env) || !local_object) {
+        ret_object = NULL;
+        goto fail;
+    }
+
+    ret_object = J4A_NewGlobalRef__catchAll(env, local_object);
+    if (!ret_object) {
+        ret_object = NULL;
+        goto fail;
+    }
+
+fail:
+    J4A_DeleteLocalRef__p(env, &local_object);
+    return ret_object;
+}
+
+jobject J4AC_java_nio_ByteBuffer__putInt(JNIEnv *env, jobject thiz, jint value)
+{
+    return (*env)->CallObjectMethod(env, thiz, class_J4AC_java_nio_ByteBuffer.method_putInt, value);
+}
+
+jobject J4AC_java_nio_ByteBuffer__putInt__catchAll(JNIEnv *env, jobject thiz, jint value)
+{
+    jobject ret_object = J4AC_java_nio_ByteBuffer__putInt(env, thiz, value);
+    if (J4A_ExceptionCheck__catchAll(env) || !ret_object) {
+        return NULL;
+    }
+
+    return ret_object;
+}
+
+jobject J4AC_java_nio_ByteBuffer__putInt__asGlobalRef__catchAll(JNIEnv *env, jobject thiz, jint value)
+{
+    jobject ret_object   = NULL;
+    jobject local_object = J4AC_java_nio_ByteBuffer__putInt__catchAll(env, thiz, value);
+    if (J4A_ExceptionCheck__catchAll(env) || !local_object) {
+        ret_object = NULL;
+        goto fail;
+    }
+
+    ret_object = J4A_NewGlobalRef__catchAll(env, local_object);
+    if (!ret_object) {
+        ret_object = NULL;
+        goto fail;
+    }
+
+fail:
+    J4A_DeleteLocalRef__p(env, &local_object);
+    return ret_object;
+}
+
+jobject J4AC_java_nio_ByteBuffer__putLong(JNIEnv *env, jobject thiz, jlong value)
+{
+    return (*env)->CallObjectMethod(env, thiz, class_J4AC_java_nio_ByteBuffer.method_putLong, value);
+}
+
+jobject J4AC_java_nio_ByteBuffer__putLong__catchAll(JNIEnv *env, jobject thiz, jlong value)
+{
+    jobject ret_object = J4AC_java_nio_ByteBuffer__putLong(env, thiz, value);
+    if (J4A_ExceptionCheck__catchAll(env) || !ret_object) {
+        return NULL;
+    }
+
+    return ret_object;
+}
+
+jobject J4AC_java_nio_ByteBuffer__putLong__asGlobalRef__catchAll(JNIEnv *env, jobject thiz, jlong value)
+{
+    jobject ret_object   = NULL;
+    jobject local_object = J4AC_java_nio_ByteBuffer__putLong__catchAll(env, thiz, value);
+    if (J4A_ExceptionCheck__catchAll(env) || !local_object) {
+        ret_object = NULL;
+        goto fail;
+    }
+
+    ret_object = J4A_NewGlobalRef__catchAll(env, local_object);
+    if (!ret_object) {
+        ret_object = NULL;
+        goto fail;
+    }
+
+fail:
+    J4A_DeleteLocalRef__p(env, &local_object);
+    return ret_object;
+}
+
+jobject J4AC_java_nio_ByteBuffer__putFloat(JNIEnv *env, jobject thiz, jfloat value)
+{
+    return (*env)->CallObjectMethod(env, thiz, class_J4AC_java_nio_ByteBuffer.method_putFloat, value);
+}
+
+jobject J4AC_java_nio_ByteBuffer__putFloat__catchAll(JNIEnv *env, jobject thiz, jfloat value)
+{
+    jobject ret_object = J4AC_java_nio_ByteBuffer__putFloat(env, thiz, value);
+    if (J4A_ExceptionCheck__catchAll(env) || !ret_object) {
+        return NULL;
+    }
+
+    return ret_object;
+}
+
+jobject J4AC_java_nio_ByteBuffer__putFloat__asGlobalRef__catchAll(JNIEnv *env, jobject thiz, jfloat value)
+{
+    jobject ret_object   = NULL;
+    jobject local_object = J4AC_java_nio_ByteBuffer__putFloat__catchAll(env, thiz, value);
+    if (J4A_ExceptionCheck__catchAll(env) || !local_object) {
+        ret_object = NULL;
+        goto fail;
+    }
+
+    ret_object = J4A_NewGlobalRef__catchAll(env, local_object);
+    if (!ret_object) {
+        ret_object = NULL;
+        goto fail;
+    }
+
+fail:
+    J4A_DeleteLocalRef__p(env, &local_object);
+    return ret_object;
+}
+
+jobject J4AC_java_nio_ByteBuffer__putDouble(JNIEnv *env, jobject thiz, jdouble value)
+{
+    return (*env)->CallObjectMethod(env, thiz, class_J4AC_java_nio_ByteBuffer.method_putDouble, value);
+}
+
+jobject J4AC_java_nio_ByteBuffer__putDouble__catchAll(JNIEnv *env, jobject thiz, jdouble value)
+{
+    jobject ret_object = J4AC_java_nio_ByteBuffer__putDouble(env, thiz, value);
+    if (J4A_ExceptionCheck__catchAll(env) || !ret_object) {
+        return NULL;
+    }
+
+    return ret_object;
+}
+
+jobject J4AC_java_nio_ByteBuffer__putDouble__asGlobalRef__catchAll(JNIEnv *env, jobject thiz, jdouble value)
+{
+    jobject ret_object   = NULL;
+    jobject local_object = J4AC_java_nio_ByteBuffer__putDouble__catchAll(env, thiz, value);
+    if (J4A_ExceptionCheck__catchAll(env) || !local_object) {
+        ret_object = NULL;
+        goto fail;
+    }
+
+    ret_object = J4A_NewGlobalRef__catchAll(env, local_object);
+    if (!ret_object) {
+        ret_object = NULL;
+        goto fail;
+    }
+
+fail:
+    J4A_DeleteLocalRef__p(env, &local_object);
+    return ret_object;
 }
 
 int J4A_loadClass__J4AC_java_nio_ByteBuffer(JNIEnv *env)
@@ -189,10 +485,87 @@ int J4A_loadClass__J4AC_java_nio_ByteBuffer(JNIEnv *env)
         goto fail;
 
     class_id = class_J4AC_java_nio_ByteBuffer.id;
+    name     = "getChar";
+    sign     = "()C";
+    class_J4AC_java_nio_ByteBuffer.method_getChar = J4A_GetMethodID__catchAll(env, class_id, name, sign);
+    if (class_J4AC_java_nio_ByteBuffer.method_getChar == NULL)
+        goto fail;
+
+    class_id = class_J4AC_java_nio_ByteBuffer.id;
+    name     = "getShort";
+    sign     = "()S";
+    class_J4AC_java_nio_ByteBuffer.method_getShort = J4A_GetMethodID__catchAll(env, class_id, name, sign);
+    if (class_J4AC_java_nio_ByteBuffer.method_getShort == NULL)
+        goto fail;
+
+    class_id = class_J4AC_java_nio_ByteBuffer.id;
+    name     = "getInt";
+    sign     = "()I";
+    class_J4AC_java_nio_ByteBuffer.method_getInt = J4A_GetMethodID__catchAll(env, class_id, name, sign);
+    if (class_J4AC_java_nio_ByteBuffer.method_getInt == NULL)
+        goto fail;
+
+    class_id = class_J4AC_java_nio_ByteBuffer.id;
+    name     = "getLong";
+    sign     = "()J";
+    class_J4AC_java_nio_ByteBuffer.method_getLong = J4A_GetMethodID__catchAll(env, class_id, name, sign);
+    if (class_J4AC_java_nio_ByteBuffer.method_getLong == NULL)
+        goto fail;
+
+    class_id = class_J4AC_java_nio_ByteBuffer.id;
+    name     = "getFloat";
+    sign     = "()F";
+    class_J4AC_java_nio_ByteBuffer.method_getFloat = J4A_GetMethodID__catchAll(env, class_id, name, sign);
+    if (class_J4AC_java_nio_ByteBuffer.method_getFloat == NULL)
+        goto fail;
+
+    class_id = class_J4AC_java_nio_ByteBuffer.id;
     name     = "getDouble";
     sign     = "()D";
     class_J4AC_java_nio_ByteBuffer.method_getDouble = J4A_GetMethodID__catchAll(env, class_id, name, sign);
     if (class_J4AC_java_nio_ByteBuffer.method_getDouble == NULL)
+        goto fail;
+
+    class_id = class_J4AC_java_nio_ByteBuffer.id;
+    name     = "putChar";
+    sign     = "(C)Ljava/nio/ByteBuffer;";
+    class_J4AC_java_nio_ByteBuffer.method_putChar = J4A_GetMethodID__catchAll(env, class_id, name, sign);
+    if (class_J4AC_java_nio_ByteBuffer.method_putChar == NULL)
+        goto fail;
+
+    class_id = class_J4AC_java_nio_ByteBuffer.id;
+    name     = "putShort";
+    sign     = "(S)Ljava/nio/ByteBuffer;";
+    class_J4AC_java_nio_ByteBuffer.method_putShort = J4A_GetMethodID__catchAll(env, class_id, name, sign);
+    if (class_J4AC_java_nio_ByteBuffer.method_putShort == NULL)
+        goto fail;
+
+    class_id = class_J4AC_java_nio_ByteBuffer.id;
+    name     = "putInt";
+    sign     = "(I)Ljava/nio/ByteBuffer;";
+    class_J4AC_java_nio_ByteBuffer.method_putInt = J4A_GetMethodID__catchAll(env, class_id, name, sign);
+    if (class_J4AC_java_nio_ByteBuffer.method_putInt == NULL)
+        goto fail;
+
+    class_id = class_J4AC_java_nio_ByteBuffer.id;
+    name     = "putLong";
+    sign     = "(J)Ljava/nio/ByteBuffer;";
+    class_J4AC_java_nio_ByteBuffer.method_putLong = J4A_GetMethodID__catchAll(env, class_id, name, sign);
+    if (class_J4AC_java_nio_ByteBuffer.method_putLong == NULL)
+        goto fail;
+
+    class_id = class_J4AC_java_nio_ByteBuffer.id;
+    name     = "putFloat";
+    sign     = "(F)Ljava/nio/ByteBuffer;";
+    class_J4AC_java_nio_ByteBuffer.method_putFloat = J4A_GetMethodID__catchAll(env, class_id, name, sign);
+    if (class_J4AC_java_nio_ByteBuffer.method_putFloat == NULL)
+        goto fail;
+
+    class_id = class_J4AC_java_nio_ByteBuffer.id;
+    name     = "putDouble";
+    sign     = "(D)Ljava/nio/ByteBuffer;";
+    class_J4AC_java_nio_ByteBuffer.method_putDouble = J4A_GetMethodID__catchAll(env, class_id, name, sign);
+    if (class_J4AC_java_nio_ByteBuffer.method_putDouble == NULL)
         goto fail;
 
     J4A_ALOGD("J4ALoader: OK: '%s' loaded\n", "java.nio.ByteBuffer");
