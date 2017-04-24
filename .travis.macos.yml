@@ -9,7 +9,8 @@ env:
 script:
 - git clone --depth=50 --branch=$HASH $REPO
 - cd jni4android
-- "./configure"
+- ./get-deps.sh
+- ./configure
 - make test
 before_install:
   - brew update

@@ -9,7 +9,8 @@ env:
 script:
 - git clone --depth=50 --branch=$HASH $REPO
 - cd jni4android
-- "./configure --cxx=clang++"
+- ./get-deps.sh
+- ./configure --cxx=clang++
 - make test
 before_install:
   - sudo apt-get update
@@ -17,7 +18,5 @@ before_install:
   - sudo apt-get install make
   - sudo apt-get install clang
   - sudo apt-get install flex
-  - sudo apt-get install bison
   - clang++ --version
   - flex --version
-  - bison --version
