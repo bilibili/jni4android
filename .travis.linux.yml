@@ -1,0 +1,18 @@
+language: cpp
+os:
+- linux
+sudo: required
+env:
+  global:
+  - HASH=master
+  - REPO=https://github.com/Bilibili/jni4android.git
+before_install:
+- sudo apt-get update
+- sudo apt-get install clang
+- sudo apt-get install flex
+- clang++ --version
+- flex --version
+before_script:
+- ./get-deps.sh
+script:
+- ./configure --cxx=clang++ && make && make test
