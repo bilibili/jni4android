@@ -63,7 +63,7 @@ private:
     void _build_c_func_string_argument_release_statements(std::ostream &os, int flags);
     void _build_c_func_impl_void_type_statement(std::ostream &os, int flags);
     void _build_c_func_impl_reference_type_statement(std::ostream &os, int flags);
-    void _build_c_func_impl_basic_type_statement(std::ostream &os, int flags);
+    void _build_c_func_impl_primitive_type_statement(std::ostream &os, int flags);
 
 public:
     virtual void build_c_func_decl(std::ostream &os) override;

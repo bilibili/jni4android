@@ -373,7 +373,7 @@ void Method::_build_c_func_impl_void_type_statement(std::ostream &os, int flags)
     os << "}" << std::endl;
 }
 
-void Method::_build_c_func_impl_basic_type_statement(std::ostream &os, int flags)
+void Method::_build_c_func_impl_primitive_type_statement(std::ostream &os, int flags)
 {
     assert(get_type());
     assert(!get_type()->is_void_type());
@@ -519,8 +519,8 @@ void Method::build_c_func_impl(std::ostream &os)
         _build_c_func_impl_void_type_statement(os, FLAG_NORMAL);
         _build_c_func_impl_void_type_statement(os, FLAG_CATCH_ALL);
     } else {
-        _build_c_func_impl_basic_type_statement(os, FLAG_NORMAL);
-        _build_c_func_impl_basic_type_statement(os, FLAG_CATCH_ALL);
+        _build_c_func_impl_primitive_type_statement(os, FLAG_NORMAL);
+        _build_c_func_impl_primitive_type_statement(os, FLAG_CATCH_ALL);
     }
 
     if (_has_string_arg()) {
@@ -538,8 +538,8 @@ void Method::build_c_func_impl(std::ostream &os)
             _build_c_func_impl_void_type_statement(os, FLAG_NORMAL | FLAG_WITH_C_STRING);
             _build_c_func_impl_void_type_statement(os, FLAG_CATCH_ALL | FLAG_WITH_C_STRING);
         } else {
-            _build_c_func_impl_basic_type_statement(os, FLAG_NORMAL | FLAG_WITH_C_STRING);
-            _build_c_func_impl_basic_type_statement(os, FLAG_CATCH_ALL | FLAG_WITH_C_STRING);
+            _build_c_func_impl_primitive_type_statement(os, FLAG_NORMAL | FLAG_WITH_C_STRING);
+            _build_c_func_impl_primitive_type_statement(os, FLAG_CATCH_ALL | FLAG_WITH_C_STRING);
         }      
     }
 }
