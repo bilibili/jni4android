@@ -24,7 +24,7 @@
 #include "ast_identifier.hpp"
 #include "ast_import.hpp"
 #include "ast_type.hpp"
-#include "ast_basic_type.hpp"
+#include "ast_primitive_type.hpp"
 #include "ast_reference_type.hpp"
 #include "ast_member.hpp"
 #include "ast_field.hpp"

@@ -36,7 +36,6 @@ class Annotation;
 class Annotations;
 class Argument;
 class ArgumentList;
-class BasicType;
 class Class;
 class ClassIdentifier;
 class CompilationUnit;
@@ -49,6 +48,7 @@ class Method;
 class MethodList;
 class ModifierSet;
 class Node;
+class PrimitiveType;
 class ReferenceType;
 class Type;
 

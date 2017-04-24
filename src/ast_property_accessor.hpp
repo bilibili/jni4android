@@ -24,7 +24,7 @@
 #include "ast__def.hpp"
 #include "ast_method.hpp"
 #include "ast_field.hpp"
-#include "ast_basic_type.hpp"
+#include "ast_primitive_type.hpp"
 
 NS_AST_BEGIN
 

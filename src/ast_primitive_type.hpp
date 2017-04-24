@@ -18,20 +18,20 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
  */
 
-#ifndef J4A__AST_BASIC_TYPE__HPP
-#define J4A__AST_BASIC_TYPE__HPP
+#ifndef J4A__AST_PRIMITIVE_TYPE__HPP
+#define J4A__AST_PRIMITIVE_TYPE__HPP
 
 #include "ast__def.hpp"
 #include "ast_type.hpp"
 
 NS_AST_BEGIN
 
-class BasicType: public Type
+class PrimitiveType: public Type
 {
 public:
-    AST_IMPLEMENT_ABSTRACT(BasicType);
+    AST_IMPLEMENT_ABSTRACT(PrimitiveType);
 protected:
-    explicit BasicType(const j4a::string& name, int token): Type(name), m_token(token) {;}
+    explicit PrimitiveType(const j4a::string& name, int token): Type(name), m_token(token) {;}
 
 public:
     // @Override
@@ -43,13 +43,13 @@ private:
     const int m_token;
 };
 
-#define AST_DEFINE__BasicType(class__, token_id__, name__, ctype__, c_sign__, c_name_in_call_api, default__) \
-class class__: public BasicType \
+#define AST_DEFINE__PrimitiveType(class__, token_id__, name__, ctype__, c_sign__, c_name_in_call_api, default__) \
+class class__: public PrimitiveType \
 { \
 public: \
     AST_IMPLEMENT(class__); \
 private: \
-    explicit class__(): BasicType(name__, token_id__) {;} \
+    explicit class__(): PrimitiveType(name__, token_id__) {;} \
 public: \
     static class__ *create() \
     { \
@@ -113,15 +113,15 @@ public: \
     } \
 };
 
-AST_DEFINE__BasicType(BooleanType,  T_BOOLEAN,  "boolean",  "jboolean", "Z", "Boolean", "false");
-AST_DEFINE__BasicType(ByteType,     T_BYTE,     "byte",     "jbyte",    "B", "Byte",    "0");
-AST_DEFINE__BasicType(FloatType,    T_FLOAT,    "float",    "jfloat",   "F", "Float",   "0");
-AST_DEFINE__BasicType(DoubleType,   T_DOUBLE,   "double",   "jdouble",  "D", "Double",  "0");
-AST_DEFINE__BasicType(CharType,     T_CHAR,     "char",     "jchar",    "C", "Char",    "0");
-AST_DEFINE__BasicType(ShortType,    T_SHORT,    "short",    "jshort",   "S", "Short",   "0");
-AST_DEFINE__BasicType(IntType,      T_INT,      "int",      "jint",     "I", "Int",     "0");
-AST_DEFINE__BasicType(LongType,     T_LONG,     "long",     "jlong",    "J", "Long",    "0");
-AST_DEFINE__BasicType(VoidType,     T_VOID,     "void",     "void",     "V", "Void",    "");
+AST_DEFINE__PrimitiveType(BooleanType,  T_BOOLEAN,  "boolean",  "jboolean", "Z", "Boolean", "false");
+AST_DEFINE__PrimitiveType(ByteType,     T_BYTE,     "byte",     "jbyte",    "B", "Byte",    "0");
+AST_DEFINE__PrimitiveType(FloatType,    T_FLOAT,    "float",    "jfloat",   "F", "Float",   "0");
+AST_DEFINE__PrimitiveType(DoubleType,   T_DOUBLE,   "double",   "jdouble",  "D", "Double",  "0");
+AST_DEFINE__PrimitiveType(CharType,     T_CHAR,     "char",     "jchar",    "C", "Char",    "0");
+AST_DEFINE__PrimitiveType(ShortType,    T_SHORT,    "short",    "jshort",   "S", "Short",   "0");
+AST_DEFINE__PrimitiveType(IntType,      T_INT,      "int",      "jint",     "I", "Int",     "0");
+AST_DEFINE__PrimitiveType(LongType,     T_LONG,     "long",     "jlong",    "J", "Long",    "0");
+AST_DEFINE__PrimitiveType(VoidType,     T_VOID,     "void",     "void",     "V", "Void",    "");
 
 NS_AST_END
 
