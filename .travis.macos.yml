@@ -14,5 +14,5 @@ before_script:
 - git clone --depth=50 --branch=$HASH $REPO
 - cd jni4android
 - ./get-deps.sh
-- ./configure
-- make test
+script:
+- ./configure && make && make test

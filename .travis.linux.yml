@@ -14,5 +14,5 @@ before_install:
 - flex --version
 before_script:
 - ./get-deps.sh
-- ./configure --cxx=clang++
-- make test
+script:
+- ./configure --cxx=clang++ && make && make test
