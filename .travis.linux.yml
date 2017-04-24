@@ -8,16 +8,11 @@ env:
   - REPO=https://github.com/Bilibili/jni4android.git
 before_install:
 - sudo apt-get update
-- sudo apt-get install git
-- sudo apt-get install make
 - sudo apt-get install clang
 - sudo apt-get install flex
 - clang++ --version
 - flex --version
 before_script:
-- git clone --depth=50 --branch=$HASH $REPO
-- cd jni4android
-- ls -la
 - ./get-deps.sh
 - ./configure --cxx=clang++
-- make tes
+- make test
