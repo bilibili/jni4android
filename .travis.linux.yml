@@ -3,10 +3,6 @@ os:
 - linux
 sudo: false
 compiler: clang
-env:
-  global:
-  - HASH=master
-  - REPO=https://github.com/Bilibili/jni4android.git
 addons:
   apt:
     packages:

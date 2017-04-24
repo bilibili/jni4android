@@ -3,10 +3,6 @@ os:
 - osx
 sudo: false
 compiler: clang
-env:
-  global:
-  - HASH=master
-  - REPO=https://github.com/Bilibili/jni4android.git
 before_install:
 - brew update
 - brew outdated flex || brew upgrade flex
