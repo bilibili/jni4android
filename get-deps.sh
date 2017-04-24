@@ -23,7 +23,9 @@ build_bison() {
     local mod="bison"
     local ver="3.0.4"
     local url="ftp://ftp.gnu.org/gnu/bison/bison-3.0.4.tar.gz"
-    tools/build_contrib.sh $mod $ver $url
+    if [ ! -f contrib/build/bin/bison ]; then
+        tools/build_contrib.sh $mod $ver $url
+    fi
 }
 
 build_bison
