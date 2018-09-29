@@ -53,12 +53,9 @@ private: \
 public: \
     static class__ *create() \
     { \
-        static pointer_type s_instance; \
-        if (!s_instance) {\
-            s_instance = new class__(); \
-            s_instance->put_in_pool(); \
-        } \
-        return s_instance; \
+        pointer_type instance = new class__(); \
+        instance->put_in_pool(); \
+        return instance; \
     } \
 public: \
     virtual j4a::string get_c_type() override { \
