@@ -78,6 +78,7 @@ TEST_JAVA_SRCS = \
 	test/i_java/android/media/PlaybackParams.java \
 	test/i_java/android/os/Build.java \
 	test/i_java/android/os/Bundle.java \
+	test/i_java/test/ReturnPrimitive.java \
 	test/i_java/tv/danmaku/ijk/media/player/misc/IMediaDataSource.java \
 	test/i_java/tv/danmaku/ijk/media/player/IjkMediaPlayer.java \
 
